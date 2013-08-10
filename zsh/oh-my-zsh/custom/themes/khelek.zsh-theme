@@ -1,29 +1,43 @@
-# ZSH Theme emulating the Fish shell's default prompt.
+# khelek.zsh-theme
+#
+# Author: Andy Fleming
+# URL: http://andyfleming.com/
+# Repo: https://github.com/andyfleming/oh-my-zsh
+# Direct Link: https://github.com/andyfleming/oh-my-zsh/blob/master/themes/khelek.zsh-theme
+#
+# Created on:		June 19, 2012
+# Last modified on:	June 20, 2012
 
 _fishy_collapsed_wd() {
   echo $(pwd | perl -pe "
    BEGIN {
       binmode STDIN,  ':encoding(UTF-8)';
       binmode STDOUT, ':encoding(UTF-8)';
-   }; s|^$HOME|~|g; s|/([^/]{3})[^/]*(?=/)|/\$1|g
+   }; s|^$HOME|~|g; s|/([^/])[^/]*(?=/)|/\$1|g
 ")
-} 
+}
 
-local user_color='green'; [ $UID -eq 0 ] && user_color='red'
-PROMPT='%n@%m %{$fg[$user_color]%}$(_fishy_collapsed_wd)%{$reset_color%}%(!.#.>) '
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+
+# primary prompt
+PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}
+$FG[032]$(_fishy_collapsed_wd "/home/haukot/programming/rails/")\
+$(git_prompt_info) \
+$FG[105]%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
+RPS1='${return_code}'
 
-local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
-RPROMPT='${return_status}$(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" "
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY=""
+# color vars
+eval my_gray='$FG[237]'
+eval my_orange='$FG[214]'
+
+# right prompt
+RPROMPT='$my_gray%n@%m%{$reset_color%}%'
+
+# git settings
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075](branch:"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_bold[green]%}+"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_bold[blue]%}!"
-ZSH_THEME_GIT_PROMPT_DELETED="%{$fg_bold[red]%}-"
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg_bold[magenta]%}>"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[yellow]%}#"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[cyan]%}?"
+ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
