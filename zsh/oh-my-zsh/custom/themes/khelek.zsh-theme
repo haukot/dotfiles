@@ -15,7 +15,7 @@ _fishy_collapsed_wd() {
    BEGIN {
       binmode STDIN,  ':encoding(UTF-8)';
       binmode STDOUT, ':encoding(UTF-8)';
-   }; s|^$HOME|~|g; s|/([^/])[^/]*(?=/)|/\$1|g
+   }; s|^$HOME|~|g; s|/([^/]{3})[^/]*(?=/)|/\$1|g
 ")
 }
 
@@ -75,10 +75,17 @@ eval my_gray='$FG[237]'
 eval my_orange='$FG[214]'
 
 # right prompt
-RPROMPT='$my_gray%n@%m $(_git_time_since_commit)%{$reset_color%}%'
+RPROMPT='$(git_prompt_status)$my_gray%n@%m%{$reset_color%}%'
 
 # git settings
-ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075](branch:"
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]("
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
+
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚ "
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}⚑ "
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}▴ "
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}◒ "
