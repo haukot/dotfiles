@@ -62,8 +62,8 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # primary prompt
-PROMPT='$FG[237]-------------------------------------------------------------------%{$reset_color%}
-$FG[032]%~\
+PROMPT='$FG[237]--------------------------------------------$FG[239]%n@%m$FG[237]------
+$FG[032]$(_fishy_collapsed_wd %~)\
 $(git_prompt_info) \
 $FG[105]%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
@@ -75,17 +75,27 @@ eval my_gray='$FG[237]'
 eval my_orange='$FG[214]'
 
 # right prompt
-RPROMPT='$(git_prompt_status)$my_gray%n%{$reset_color%}%'
+RPROMPT='$(git_prompt_status)%{$reset_color%}%'
 
-# git settings
+# Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]("
+## parse_git_dirty()
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
+##
 ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
-
+#
+#git_prompt_status()
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚ "
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}⚑ "
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}▴ "
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}◒ "
+#
+# git_prompt_ahead()
+ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
+
+# git_prompt_long_sha() and git_prompt_short_sha()
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
