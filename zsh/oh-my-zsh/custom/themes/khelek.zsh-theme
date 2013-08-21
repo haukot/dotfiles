@@ -62,7 +62,7 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # primary prompt
-PROMPT='$FG[237]--------------------------------------------$FG[239]%n@%m$FG[237]------
+PROMPT='$FG[237]--------------------------------------------$FG[239]%n@%m$FG[237]----------
 $FG[032]$(_fishy_collapsed_wd %~)\
 $(git_prompt_info) \
 $FG[105]%(!.#.»)%{$reset_color%} '
@@ -99,3 +99,13 @@ ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
 # git_prompt_long_sha() and git_prompt_short_sha()
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
+
+
+### man colors
+export LESS_TERMCAP_mb=$'\E[01;31m'       # начала мигающего
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # начало жирного текста
+export LESS_TERMCAP_me=$'\E[0m'           # окончание
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # начала текста в инфобоксе
+export LESS_TERMCAP_se=$'\E[0m'           # конец его
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # начало подчеркнутого
+export LESS_TERMCAP_ue=$'\E[0m'           # конец подчеркнутого

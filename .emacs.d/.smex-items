@@ -1,0 +1,30 @@
+
+;; ----- smex-history -----
+(
+ server-start
+ package-list-packages
+ customize-group
+ load-theme
+ erc-speedbar-browser
+ speedbar
+ speedbar-frame-mode
+)
+
+;; ----- smex-data -----
+(
+ (package-list-packages . 12)
+ (speedbar-add-localized-speedbar-support . 1)
+ (speedbar-frame-mode . 2)
+ (speedbar . 2)
+ (speedbar-customize . 14)
+ (load-theme . 5)
+ (my-speedbar-no-separate-frame . 1)
+ (erc-speedbar-browser . 1)
+ (sr-speedbar-open . 1)
+ (sr-speedbar-toggle . 1)
+ (customize-group . 1)
+ (rainbow-mode . 7)
+ (rainbow-delimiters-mode . 4)
+ (web-mode . 2)
+ (server-start . 2)
+)
