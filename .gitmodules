@@ -1,0 +1,3 @@
+[submodule ".emacs.d/haukot/themes"]
+	path = .emacs.d/haukot/themes
+	url = git@github.com:Khelek/monokai-emacs.git
