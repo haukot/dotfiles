@@ -49,6 +49,7 @@
 ;;; ---------------------------------------------------------------------------
 
 (global-set-key (kbd "<f6>") 'sr-speedbar-toggle)
+(global-set-key (kbd "<f7>") 'fullscreen-mode-fullscreen-toggle)
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Key Bindings
@@ -68,8 +69,15 @@
 ;(add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes)) 
 ;(add-hook 'sass-mode-hook 'rainbow-mode)
 
+
+;; Erlang mode
+(add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode)) 
+(add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
+;(add-hook 'erlang-mode-hook 'prog-mode)
+
 ;; Rainbow Delimiters ((()))
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Emacs Mode's

@@ -20,10 +20,12 @@
                         ; ruby and rails
 			starter-kit-ruby
                         haml-mode
-			rainbow-delimiters
-			rainbow-mode
 			rinari
-			ruby-end)
+			ruby-end
+			; hz
+			find-file-in-project			
+			rainbow-delimiters
+			rainbow-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -35,13 +37,20 @@
 ;;; End Packages
 ;;; ---------------------------------------------------------------------------
 
-
+(defun my-skype ()
+  (interactive)
+  (add-to-list 'load-path (concat "packages" "emacs-skype"))
+  (require 'skype)
+  (setq skype--my-user-handle "haudvd@gmail.com")
+  (global-set-key (kbd "M-9") 'skype--anything-command))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Requires
 ;;; ---------------------------------------------------------------------------
 
 (require 'rainbow-delimiters)
+(require 'flymake)
+;(require 'erlang-flymake)
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Requires
@@ -50,6 +59,6 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-(server-start)
+;(server-start)
 
 

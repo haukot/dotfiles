@@ -11,6 +11,7 @@
  '(show-paren-delay 0)
  '(speedbar-default-position (quote left))
  '(speedbar-show-unknown-files t)
+ '(sr-speedbar-auto-refresh nil)
  '(sr-speedbar-max-width 40)
  '(sr-speedbar-right-side nil)
  '(sr-speedbar-width-console 30)
@@ -20,4 +21,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-)
+ )

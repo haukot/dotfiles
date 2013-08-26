@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- server-start
+ skype--chat-mode
  package-list-packages
+ server-start
  customize-group
  load-theme
  erc-speedbar-browser
  speedbar
- speedbar-frame-mode
 )
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 12)
+ (package-list-packages . 13)
  (speedbar-add-localized-speedbar-support . 1)
  (speedbar-frame-mode . 2)
  (speedbar . 2)
@@ -27,4 +27,7 @@
  (rainbow-delimiters-mode . 4)
  (web-mode . 2)
  (server-start . 2)
+ (erlang-mode . 1)
+ (my-skype . 1)
+ (skype--chat-mode . 1)
 )
