@@ -78,7 +78,35 @@
 ;; Rainbow Delimiters ((()))
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;;;; --------------------------------------------------------------------------
+;;;; Evil Mode
+;;;; --------------------------------------------------------------------------
+(setq evil-normal-state-tag   (propertize "N" 'face '((:background "green" :foreground "black")))
+      evil-emacs-state-tag    (propertize "E" 'face '((:background "orange" :foreground "black")))
+      evil-insert-state-tag   (propertize "I" 'face '((:background "red")))
+      evil-motion-state-tag   (propertize "M" 'face '((:background "blue")))
+      evil-visual-state-tag   (propertize "V" 'face '((:background "grey80" :foreground "black")))
+      evil-operator-state-tag (propertize "O" 'face '((:background "purple"))))
 
+
+(add-hook 'evil-normal-state-entry-hook 
+	(lambda ()
+		(keyboard-translate ?t ?j)
+		(keyboard-translate ?T ?J)
+		(keyboard-translate ?j ?t)
+		(keyboard-translate ?J ?T)
+	))
+
+(add-hook 'evil-normal-state-exit-hook 
+	(lambda ()		
+		(keyboard-translate ?j ?j)
+		(keyboard-translate ?J ?J)
+		(keyboard-translate ?t ?t)
+		(keyboard-translate ?T ?T)
+	))
+;;;; -----------------	---------------------------------------------------------
+;;;; End Evil Mode
+;;;; --------------------------------------------------------------------------
 ;;; ---------------------------------------------------------------------------
 ;;; End Emacs Mode's
 ;;; ---------------------------------------------------------------------------

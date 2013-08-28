@@ -50,12 +50,15 @@
 
 (require 'rainbow-delimiters)
 (require 'flymake)
+(require 'evil)
 ;(require 'erlang-flymake)
+
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Requires
 ;;; ---------------------------------------------------------------------------
 
+(evil-mode 1)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)

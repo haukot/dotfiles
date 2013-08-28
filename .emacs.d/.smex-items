@@ -1,7 +1,7 @@
 
 ;; ----- smex-history -----
 (
- skype--chat-mode
+ evil-mode
  package-list-packages
  server-start
  customize-group
@@ -12,7 +12,7 @@
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 13)
+ (package-list-packages . 14)
  (speedbar-add-localized-speedbar-support . 1)
  (speedbar-frame-mode . 2)
  (speedbar . 2)
@@ -28,6 +28,5 @@
  (web-mode . 2)
  (server-start . 2)
  (erlang-mode . 1)
- (my-skype . 1)
- (skype--chat-mode . 1)
+ (evil-mode . 1)
 )
