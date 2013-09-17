@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.springpad.com/chromestore.action?app_version=4"
+      },
+      "urls": [ "http://www.springpad.com/", "https://www.springpad.com/" ]
+   },
+   "description": "Create and share notebooks for any interest - on the web and on your phone.",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhSS+SAjXXi/E6ibtiEsImrlqHOjn8p4CKxmDcxCZnyEs13RQRHIzRIqwb23Mbh07wzJKuipL2d471N/0pmPdETaV+BnULe1tNDKzr3iJBxFEPGtd/dtcQtGVSIOTW2IXlAxoUApVz5kh9XsknTMGROEJLCnlklUb/NkznZhgB2QIDAQAB",
+   "name": "Springpad",
+   "permissions": [ "geolocation", "notifications", "unlimitedStorage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "6"
+}

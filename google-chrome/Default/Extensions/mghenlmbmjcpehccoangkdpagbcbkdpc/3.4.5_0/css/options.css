@@ -1,0 +1,72 @@
+/*** global ***/
+a {
+	color: blue;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+body {
+	font: 13px/15px "DejaVu Sans", sans-serif;
+	margin: 10px auto;
+	max-width: 600px;
+}
+
+div {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+h2 {
+	font-size: 14px;
+	margin: 20px 0 8px 0;
+}
+h1 + h2 {
+	margin-top: 10px;
+}
+
+li + li {
+	margin-top: 2px;
+}
+
+p {
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-align: justify;
+}
+
+ul {
+	margin-bottom: 10px;
+	padding-left: 40px;
+	text-align: justify;
+}
+
+section {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+
+/*** options ***/
+input {
+	vertical-align: baseline;
+}
+
+label {
+	display: block;
+}
+
+#open > label {
+	clear: right;
+	float: left;
+}
+#open > select {
+	clear: right;
+	float: right;
+}

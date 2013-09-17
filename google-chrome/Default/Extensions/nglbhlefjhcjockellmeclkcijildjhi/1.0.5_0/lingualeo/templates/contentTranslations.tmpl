@@ -1,0 +1,52 @@
+<div class="{soundUrl?lleo_has_sound:} {hasPic?lleo_has_pic:} {context?lleo_has_context:}">
+    <div id="lleo_contextContainer">
+        <div id="lleo_gBrand" class="hidden" style="background-image: url('{imagesUrl}/google.png') !important">powered by</div>
+        <!--<div id="lleo_rusFlag" title="{translateContextHint}"><div></div></div>-->
+        <div id="lleo_context">{context}<a href="javascript:void 0" id="lleo_translateContextLink">{translateContextHint}</a></div>
+    </div>
+	<div id="lleo_translationsCopntainer1">
+		<a href="javascript:void 0" id="lleo_optionsBtn" title="{optionsBtnHint}"><img src="{imagesUrl}/1/settings4.png" width="7" height="7"/></a>		
+		<div id="lleo_translationsCopntainer2">
+			<div id="lleo_picOuter">
+				<table>
+					<tr>
+						<td>
+							<div>
+								<img id="lleo_pic" src="{picUrl}" width="30"/>
+							</div>	
+						</td>
+					</tr>
+				</table>
+				<img id="lleo_picBig" src="{picUrl}"/>
+			</div>
+			<div id="lleo_inner">			
+				<div id="lleo_sound" title="{soundHint}" style="background-image:url('{imagesUrl}/sound.png') !important;">
+					<audio id="lleo_player"><source type="audio/mpeg" src="{soundUrl}"></audio>
+				</div>
+				<div id="lleo_word">
+					<a id="lleo_text" href="{wordLink}" title="{wordHint}" target="_blank" class="{inDict?lleo_known:}">{originalText}</a>
+					&nbsp;
+					<span class="{inDict?:lleo_no_trans}">&mdash; {translatedText}</span>
+					<a id="lleo_baseForm" href="#" class="infinitive {baseForm?:hidden}">{baseForm}</a>
+				</div>
+				<div id="lleo_transcription">[{transcription}]</div>
+				<div id="lleo_trans">{transItems}</div>
+				<div class="lleo_clearfix">.</div>
+				<div id="lleo_icons" class="{showDicts?:hidden}">
+					{seeAlsoHint}:
+					{dictionariesLinksHTML}
+				</div>
+			</div>
+			<form id="lleo_setTransForm">
+				<input type="text" id="lleo_transField" maxlength="255" value="" placeholder="{addTranHint}" class="lleo-custom-translation"/>
+			</form>
+			<table id="lleo_markBlock">
+				<tr>
+					<td class="icon-cell"><img src="{imagesUrl}/i16.png"></td>
+					<td class="text-cell">LinguaLeo</td>
+					<td class="wide-cell"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

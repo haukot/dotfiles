@@ -1,0 +1,198 @@
+0.5.0:
+------
+- partialy re-designed the internal architecture (performance boost!)
+- added: full-text search and highlighting of results!
+- added: new really cool fullscreen mode!
+- added: show / hide completed list-items via button
+- added: localization (english and german language)
+- added: sorting of item-list (modified, added, name, type)
+- added: download images for offline usage
+- added: help-dialog
+- added: background-sync
+- added: rotation-lock for mobile-phones!
+
+0.5.1:
+------
+- added: filter by tags (via filter-dialog and via tags in item-details-view
+- added: welcome-wizard (with links to import stuff from evernote and google note!
+- added: toggle-search highlighting in details-view (new icon in toolbar)
+- added: "servings" to recipe-items 
+- added: some layout improvements (item-view header)
+
+0.5.2:
+______
+- added: create new notes (title, content, notebooks & tags)
+- added: edit existing notes (title, content, notebooks & tags)
+- added: support for more item-types (movie, tvshow)
+- added: checklists "show / hide checked" state is now synced with springpad!
+- added: check / uncheck state of checklist items is now synced with springpad!
+- changed: fullscreen mode starts now with visible header- and toolbar (tap on content to hide/unhide them)
+
+0.7.0:
+------
+- added: create new objects: note, bookmark, recipe, generallist, shoppinglist, packinglist (all via new dialog)
+- added: add new items to lists, rename and remove them (context-menu of list-item)
+- added: create notebooks inside create-objects dialog
+- added: rating of objects (click the stars in the detail-view to rate them!)
+- added: new home, tags and type buttons
+- added: filter by type via button and list-item context-menu
+- added: set notebook of new object to actual filter notebook
+- added: searching in item-list now also searches in currently opened detail view (live search and highlighting on the fly!)
+- added: click on thumbnail in item-details now shows the image
+- added: new icons for some object-types (packing list, shopping list)
+- added: object-rating to details-view
+- added: line-spacing to font-settings
+- changed: modified icon for fullscreen and highlight-toggle
+- bugfix: no more auto-sync after deleting an item
+- bugfix: resize detail-view after deleting object
+- bugfix: adapted dialog dimensions for pre3/veer
+- bugfix: search in item-list now also searches in name of list-items (like any other items before)
+
+0.7.1:
+------
+- updated: rating-dialog
+- updated: help dialog
+- bugfix: renaming list-items finally works
+- bugfix: show rating for all kind of objects in itemlist
+
+0.8.1:
+------
+- added: new attachment-dialog (download and open attachments!)
+- added: new object types (book, alarm)
+- added: new icon for show/hide list-items
+- changed: re-designed "create new object" dialog
+- changed: dialogs to better fit on pre3/veer
+- bugfix: set focus to input field on create new tag dialog
+- bugfix: edit list item is now possible on veer
+
+0.9.0:
+------
+- added: add ingredients from recipe to shopping list!
+- added: sort itemlist by rating
+- added: great new icons by michote! :-)
+- added: "show changelog" to app-menu
+- re-added: clear button to filter dialogs
+- changed: redesigned attachments dialog
+- major bugfix: editing and or creating more than one list item is now possible without having to restart the app.
+- bugfix: app finally uses advanced browser, if selected in preferences
+- bugfix (veer only): removed clickable links, because of problems with enyo...
+- bugfix (veer only): editing an checklist item is now possible. the old value is not selected anymore. 
+- many other bugfixes...
+
+0.9.5:
+------
+- added: add links from external apps (via new ReadOnTouch PRO beta!)
+- added: more great new icons by michote! :-)
+- bugfix: "add to shopping list" in recipes only available when client is online
+
+0.9.9:
+------
+- added: add attachments directly from your touchpad via the attachments dialog!
+- added: share contained url via new share-icon (mail, messaging, pdf, facebook, twitter, google plus)
+- added: showing of delete-button must / can be toggled in preferences!
+- changed: moved delete-button to upper toolbar
+
+1.0.0:
+------
+- added: new icons by michote
+- added: support thread of webos-nations thread to help-dialog
+
+1.0.1:
+------
+- added: evernote and google note import apps to app menu
+- bugfix: did changes for the new springpad api
+- bugfix (phones only): tag-dialog now hides the unrelevant items on search correctly
+- bugfix: create / edit content now possible on other devices than touchpad and pre3
+- bugfix: create list items now works on touchpad
+- bugfix: some other small changes
+
+1.0.2:
+------
+- added (TP only): scrollbars to detail-view
+- changed: new icons for object-details by Micha
+- bugfix: due to new springpad api, there are no more shoppinglists! adapted everything to work with generallists
+- bugfix: prevent accidently selecting item in itemlist when scrolling
+- and some other bugfixes
+
+1.1.0:
+------
+- added (TP only): print-support!
+- added: french language support by Kratus!
+- added: did some major performance optimizations!
+- added: ability to logout from springpad via preferences
+- changed: attached images are now opened in MeOrg! directly
+- bugfix: no more empty object-list after enabling image download in preferences and following sync
+- bugfix: no more error messages and empty object-lists when syncing without having an notebook beside "all my stuff"
+- bugfix: no more broken links in details-view
+- and some other bugfixes
+
+1.1.1:
+------
+- added: portrait mode
+- added: fullscreen mode
+- added: new serif font: bbalpha sans 
+- added: "rate me!" and "other apps by this dev" to menu 
+- removed: rounded searchbox borders, now integrates seemlessly in article list
+- bugfix: fixed itemlist scrolling 
+- bugfix: image download for offline usage should work finally 
+- bugfix: no more accidently selecting article during scroll in article-list
+
+1.2.0:
+------
+- added: add alarms, reminders and events to the webOS calendar!
+- added: file, photo, product, album, business, restaurant & wine object types
+- added: static google map for business and restaurant addresses
+- added: bigger dialogs in portrait mode!
+- added: double-tap on headline in details view switches to fullscreen-mode
+- changed: using smaller icons in list on phones
+- bugfix: times will be stored correctly on appointments, alarms and reminders
+- bugfix: progress bar during sync now works
+- bugfix: show no more deleted objects in object-list
+- and several other bugfixes
+
+1.3.0:
+------
+- added: new panel for notebook management
+- added: new object-type video
+- added: delete attachments
+- added: prefered shopping list via preferences
+- improved: some major performance optimizations
+- bugfix: sort by name works now
+- bugfix: another issue with deleted objects was identified and solved
+- bugfix: storage of local data should now work properly again
+- bugfix: add to shopping cart now displays the first list element initially 
+- bugfix: notes are displayed properly (with line breaks etc)
+- bugfix: links should be clickable on the pre2
+- and many other bugfixes and improvements
+
+1.3.1:
+------
+- updated: french and german translations
+- bugfix: renaming of notebooks is now possible
+- bugfix: removed possible syncing bug
+
+1.3.2:
+------
+- bugfix: fixed memory leak that causes the app to restart luna sometimes
+- bugfix: special fullscreen mode works again (switch to fullscreen mode an tap the title to hide / unhide the toolbars)
+
+2.0.0:
+------
+- added: ability to create and modify items in offline mode!
+- added: now uses delta sync instead of full sync every time!
+- added: no more automatic syncs after creating an object locally
+- added: new sync dialog
+- added: move checklist items up and down! (tap and hold a checklist item)
+- added: scrollbar to item list
+- changed: new look of the dialogs
+- optimized: search performance
+- bugfix: add ingredients from recipe to selected shopping list works again
+- bugfix: share by mail works again
+- and some other bugfixes
+
+2.0.1:
+------
+- added: reworked display of photo objects
+- bugfix: saving tasks is now possible again
+- bugfix: saving appointments is now possible again 
+- updated: french localization

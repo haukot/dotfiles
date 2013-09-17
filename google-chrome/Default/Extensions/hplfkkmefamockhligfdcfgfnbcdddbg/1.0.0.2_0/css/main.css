@@ -1,0 +1,82 @@
+body {
+	min-width: 500px;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000000;
+	margin: 0;
+	padding: 0 10px 10px 10px;
+}
+
+h1 {
+	font-size: 16px;
+	border-bottom: 1px solid #000000;
+	color: #000000;
+	padding-bottom: 5px;
+	text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+caption {
+	text-align: right;
+	text-shadow: 1px 1px 1px #CCCCCC;
+	padding-bottom: 2px;
+}
+
+th {
+	background: #F9F9F9;
+	font-weight: bold;
+}
+
+td, th {
+	padding: 2px;
+	border: 1px solid #E7E7E7;
+	text-align: left;
+	vertical-align: top;
+}
+
+tr:hover td {
+	background: #FCFCFC;
+}
+
+label {
+	float: left;
+	width: 50px;
+	padding-top: 4px;
+}
+
+form p {
+	margin-bottom: 0;
+}
+
+input[type=text] {
+	width: 444px;
+}
+
+select {
+	width: 450px;
+}
+
+#loading {
+	display: none;
+	margin-top: 10px;
+	width: 100%;
+}
+
+#result {
+	display: none;
+	margin-top: 10px;
+}
+
+#error {
+	display: none;
+	margin-top: 10px;
+	padding: 10px 10px 10px 30px;
+	border: 1px solid #E7E7E7;
+	background-repeat: no-repeat;
+	background-position: 5px 6px;
+}

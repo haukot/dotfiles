@@ -1,7 +1,7 @@
 
 ;; ----- smex-history -----
 (
- evil-mode
+ w3
  package-list-packages
  server-start
  customize-group
@@ -12,7 +12,7 @@
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 14)
+ (package-list-packages . 15)
  (speedbar-add-localized-speedbar-support . 1)
  (speedbar-frame-mode . 2)
  (speedbar . 2)
@@ -29,4 +29,5 @@
  (server-start . 2)
  (erlang-mode . 1)
  (evil-mode . 1)
+ (w3 . 1)
 )

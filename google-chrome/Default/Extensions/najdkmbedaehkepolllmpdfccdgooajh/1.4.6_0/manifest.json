@@ -1,0 +1,20 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "js": [ "web_server_notifier.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Displays the Web server of the current page.",
+   "icons": {
+      "128": "web_server_notifier-128x128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDrdAnshGdMD2stuocDKus1fh3+MGZKrHLQw6NAqXU8uKrn1M2ykmf0hU4pWIufxS43NX/WtTkj75dJJW63bYebZXPjaGp/xy0Yx8jhDqr9Qgx5yb9zE/PvBKwGIuxLwCn/5xYgbHXcVeEw+Q2b624q/cds8K+4OsEiTnc7ZyppvQIDAQAB",
+   "name": "Web Server Notifier",
+   "page_action": {
+      "popup": "popup.html"
+   },
+   "permissions": [ "http://*/*", "https://*/*", "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.4.6"
+}

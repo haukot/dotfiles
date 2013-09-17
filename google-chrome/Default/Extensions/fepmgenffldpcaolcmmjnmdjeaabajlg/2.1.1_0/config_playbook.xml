@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns=" http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="1.0.1.0">
+
+  <name>OrganizeMe!</name>
+  <description>OrganizeMe! is your favorite Springpad-Client for the BlackBerry PlayBook!</description>
+  <rim:orientation mode="auto"/>
+		
+  <rim:category name="apps"/>	
+
+  <rim:permissions>
+  	<rim:permit>read_device_identifying_information</rim:permit> 
+  	<rim:permit>access_shared</rim:permit> 
+  </rim:permissions>
+
+  <author>Sven Ziegler</author>
+
+  <icon src="images/64r2ws.png"/>
+
+  <content src="index.html"/>
+
+  <feature id="blackberry.ui.dialog"/>
+  <feature id="blackberry.io.file" />
+  <feature id="blackberry.io.dir" required="true"/>
+  <feature id="blackberry.utils" />
+  <feature id="blackberry.system" required="true" version="1.0.0.0"/>
+  <feature id="blackberry.app" required="true" version="1.0.0.0"/>
+  <feature id="blackberry.invoke" />
+  <feature id="blackberry.app.event" required="true" version="1.0.0.0"/>
+  <feature id="blackberry.system.locale" />
+  <feature id="blackberry.identity" />
+  <feature id="webworks.io.fileTransfer"/>
+  <feature id="blackberry.clipboard" />
+  <feature id="blackberry.devbar.dialog" /> 
+  
+  
+  <!-- Expose access to all URIs, including the file and http protocols -->
+  <access uri="*" subdomains="true" />
+
+  <rim:loadingScreen backgroundColor="#000000" 
+  					 foregroundImage="images/256r2.png">
+	  <rim:transitionEffect type="fadeIn" direction="left" />
+  </rim:loadingScreen>
+  
+  <!--<rim:permissions>
+	<rim:permit>access_shared</rim:permit>
+  </rim:permissions>-->
+
+</widget>

@@ -58,6 +58,7 @@
 ;;; End Requires
 ;;; ---------------------------------------------------------------------------
 
+(windmove-default-keybindings) 
 (evil-mode 1)
 
 (setq custom-file "~/.emacs.d/custom.el")

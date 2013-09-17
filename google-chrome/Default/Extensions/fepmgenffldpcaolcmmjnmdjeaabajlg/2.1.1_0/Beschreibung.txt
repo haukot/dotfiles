@@ -1,0 +1,48 @@
+BESCHREIBUNG:
+
+Unter anderem Neu in 2.0:
+- Objekte auf offline anlegen und bearbeiten!
+
+Kennen Sie die Momente in denen Sie sich wünschen ihre persönlichen Notizen und Gedankenstützen sofort parat zu haben, jederzeit wo sie auch sind? Mit OrganizeMe! bieten wir Ihnen eine Möglichkeit alles was Ihnen wichtig ist in einer unkomplizierten App übersichtlich sortiert und schnell abrufbar auf Ihrem webOS-Gerät verfügbar zu haben!
+
+OrganizeMe! stellt Ihnen eine Oberfläche zur Verfügung mit der Sie mühelos Notizen, Lesezeichen für ihren Browser, ToDo-Listen, Rezepte, Einkaufslisten und weiteres Wissenswertes organisieren können.
+
+OrganizeMe! ist somit im Alltag, Beruf und Studium der ideale Begleiter! Stöbern Sie jederzeit und überall in Ihren Lieblings-Rezepten und fügen Sie die benötigten Zutaten zum Nachkochen einfach per Klick auf Ihren elektronischen Einkaufszettel hinzu. 
+
+ToDo-Listen und Notizen räumen zudem mit jeglichen Anfällen von Vergesslichkeit auf, auch im größten Stress ist OrganizeMe! ihr verlässlicher Helfer.
+
+Features (Auszug):
+- Zahlreiche verschiedene Objekttypen (Notizen, Lesezeichen, Rezepte, Listen, ...)
+- Möglichkeit verschiedene Notizbücher anzulegen
+- Umfangreiche Filtermöglichkeiten und Volltext-Suche
+- Ihnen stehen alle Daten auch offline zur Verfügung!
+
+Kennen Sie Springpad, Evernote oder Google Note? Haben Sie vielleicht schon bei einem der Dienste wichtige Daten und Notizen abgelegt? Dann importieren Sie diese in OrganizeMe!
+OrganizeMe! setzt zum Betrieb einen kostenlosen Account bei Springpad voraus. Bestehende Daten aus Evernote und Google Note können mit Hilfe von kostenlosen Online-Tools importiert werden. Die Links bekommen Sie in der App!
+
+DESCRIPTION:
+
+Excerpt of the changelog:
+- Create and edit data in offline mode!
+
+Do you know these moments where you wish to have your notes and reminders on hand immediately, wherever you are? With OrganizeMe! we offer you the oppertunity to gather everything that is important to you neatly arranged and sorted in an incomplex app for your webOS-gadget with instant availability!
+
+OrganizeMe! offers you a surface with which you effortless manage and organize your notes, browser bookmarks, todo-lists, recipes, shopping lists and many more things to know without even being dependent on an internet connection.
+
+OrganizeMe! is not only helpful at your work, it is a viable tool for everyones daily routines. Browse your favorite recipes anytime anywhere and add the ingredients by one simple click to your own electronic shopping list. MeOrg is also available on your webOS-cellphone, so you can just take your generated shopping list with you to the supermarket. While adding and tagging elements as done makes shopping relaxing and fast, you do not have to worry anymore about losing your shopping-list or forgetting to buy an ingredient.
+
+Todo-lists and reminders help with forgetfulness, even in moments of high stress MeOrg is your helpful companion to get everything done. OrganizeMe! Get organized!
+
+Features (abstraction):
+- Many different object types (notes, bookmarks, recipes, lists, ...)
+- Possibility to create different notebooks
+- Extensive filters and full context search on all elements (highlighting results corresponding to search term)
+- All data is available offline
+
+Do you know Springpad, Evernote or Google Note? Do you have important data created already with one of these services? Just import it to OrganizeMe!
+For using OrganizeMe! a free Springpad account is required. Exisiting data from Evernote and Google Note can be imported via a free online tool without problems. The required links are provided inside the app.
+
+
+
+
+

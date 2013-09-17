@@ -1,0 +1,12 @@
+enyo.depends(
+     "source/enyo-utils/Platform.js",
+     "dashboard-window/",
+     "source/enyo-utils/",
+     "source/libs/",
+     "source/utils/",
+     "source/edit/",
+     "source/",
+     "source/types/",
+     "css/",
+     "noWindow/Launch.js"
+ );

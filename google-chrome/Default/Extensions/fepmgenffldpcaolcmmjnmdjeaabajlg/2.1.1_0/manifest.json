@@ -1,0 +1,21 @@
+{
+   "app": {
+      "launch": {
+         "local_path": "index_chrome.html"
+      }
+   },
+   "content_security_policy": "script-src 'self' https://springpad.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "images/110.png",
+      "16": "images/16.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2hEqVDP3c1ULp3JSN7/W4hPEUsFMw4rLRu7M39BalloiuPtI0mjapkA7eMBiPKPnR7c7s5wQmyPbRvBHmKMQYV6GMxoCphykNYE9hszk1UYVJyA8T2Wyt+k6sNywaoyvvEWgrggoUFQ7j/bG1agaXf+zO3PCpv6D1ztNG6zkq6wIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "offline_enabled": true,
+   "permissions": [ "unlimitedStorage", "fileBrowserHandler", "\u003Call_urls\u003E" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.1.1"
+}

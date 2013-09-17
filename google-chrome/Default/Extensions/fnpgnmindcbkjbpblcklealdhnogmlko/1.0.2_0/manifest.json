@@ -1,0 +1,20 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "js": [ "web_technology_notifier.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Displays the Web technology of the current page.",
+   "icons": {
+      "128": "web_technology_notifier-128x128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDALCJU0w/2JNGQM7hecNQAzLGozG1BhVcEG3BIp48aX+CEIPvlc+WH+5Ku0Xd/dc2fPbyAYA5flYU7wl1776XrGrKghPD377ZX/UrLDCElIRh3kc2RkI2lFfA4EVwv66Ty8vVHGA8h1lCQe43l6p1EKfVUvNBjv2JBSekEWvY/PQIDAQAB",
+   "name": "Web Technology Notifier",
+   "page_action": {
+      "popup": "popup.html"
+   },
+   "permissions": [ "http://*/*", "https://*/*", "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}

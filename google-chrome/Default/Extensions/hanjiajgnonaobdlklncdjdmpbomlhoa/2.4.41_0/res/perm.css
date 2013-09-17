@@ -1,0 +1,20 @@
+﻿#profilePhoto {max-height:800px !important;height:auto !important;overflow:hidden}
+#calendarex{position:relative;left:-10pt}
+.fl_l[style*="width:21px;height:21px;"]{float:right;margin-right:7px;margin-top:-21px;}
+.people_table img,.people_table .name {max-width: 50px !important;} 
+.msaudio{float: left; clear: left; padding: 1px 9px; height: 17px;}
+.msaudioinfo{float: left; position: relative;margin-top: 1px;color: #777;}
+.iatwall{float:none}
+/*.audio:nth-child(1){padding-top:10px}TODO*/
+/*.downloadbtn img{visibility: hidden;opacity: 0.4;}*/
+.audio.over .downloadbtn img{visibility: visible;}
+/*.audio.over .downloadbtn img:hover{opacity: 1;}*/
+.audio.current .msaudioinfo{color:#CCC}
+/*.audio.lyricsfix{height:auto!important}*/
+/*.audio {height: 45px;}
+.page_preview_audio_wrap .audio {height: auto!important;}*/
+.audio .actdown a{padding:0!important;width:16px!important}
+.audio .actdown{margin: 6px 6px 6px 0;padding: 4px;float:right;visibility: hidden;opacity: 0.4;}
+.audio .actdownwrap{width: 16px;position: relative;cursor: pointer;overflow: hidden;}
+.downloadbtn img{width:16px;height:16px}
+.im_status_online{background:lime!important;}

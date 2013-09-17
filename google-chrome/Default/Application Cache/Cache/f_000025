@@ -1,0 +1,416 @@
+
+<div id="page_album" data-bg="white">
+	<div class="bg-gray" id="naboo_album" data-template="naboo/album" style="display:block">
+		<div id="naboo_album_head" class="naboo_head">
+			<div class="naboo_album_head_cover block_cover">
+				<div class="cover">
+					<span id="flagNewAlbum" class="icn_new sprite_naboo"></span>
+					<img id="naboo_album_image" class="img_main" width="200" height="200"/>
+					<span>
+						<a href="" id="naboo_album_image_large" class="icn_zoom sprite_naboo" onclick=""></a>
+					</span>
+				</div>
+				<div class="naboo_album_label label">
+					<dl>
+						<dt></dt>
+					</dl>
+				</div>
+			</div>
+			<div class="naboo_album_head_infos head_content">
+				<h1 id="naboo_album_title" class="heading-1" ></h1>
+				<div class="clearfix"></div>
+				<div id="naboo_album_artist" class="head_informations">
+					<a id="naboo_album_artist_modele" href="" data-id="" onclick="loadBox('artist/' + $(this).attr('data-id')); return false;"></a>
+					<span id="naboo_album_head_style" class="ts_fff"></span>
+					<p id="naboo_album_contributor_modele" class="head_classical_informations"></p>
+				</div>
+				<div class="clearfix"></div>
+				<div id="naboo_album_chronic" class="quote">
+					<!-- Simple Chronique -->
+					<div class="naboo_album_chronic_content" id="naboo_album_chronic_content_result">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="naboo_album_chronic_content_text o_hidden" style="vertical-align:middle;"></td>
+								<td class="naboo_album_chronic_content_logo o_hidden" style="width:100px;vertical-align:middle;text-align:right"></td>
+							</tr>
+						</table>
+					</div>
+					<!--/ Simple Chronique -->
+
+					<!-- Multi Chronique -->
+					<div class="naboo_album_chronic_content" id="naboo_album_chronic_content_select">
+						<ul class="naboo_album_chronic_content_list">
+							<li class="select">
+								<span class="select_chronicle">
+									Следите за хроникой:								</span>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<!--/ Multi Chronique -->
+				</div>
+
+				<!-- options -->
+				<ul class="naboo_head_buttons_options">
+					<li id="naboo_album_favorite">
+						<a id="naboo_album_favorite_link" href="javascript:void(0)" class="btn">
+							<i class="icon icon-star"></i>
+							<span class="label"></span>
+						</a>
+					</li>
+					<li id="naboo_album_share" class="card">
+						<a href="javascript:void(0)" class="btn">
+							<i class="icon icon-share-grey"></i> Поделиться						</a>
+					</li>
+					<li id="naboo_album_download" class="card">
+						<a href="javascript:void(0)" class="btn">
+							<i class="icon icon-cart-grey"></i> Купить						</a>
+					</li>
+				</ul>
+				<!--/ options -->
+
+			</div>
+			<div class="clearfix"></div>
+			<div id="naboo_album_chronicals"></div>
+		</div>
+
+		<div class="naboo_album_content">
+			<div id="naboo_album_duration">
+				<span class="naboo_album_tracks_time ts_fff" style="">
+					Общая длительность:					<span></span>
+				</span>
+			</div>
+			<div id="naboo_album_tracks" class="wrapper"></div>
+			<div class="naboo_album_video">
+				<ul id="naboo_album_video_list" class="naboo_video_list">
+					<li class="naboo_video block_cover" style="display:none">
+						<div class="naboo_video_picture cover cov-play-128">
+							<a class="evt-click" href="">
+								<img src="http://cdn-files.deezer.com/img/global/button-play-v00200922.png" class="big_play" width="80" height="80" />
+								<img src="" class="img_main" width="128" height="98"/>
+							</a>
+							<img class="shadow" src="http://cdn-files.deezer.com/img/naboo/ombre-130-v00200922.png" width="100%" height="10px"/>
+						</div>
+						<div class="naboo_video_title label">
+							<dl>
+								<dt class="text-ellipsis">
+									<a class="evt-click" href=""></a>
+								</dt>
+							</dl>
+						</div>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+		<div id="naboo_album_second">
+			<div class="tabbable">
+	<ul class="nav-tabs">
+					<li id="tab_review_link" class="active" >
+				<a href="javascript:void(0)" data-type="review" onclick="loadTab($(this).attr('data-type')); return false;">
+					Комментарии											<span class="badge badge-info" style="display: none;"></span>
+									</a>
+			</li>
+					<li id="tab_related_link" class="" >
+				<a href="javascript:void(0)" data-type="related" onclick="loadTab($(this).attr('data-type')); return false;">
+					Похожие исполнители									</a>
+			</li>
+					<li id="tab_discography_link" class="" >
+				<a href="javascript:void(0)" data-type="discography" onclick="loadTab($(this).attr('data-type')); return false;">
+					Дискография									</a>
+			</li>
+					<li id="tab_chronicles_link" class="" >
+				<a href="javascript:void(0)" data-type="chronicles" onclick="loadTab($(this).attr('data-type')); return false;">
+					Обзор									</a>
+			</li>
+			</ul>
+	<div class="tabs-content">
+					<div id="tab_review_content" class="tab-pane active">
+				
+<div class="review">
+	<div id="naboo_comment_new" class="hide">
+		<div class="post">
+			<form class="form">
+
+				
+<span class="thumbnail">
+
+	
+	<span class="picture">
+
+		
+		<img alt="" src="http://cdn-images.deezer.com/images/user/34x34-000000-80-0-0.jpg">
+
+		
+		
+		
+		
+	</span>
+
+	
+</span>
+				<span class="comment">
+					<textarea class="input-block" name="new_comment" id="new_comment" onKeyDown="review.limitComment(10,250);" onKeyUp="review.limitComment(10,250);"></textarea>
+					<button id="btn-submit-comment" class="pull-right btn" type="submit" onclick="review.postComment(); review.limitComment(10,250); return false;">
+						Опубликовать					</button>
+					<span class="message-limit pull-right">
+						<span class="nb" data-max="250">250</span>
+						осталось символов					</span>
+					<span class="share">
+						<span class="label">
+							ПОДЕЛИТЬСЯ НА:						</span>
+													<a id="fb_perms_comment" class="social social-small social-facebook" href="http://www.facebook.com/deezer" onClick="review.facebook_share($(this)); return false;">
+								<i class="social-icon"></i>
+							</a>
+													<a id="tw_perms_comment" class="social social-small social-twitter" href="http://twitter.com/Deezer" onClick="review.twitter_share($(this)); return false;">
+								<i class="social-icon"></i>
+							</a>
+											</span>
+				</span>
+			</form>
+		</div>
+	</div>
+	<div id="naboo_comment_new_not_logged" class="hide">
+		<div class="signup">
+			Чтобы оставить комментарий, пожалуйста, <a class="link-primary" href="javascript:void(0)" onclick="modal.open('/ru/login.php'); return false;"><strong>войти</strong></a> или <a class="link-primary" href="javascript:void(0)" onclick="modal.open('/ru/register.php'); return false;"><strong>вписать</strong></a>.		</div>
+	</div>
+			<div class="list">
+							<div id="naboo_comment_" class="comment" data-id="">
+
+					
+<span class="thumbnail">
+
+	
+	<span class="picture">
+
+		<a class="evt-click" href="/profile/">
+		<img alt="" src="http://cdn-images.deezer.com/images/user/34x34-000000-80-0-0.jpg">
+
+		
+		
+		
+					</a>
+		
+	</span>
+
+	
+</span>
+					<div class="message">
+						<div class="caption">
+							<span class="time timestamp" data-timestamp=""></span>
+							<span class="author">
+															</span>
+						</div>
+						<div class="text">
+													</div>
+						<div class="vote">
+							<a id="like_" href="javascript:void(0)" class="like " onclick="review.ranking('like', $(this).closest('.comment').attr('data-id')); return false;" data-hovercard="/ajax/hovercard/page.php?card=unlogged&action=%D0%9A%D0%B0%D0%BA%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" title="Проголосовать за" style="display:inline-block">
+								<i class="icon icon-up-grey"></i>
+							</a>
+							<a id="dislike_" href="javascript:void(0)" class="dislike " onclick="review.ranking('dislike', $(this).closest('.comment').attr('data-id')); return false;" data-hovercard="/ajax/hovercard/page.php?card=unlogged&action=%D0%9A%D0%B0%D0%BA%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" title="Проголосовать против" style="display:inline-block">
+								<i class="icon icon-down-grey"></i>
+							</a>
+							<button class="delete btn btn-small" onclick="review.deleteComment($(this), $(this).closest('.comment').attr('data-id')); return false;" style="display:none;" type="button">
+								<i class="icon icon-trash-grey"></i>
+								Удалить мой комментарий							</button>
+						</div>
+						<a class="abuse" href="javascript:void(0)" onclick="review.flag($(this), $(this).closest('.comment').attr('data-id')); return false;">
+							Сообщить о нарушении						</a>
+					</div>
+				</div>
+					</div>
+		<!-- /section: list -->
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	if (facebook.commentEnable()) {
+		$('#fb_perms_comment').addClass('active');
+	} else {
+		$('#fb_perms_comment').removeClass('active');
+	}
+
+	if (twitter.commentEnable()) {
+		$('#tw_perms_comment').addClass('active');
+	} else {
+		$('#tw_perms_comment').removeClass('active');
+	}
+
+	if (USER.USER_ID == 0) {
+
+		$("#tab_review_content .like").attr('onClick', "modal.open('/" + SETTING_LANG + "/login.php')");
+		$("#tab_review_content .dislike").attr('onClick', "modal.open('/" + SETTING_LANG + "/login.php')");
+
+		$('#naboo_comment_new').hide();
+		$('#naboo_comment_new_not_logged').show();
+
+	} else{
+
+		$('#naboo_comment_new').show();
+		$('#naboo_comment_new_not_logged').hide();
+
+		$('#tab_review_content .like').tipsy({gravity: 's', space : 10});
+		$('#tab_review_content .dislike').tipsy({gravity: 's', space : 10});
+	}
+
+	});
+</script>			</div>
+					<div id="tab_related_content" class="tab-pane ">
+				<div class="wrapper">
+		<div class="naboo_related_list">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="naboo_related" id="naboo_default_related" style="display:none">
+			<tr>
+				<td class="naboo_related_artist_cover">
+					<div class="block_cover naboo_related_picture">
+						<div class="cover">
+							<a href="javascript:void(0)">
+								<img class="img_main" src="http://cdn-images.deezer.com/images/artist//85x85-000000-80-0-0.jpg" width="85" height="85" />
+							</a>
+							<img class="shadow" src="http://cdn-files.deezer.com/img/naboo/ombre-130-v00200922.png" width="100%" height="10"/>
+						</div>
+					</div>
+				</td>
+				<td class="naboo_related_content" style="vertical-align:top;width:100%;height:87px;">
+					<div class="naboo_fan_content_relative" style="position:relative;height:87px;">
+						<strong class="naboo_related_name">
+													</strong>
+						<div style="clear:left;"></div>
+						<span class="naboo_related_infos"></span>
+						<span class="naboo_related_fans"></span>
+						<ul class="naboo_related_links"  style="position:absolute;bottom:-4px;">
+							<li class="naboo_related_link_smart" style="display:none">
+								<a href="javascript:void(0)" class="link_play" onclick="loadBox('radio/artist-'); return false;">
+									<span class="icn_play sprite_naboo"></span>Радиостанции								</a>
+							</li>
+							<li class="naboo_related_artist">
+								<a href="javascript:void(0)">
+									<span class="icn_favorite sprite_naboo"></span>
+									<span class="label"></span>
+								</a>
+							</li>
+							<li class="card" >
+								<a href="javascript:void(0)">
+									<span class="icon icon-share-grey mr_7"></span> Поделиться								</a>
+							</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+				</div>
+		<div id="naboo_related_empty" style="display:none">
+		<span class="naboo_empty">Похожих исполнителей не найдено.</span>
+	</div>
+</div>			</div>
+					<div id="tab_discography_content" class="tab-pane ">
+				<div class="wrapper">
+	<div id="naboo_discography_disable_catalog" class="alert alert-info" style="display:none">
+		В соответствии с требованиями правообладателей часть или вся дискография этого исполнителя были изъяты из открытого доступа. Deezer делает все возможное для исправления данной ситуации.	</div>
+	
+		<div class="display_mode">
+			<a href="javascript:void(0)" id="naboo_discography_display_mode_small" onclick="discography.switchModele('small'); return false;" class="display_block sprite_naboo"></a>
+			<a href="javascript:void(0)" id="naboo_discography_display_mode_big" onclick="discography.switchModele('big'); return false;" class="display_line sprite_naboo"></a>
+			<div class="clearfix"></div>
+		</div>
+		<div id="modele_type" class="naboo_discography_album_type" style="display:none"></div>
+		<div class="clearfix"></div>
+		<div class="naboo_discography_list relative">
+					<div class="naboo_discography_album" id="naboo_discography_default_album" style="display:none">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="naboo_discography_album_cover" style="vertical-align:top;">
+							<div class="naboo_discography_album_image block_cover">
+								<div class="cover">
+																		<span class="icn_new sprite_naboo" style="display:none;"></span>
+									<a href="/ru/album/0" onclick="loadBox('album/0'); return false;">
+										<img class="img_main" src="http://cdn-images.deezer.com/images/cover//120x120-000000-80-0-0.jpg" width="120px"height="120px">
+									</a>
+									<img class="shadow" src="http://cdn-files.deezer.com/img/naboo/ombre-130-v00200922.png" width="100%" height="10"/>
+								</div>
+								<div class="label">
+									<dl>
+										<dt>
+																					</dt>
+										<dd>
+																					</dd>
+									</dl>
+								</div>
+							</div>
+						</td>
+						<td style="vertical-align:top;">
+							<h1 class="naboo_discography_album_title">
+								<a href="/ru/album/0" onclick="loadBox('album/0');  return false;" ></a>							</h1>
+							<ul class="naboo_discography_album_options naboo_head_options">
+								<li class="naboo_discography_album_listen" style="padding-left:0;">
+									<a href="javascript:void(0)" onclick="discography.play($(this).attr('data-value')); return false;" data-value="">
+										<span class="icn_play sprite_naboo"></span>Слушать									</a>
+								</li>
+								<li class="naboo_album_discography_favorite">
+									<a href="javascript:void(0)" data-art-name="" data-alb-title="" data-id="0" id="naboo_album_discography_favorite_0">
+										<span class="icn_favorite sprite_naboo"></span>
+										<span class="label"></span>
+									</a>
+								</li>
+								<li class="naboo_discography_album_buy"
+									>
+									<a href="javascript:void(0)">
+										<span class="icn_download sprite_naboo"></span>Купить									</a>
+								</li>
+								<li class="naboo_discography_album_share" >
+									<a href="javascript:void(0)" onclick="sharebox.load(1, ''); return false;">
+										<span class="icn_share-16 icn_16 floatl mr_7"></span>Поделиться									</a>
+								</li>
+							</ul>
+
+							<div class="clearfix"></div>
+							<div id="naboo_discography_album_tracks_0" class="naboo_discography_album_tracks">
+
+														</div>
+														<div class="naboo_discography_album_tracks_all">
+																<div class="clearfix"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+				</div>
+		<div class="naboo_discography_list_mosaic" style="display:none">
+			<div id="naboo_discography_album_type_default" class="naboo_discography_album_type" style="display:none"></div>
+			<div id="naboo_cover_default" class="block_cover" style="display:none">
+				<div class="cover">
+					<a>
+						<img src="http://cdn-files.deezer.com/img/global/button-play-v00200922.png" class="big_play" width="80px" height="80px" />
+						<img id="naboo_playlist_image" class="img_main" width="200" height="200" />
+					</a>
+					<img class="shadow" src="http://cdn-files.deezer.com/img/naboo/ombre-130-v00200922.png" width="100%" height="10px" />
+				</div>
+				<div class="label">
+					<dl>
+						<dt></dt>
+						<dd></dd>
+					</dl>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+			</div>
+					<div id="tab_chronicles_content" class="tab-pane ">
+				<table id="tab_chronicles_content" class="table-chronic tab_chronicles_content">
+	<tr>
+		<td class="column-chronic-logo">
+			<div class="naboo_album_chronicles_providers"></div>
+		</td>
+		<td class="column-chronic-logo">
+			<div class="naboo_album_chronicles_texts"></div>
+		</td>
+	</tr>
+</table>			</div>
+			</div>
+</div>		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+{
+     "id": "com.sven-ziegler.meorg",
+     "appWorldId": "107264",
+     "uiRevision": 2,
+     "noWindow" : true,
+     "version": "2.1.1",
+     "vendor": "Sven Ziegler",
+     "vendorurl" : "http://sven-ziegler.com",
+     "vendortwitter": "@svzi",
+     "vendormail": "meorg@sven-ziegler.com",
+     "type": "web",
+     "main": "index.html",
+     "title": "OrganizeMe!",
+     "icon" : "images/64r2ws.png",
+     "splashicon": "images/256r2.png",
+     "copyright": "&copy; 2012 Sven Ziegler",
+     "keywords" : ["MeOrg", "Springpad", "Organize", "Myself", "Evernote", "Google Note"]
+} 

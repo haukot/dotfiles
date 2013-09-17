@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+   <title>Install Maps and Enyo</title>
+   <meta name="viewport" content="height=device-height" />
+   <script src="/usr/palm/frameworks/mojo/mojo.js" type="text/javascript" x-mojo-version="1" />
+</head>
+<body>
+   <div style="padding: 5px">
+      Attention: This application requires an updated version of the system software which is not available on your phone. To install this updated software, you must install the updated Maps app by tapping the below button (will open the App Catalog):
+   </div>
+   <div class="palm-button" onclick="installEnyo()">Install</div>
+   <script>
+      window.onload = function() {
+         PalmSystem.stageReady(); // required for page to load
+      };
+      function installEnyo() {
+         window.location = "http://developer.palm.com/appredirect/?packageid=com.palm.app.maps";
+      }
+   </script>
+</body>
+</html>

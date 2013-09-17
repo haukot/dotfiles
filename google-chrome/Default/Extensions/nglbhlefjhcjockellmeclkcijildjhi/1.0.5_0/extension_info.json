@@ -1,0 +1,39 @@
+{
+  "kango_version": "1.0.0 final", 
+  "content_scripts": [
+    "lingualeo/js/config.js", 
+    "lingualeo/js/content_utils.js", 
+    "lingualeo/js/content.js", 
+    "lingualeo/js/content_notification.js", 
+    "lingualeo/js/content_dialogs.js"
+  ], 
+  "description": "A leading language learning platform that makes learning fun - www.LinguaLeo.com.", 
+  "default_locale": "en", 
+  "creator": "LinguaLeo", 
+  "settings": {
+    "port": 1001
+  }, 
+  "background_scripts": [
+    "lingualeo/js/server.js", 
+    "lingualeo/js/config.js", 
+    "lingualeo/js/ext.js", 
+    "lingualeo/js/options.js", 
+    "lingualeo/js/contextmenu.js", 
+    "lingualeo/js/lingualeo_init.js"
+  ], 
+  "homepage_url": "http://lingualeo.com/", 
+  "version": "1.0.5", 
+  "options_page": "options.html", 
+  "browser_button": {
+    "caption": "LinguaLeo", 
+    "tooltipText": "LinguaLeo", 
+    "icon": "icons/button.png"
+  }, 
+  "id": "{0E243E70-1FC3-4894-B5BE-E7A557ED595B}", 
+  "locales": [
+    "en", 
+    "pt", 
+    "ru"
+  ], 
+  "name": "LinguaLeo"
+}

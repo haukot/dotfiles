@@ -1,0 +1,54 @@
+{
+   "domain_not_found": {
+      "description": "",
+      "message": "It was not possible to not find the given domain."
+   },
+   "extension_default_title": {
+      "description": "The default title of the extension",
+      "message": "HTTP Headers"
+   },
+   "extension_description": {
+      "description": "The description of the extension",
+      "message": "Google Chrome extension that lets you quickly view HTTP Response Headers of a URL."
+   },
+   "extension_name": {
+      "description": "The name of the extension",
+      "message": "HTTP Headers"
+   },
+   "headline": {
+      "description": "The first headline of the extension",
+      "message": "HTTP Headers"
+   },
+   "http_request_status": {
+      "description": "",
+      "message": "HTTP request status"
+   },
+   "name": {
+      "description": "",
+      "message": "Name"
+   },
+   "network_error": {
+      "description": "",
+      "message": "It's not possible to get the requested response headers because of a network error."
+   },
+   "tabs": {
+      "description": "",
+      "message": "Tabs"
+   },
+   "url": {
+      "description": "",
+      "message": "URL"
+   },
+   "url_example": {
+      "description": "",
+      "message": "http://www.google.com"
+   },
+   "url_not_valid": {
+      "description": "",
+      "message": "The URL is not valid and cannot be loaded."
+   },
+   "value": {
+      "description": "",
+      "message": "Value"
+   }
+}

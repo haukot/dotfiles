@@ -1,0 +1,47 @@
+.checkbox_container {
+	cursor: pointer;
+}
+
+.checkbox_container table {
+	width: 100%;
+	z-index: 0;
+}
+
+.checkbox_container table td {
+	vertical-align: middle;
+}
+
+.checkbox_container table td.checkbox {
+	width: 20px;
+	padding: 2px 0px 0px;
+}
+
+.checkbox_container table td.checkbox_label {
+	padding: 0px 0px 0px 3px;
+	text-align: left;
+}
+
+
+.checkbox_container table td .checkbox_on, .checkbox_container table td .checkbox_off, .checkbox_container table td .checkbox_on_over, .checkbox_container table td .checkbox_off_over {
+	height: 14px;
+	width: 15px;
+	overflow: hidden;
+	background: transparent url(/res/check.gif) 0px 0px no-repeat;
+}
+
+.checkbox_container table td .checkbox_on {
+	background-position: 0px -14px;
+}
+
+.checkbox_container table td .checkbox_off_over {
+	background-position: 0px -28px;
+}
+
+.checkbox_container table td .checkbox_on_over {
+	background-position: 0px -42px;
+}
+
+.checkbox_container table td .checkbox_null {
+	background-position: -100px -100px;
+	cursor: auto;
+}

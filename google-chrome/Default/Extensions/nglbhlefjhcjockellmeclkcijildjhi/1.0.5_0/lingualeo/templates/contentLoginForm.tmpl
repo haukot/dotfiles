@@ -1,0 +1,27 @@
+<form id="ll_login_form" action="" method="post" class="leo-auth-form" autocomplete="off">
+    <h4>{loginDialogCapt}</h4>
+    <fieldset>
+        <dl>
+            <dt>
+                <label for="ll_login_username">{loginDialogEmail}</label>
+                <a href="#" class="leo-auth-new-account" id="ll_login_create_acc">{loginDialogSignUp}</a>
+            </dt>
+            <dd>
+                <input type="email" name="ll_login_username" id="ll_login_username" class="leo-auth-input" autocomplete="off"/>
+                <p class="leo-auth-form-error" id="ll_login_error_list_1"></p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <label for="ll_login_pass">{loginDialogPass}</label>
+                <a href="#" class="leo-auth-forgot-pass" id="ll_login_forgot_pass">{loginDialogForgot}</a>
+            </dt>
+            <dd>
+                <input type="password" name="ll_login_pass" id="ll_login_pass" class="leo-auth-input" autocomplete="off"/>
+            </dd>
+        </dl>
+        <input type="submit" name="ll_login_button" class="sign-in" id="ll_login_button" value="{loginDialogEnter}"/>
+        <i class="icon-paw"></i>
+        <a href="#" class="leo-auth-close" title="{dlgCloseHint}" id="ll_login_close"><i class="icon-close"></i></a>
+    </fieldset>
+</form>

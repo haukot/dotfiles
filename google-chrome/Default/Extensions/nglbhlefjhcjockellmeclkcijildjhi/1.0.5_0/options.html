@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+	<title>LinguaLeo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <link href="lingualeo/css/options.css" rel="stylesheet" type="text/css"/>
+	<!--[if lt IE 10]><link rel="stylesheet" type="text/css" href="lingualeo/css/options_ie.css" /><![endif]-->
+</head>
+<body>
+
+<div id="container">
+    <div class="clouds-1" id="clouds1"></div>
+    <div class="clouds-2" id="clouds2"></div>
+    <div class="light"></div>
+    <div class="sun" id="sun"></div>
+    <div class="forest" id="forest"></div>
+    <div class="tree" id="tree"></div>
+    <div id="containerInner">
+        <div id="version" i18n-innerHTML="optionsVersion" i18n-param1="$$version$$"></div>
+        <a href="http://lingualeo.com" id="logo" target="_blank" title="Go to LinguaLeo"><img src="lingualeo/images/logo.png" width="116" height="22" alt="LinguaLeo"/></a>
+        <div id="content">
+            <div id="contentInner">
+                <div class="tabs">
+                    <a href="#" class="selected" id="tabOptions" i18n-innerHTML="optionsTitle"></a>
+                    <a href="#changelog" id="tabChangelog" i18n-innerHTML="changelogTitle"></a>
+                    <div id="status" i18n-innerHTML="optionsSaved"></div>
+                </div>
+                <div class="clear"></div>
+                <div id="optionsContainer" class="hidden">
+                    <form id="optionsForm" action="" method="post">
+                        <div class="row">
+                            <input type="checkbox" id="cbUseDblClick" name="useDblClick"/>
+                            <label for="cbUseDblClick" i18n-innerHTML="optionsUseDblClick"></label>
+                            <div class="sub-row">
+                                <input type="checkbox" id="cbDblClickWithCtrl" name="dblClickWithCtrl"/>
+                                <label for="cbDblClickWithCtrl" i18n-innerHTML="optionsDblClickWithCtrl" i18n-param1="$$command_key$$"></label>
+                            </div>
+                            <div class="sub-row">
+                                <input type="checkbox" id="cbDblClickWithAlt" name="dblClickWithAlt"/>
+                                <label for="cbDblClickWithAlt" i18n-innerHTML="optionsDblClickWithAlt"></label>
+                            </div>
+                        </div>
+                        <!-- div class="row">
+                            <input type="checkbox" id="cbShowDictIcons" name="showDictIcons"/>
+                            <label for="cbShowDictIcons" i18n-innerHTML="optionsShowDictIcons"></label>
+                        </div -->
+                        <div class="row">
+                            <input type="checkbox" id="cbShowPicture" name="showPicture"/>
+                            <label for="cbShowPicture" i18n-innerHTML="optionsShowPicture"></label>
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" id="cbShowContext" name="showContext"/>
+                            <label for="cbShowContext" i18n-innerHTML="optionsShowContext"></label>
+                            <div class="sub-row">
+                                <input type="checkbox" id="cbAutoTranslateContext" name="autoTranslateContext"/>
+                                <label for="cbAutoTranslateContext" i18n-innerHTML="optionsAutoTranslateContext"></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" id="cbAutoplaySound" name="autoplaySound"/>
+                            <label for="cbAutoplaySound" i18n-innerHTML="optionsAutoplaySound"></label>
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" id="cbShowUntrainedWordsCount" name="showUntrainedWordsCount"/>
+                            <label for="cbShowUntrainedWordsCount" i18n-innerHTML="optionsShowUntrainedWordsCount"></label>
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" id="cbShowBrowserPopups" name="showBrowserPopups"/>
+                            <label for="cbShowBrowserPopups" i18n-innerHTML="optionsShowBrowserPopups"></label>
+							<div class="sub-row">
+                                <input type="checkbox" id="cbShowSiteNotifications" name="showSiteNotifications"/>
+                                <label for="cbShowSiteNotifications" i18n-innerHTML="optionsShowSiteNotifications"></label>
+                            </div>
+                        </div>
+                    </form>                    
+                </div>
+
+                <div id="changelogContainer" class="hidden">
+                    <div class="how-to-use">
+                        <h2 i18n-innerHTML="changelogHowToUse" i18n-param1="$$version$$"></h2>
+                        <span i18n-innerHTML="changelogUseOptions1"></span>
+						<span id="howToUseAll" i18n-innerHTML="changelogUseOptions2_all"></span>
+						<span id="howToUseOpera" i18n-innerHTML="changelogUseOptions2_opera"></span>
+						<span i18n-innerHTML="changelogUseOptions3"></span>
+                        <!-- div class="info" i18n-innerHTML="changelogInfo"></div -->
+                        <span i18n-innerHTML="changelogSeeOptions"></span>
+                    </div>
+					<div class="about">
+                        <img src="lingualeo/images/leo-big.png" width="99" height="144" class="leo" />
+                        <div class="desc">
+                            <h2 i18n-innerHTML="optionsAbout1"></h2>
+                            <span i18n-innerHTML="optionsAbout2"></span><br/><br/>
+                            <span i18n-innerHTML="optionsAbout3"></span><br/><br/>
+                            <a href="http://www.lingualeo.com/?utm_source=ll_plagin&utm_medium=referral&utm_campaign=welcomescreen" class="btn" i18n-innerHTML="optionsTryButton"></a><br/>
+                        </div>
+                    </div>
+                    <ul class="links">
+                        <li><a href="http://lingualeo.com/about/forwhom?utm_source=ll_plagin&utm_medium=referral&utm_campaign=forwhom" i18n-innerHTML="optionsForWhom"></a></li>
+                        <li><a href="http://lingualeo.com/faq?utm_source=ll_plagin&utm_medium=referral&utm_campaign=faq" i18n-innerHTML="optionsFAQ"></a></li>
+                        <li><a href="http://lingualeo.com/about/psecrets?utm_source=ll_plagin&utm_medium=referral&utm_campaign=psecrets" i18n-innerHTML="optionsSecrets"></a></li>
+                        <li><a href="http://lingualeo.com/feedback?utm_source=ll_plagin&utm_medium=referral&utm_campaign=feedback" i18n-innerHTML="optionsFeedback"></a></li>
+                    </ul>
+                    <!-- span i18n-innerHTML="changelogSupport"></span -->
+                    <!--
+                    <h3 i18n-innerHTML="changelogVersion" i18n-param1="0.2.3"></h3>
+                    <ul class="changes-list">
+                        <li>Добавлена поддержка комбинации Ctrl+L для перевода выделенного текста.</li>
+                        <li>К переводимому слову показывается транскрипция.</li>
+                        <li>Поддержка beta-версий Google Chrome (на данный момент это v18).</li>
+                        <li>Исправлены ошибки.</li>
+                    </ul>
+                    <h3 i18n-innerHTML="changelogVersion" i18n-param1="0.2.1"></h3>
+                    <ul class="changes-list">
+                        <li>Добавлена поддержка клавиши ⌘Command для Mac OS.</li>
+                        <li>Добавлена возможность работы на локальных страницах, открытых с диска.</li>
+                        <li>Исправлена ошибка перевода для контекста.</li>
+                        <li>Исправлена ошибка с переводом на Abbyy Lingvo.</li>
+                    </ul>
+                    <h3 i18n-innerHTML="changelogVersion" i18n-param1="0.2"></h3>
+                    <ul class="changes-list">
+                        <li>Горячие клавиши для показа диалога двойным кликом (Ctrl, Alt).</li>
+                        <li>Показ контекста для переводимого слова или фразы.</li>
+                        <li>Перевод контекста (Google Translate): вручную или автоматически.</li>
+                        <li>Настройка авто-произношения переводимого текста.</li>
+                        <li>Возможность отключения счётчика нетренированных слов.</li>
+                        <li>Возможность отключения всплывающих сообщений.</li>
+                        <li>Более информативные сообщения об ошибках.</li>
+                        <li>Работа расширения внутри iframe'ов.</li>
+                        <li>Обновлённая страница настроек.</li>
+                        <li>Появление списка изменений.</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <!-- <div id="contentFade"></div> -->
+        </div>
+    </div>
+    <div id="footer">
+        <div class="hint" i18n-innerHTML="optionsUseMouseWheel"></div>
+        <div class="copy">
+            © 2009–2012 <a href="http://lingualeo.com" target="_blank">LinguaLeo.com</a><br/>
+            <span class="trade" i18n-innerHTML="optionsTrademark"></span>
+        </div>
+    </div>
+</div>
+
+<script src="kango-ui/kango_api.js"></script>
+<script src="lingualeo/js/content_utils.js"></script>
+<script src="lingualeo/js/options.js"></script>
+<script src="lingualeo/js/options_page.js"></script>
+<script src="lingualeo/js/page.js"></script>
+
+</body>
+</html>

@@ -88,22 +88,6 @@
       evil-visual-state-tag   (propertize "V" 'face '((:background "grey80" :foreground "black")))
       evil-operator-state-tag (propertize "O" 'face '((:background "purple"))))
 
-
-(add-hook 'evil-normal-state-entry-hook 
-	(lambda ()
-		(keyboard-translate ?t ?j)
-		(keyboard-translate ?T ?J)
-		(keyboard-translate ?j ?t)
-		(keyboard-translate ?J ?T)
-	))
-
-(add-hook 'evil-normal-state-exit-hook 
-	(lambda ()		
-		(keyboard-translate ?j ?j)
-		(keyboard-translate ?J ?J)
-		(keyboard-translate ?t ?t)
-		(keyboard-translate ?T ?T)
-	))
 ;;;; -----------------	---------------------------------------------------------
 ;;;; End Evil Mode
 ;;;; --------------------------------------------------------------------------

@@ -1,0 +1,19 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://get.youripfast.com/?s=free-app"
+      },
+      "urls": [ "*://*.youripfast.com/", "*://*.findyouripfast.com/" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmq7oQ8z6GPbs00Jw7SnnYNfwTD5ChfGeM9knXlttlHUn2DtO735d0Nrs54CplV4ybNJr37JfCkNbXR7PeWkxYM6R4RZClp/mIMSSOeF2dFJ07FXpPvlrr2GOIj9f1TOEaYCPwYwCMo77QUxD3/MWriDDNJlYi91IXuwehYlQPZQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "7.1",
+   "web_accessible_resources": [ "icon_128.png" ]
+}

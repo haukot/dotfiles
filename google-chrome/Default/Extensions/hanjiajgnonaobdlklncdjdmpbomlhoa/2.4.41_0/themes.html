@@ -1,0 +1,23 @@
+<html><head><title>Выбор темы</title>
+<link rel="stylesheet" href="/res/theme.css" type="text/css" />
+<script type="text/javascript" src="/res/theme.js"></script>
+</head><body>
+<div align="center">
+<div id="update">В новой версии расширения необходимо указывать CSS-код вместо ссылки на CSS файл<br>
+До обновления была указана ссылка <a href="#" id="uplink"></a>,<br>
+перейдите по ней и скопируйте текст в поле ввода ниже</div>
+
+<!--div>Темы оформления можно выбрать из готового набора,<br>
+для этого необходимо перейти в альбом <a href="http://vkontakte.ru/album-9397418_120557494">Стили оформления</a>,<br>
+выбрать понравившуюся тему и нажать по ссылке "Установить тему"</div-->
+<br>
+<div>Можно установить любую тему оформления, для этого необходимо<br>
+скопировать код стиля в поле ввода ниже и нажать кнопку "Сохранить"</div><br>
+
+<div>Галлерея тем оформления временно не доступна, темы можно взять <a href="http://musicsig.darkbyte.ru/css/" target="blank">тут</a></div><br>
+<div><textarea id="style"></textarea><br>
+<input type="button" id="btSaveTheme" onclick="saveTheme()" value="Сохранить">
+<input type="button" id="btClearTheme" onclick="clearTheme()" value="Удалить">
+</div><br>
+</div>
+</body></html>
