@@ -1,9 +1,0 @@
-enyo.depends(
-     "jquery-1.6.4.js",
-     "oauth.js",
-     "sha1.js",
-     "ScrollBarsScroller.js",
-     "VirtualList.js",
-     "Textarea.js",
-     "Upload.js"
- ); 

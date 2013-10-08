@@ -33,16 +33,19 @@
     (package-install p)))
 
 
+
+
+(add-to-list 'load-path "~/.emacs.d/haukot/powerline")
+(add-to-list 'load-path "~/.emacs.d/haukot/configs/")
+
 ;;; ---------------------------------------------------------------------------
 ;;; End Packages
 ;;; ---------------------------------------------------------------------------
 
-(defun my-skype ()
-  (interactive)
-  (add-to-list 'load-path (concat "packages" "emacs-skype"))
-  (require 'skype)
-  (setq skype--my-user-handle "haudvd@gmail.com")
-  (global-set-key (kbd "M-9") 'skype--anything-command))
+(setq load-path (cons  "/usr/lib/erlang/lib/tools-2.6.11/emacs"
+    load-path))
+(setq erlang-root-dir "/usr/lib/erlang")
+(setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Requires
@@ -51,15 +54,20 @@
 (require 'rainbow-delimiters)
 (require 'flymake)
 (require 'evil)
+(require 'powerline)
+(require 'powerline-evil-theme)
 ;(require 'erlang-flymake)
+(require 'erlang-start)
 
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Requires
 ;;; ---------------------------------------------------------------------------
 
+
 (windmove-default-keybindings) 
 (evil-mode 1)
+(powerline-evil-theme)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)

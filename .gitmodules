@@ -1,3 +1,6 @@
 [submodule ".emacs.d/haukot/themes"]
 	path = .emacs.d/haukot/themes
 	url = git@github.com:Khelek/monokai-emacs.git
+[submodule ".emacs.d/haukot/powerline"]
+	path = .emacs.d/haukot/powerline
+	url = https://github.com/milkypostman/powerline
