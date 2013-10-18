@@ -5,6 +5,7 @@
 	st = status -sb
 	ci = commit
 	co = checkout
+	cim = commit -m
 [color]
    	ui = auto
 [color "branch"]
