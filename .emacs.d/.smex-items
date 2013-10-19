@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ rainbow-mode
  load-theme
  package-list-packages
  w3
  server-start
  customize-group
  erc-speedbar-browser
- speedbar
 )
 
 ;; ----- smex-data -----
@@ -23,7 +23,7 @@
  (sr-speedbar-open . 1)
  (sr-speedbar-toggle . 1)
  (customize-group . 1)
- (rainbow-mode . 7)
+ (rainbow-mode . 9)
  (rainbow-delimiters-mode . 4)
  (web-mode . 2)
  (server-start . 2)
