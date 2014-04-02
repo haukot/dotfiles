@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- rainbow-mode
- load-theme
+ revert-buffer-with-coding-system
+ paredit-mode
  package-list-packages
- w3
- server-start
- customize-group
- erc-speedbar-browser
+ show-paren-mode
+ shell
+ eshell
+ load-theme
 )
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 16)
+ (package-list-packages . 22)
  (speedbar-add-localized-speedbar-support . 1)
  (speedbar-frame-mode . 2)
  (speedbar . 2)
@@ -20,14 +20,34 @@
  (load-theme . 13)
  (my-speedbar-no-separate-frame . 1)
  (erc-speedbar-browser . 1)
- (sr-speedbar-open . 1)
+ (sr-speedbar-open . 2)
  (sr-speedbar-toggle . 1)
  (customize-group . 1)
  (rainbow-mode . 9)
  (rainbow-delimiters-mode . 4)
  (web-mode . 2)
  (server-start . 2)
- (erlang-mode . 1)
- (evil-mode . 1)
+ (erlang-mode . 3)
+ (evil-mode . 3)
  (w3 . 1)
+ (yari . 5)
+ (yari-helm . 1)
+ (yari-anything . 1)
+ (rsense-complete . 6)
+ (rsense-version . 1)
+ (rsense-service-start . 1)
+ (ac-complete-rsense . 1)
+ (lisp-mode . 1)
+ (sql-mode . 2)
+ (sql-db2 . 1)
+ (sql-mode-menu . 1)
+ (eshell . 2)
+ (shell . 1)
+ (erlang-shell . 1)
+ (erlang-font-lock-level-4 . 3)
+ (erlang-font-lock-level-3 . 2)
+ (show-paren-mode . 3)
+ (paredit-mode . 5)
+ (disable-paredit-mode . 1)
+ (revert-buffer-with-coding-system . 1)
 )

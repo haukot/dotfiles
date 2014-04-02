@@ -6,7 +6,7 @@
 
   (when (string-equal system-type "gnu/linux")
     (if (find-font (font-spec :name "Nitti Light"))
-        (set-default-font "Nitti Light-12")
+        (set-default-font "Nitti Light-14")
       (set-default-font "Monospace-11")))
 
 
@@ -48,7 +48,8 @@
 ;;; Key Bindings
 ;;; ---------------------------------------------------------------------------
 
-(global-set-key (kbd "<f6>") 'sr-speedbar-toggle)
+
+(global-set-key [f6] 'nav-toggle)
 (global-set-key (kbd "<f7>") 'fullscreen-mode-fullscreen-toggle)
 
 ;;; ---------------------------------------------------------------------------
@@ -78,6 +79,8 @@
 ;; Rainbow Delimiters ((()))
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; YARI (rails)
+(define-key 'help-command "R" 'yari)
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Emacs Mode's

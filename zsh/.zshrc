@@ -40,10 +40,18 @@ ZSH_THEME="khelek"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails rebar git_flow)
+plugins=(git rails rebar git_flow brew hub-completion github)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PGPORT=5432
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+
+alias gst='git st'
+alias proc='ps ax | grep'
+alias 'gmo-master'='git merge origin/master'
+alias 'gmo-develop'='git merge origin/develop'

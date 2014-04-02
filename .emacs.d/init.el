@@ -34,9 +34,14 @@
 
 
 
-
+(add-to-list 'load-path "~/.emacs.d/packages/emacs-nav-49")
 (add-to-list 'load-path "~/.emacs.d/haukot/powerline")
 (add-to-list 'load-path "~/.emacs.d/haukot/configs/")
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+;;;https://github.com/eschulte/yasnippets-rails not in dotfiles
+
+(setq rsense-home "/usr/lib/rsense-0.3")
+(add-to-list 'load-path (concat rsense-home "/etc"))
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Packages
@@ -57,13 +62,16 @@
 (require 'powerline)
 (require 'powerline-evil-theme)
 ;(require 'erlang-flymake)
-(require 'erlang-start)
-
+(require 'erlang)
+(require 'yasnippet)
+(require 'rsense)
+(require 'nav)
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Requires
 ;;; ---------------------------------------------------------------------------
 
+(nav-disable-overeager-window-splitting)
 
 (windmove-default-keybindings) 
 (evil-mode 1)
@@ -73,5 +81,9 @@
 (load custom-file)
 ;(server-start)
 
+(yas-global-mode 1)
+
+(rainbow-delimiters-mode 1)
+(global-rainbow-delimiters-mode)
 
 (put 'upcase-region 'disabled nil)
