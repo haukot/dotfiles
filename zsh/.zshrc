@@ -40,18 +40,24 @@ ZSH_THEME="khelek"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails rebar git_flow brew hub-completion github)
+plugins=(git rails rebar git_flow_avh brew hub-completion github)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PGPORT=5432
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 alias gst='git st'
+alias gp='git put'
+alias gcod='git checkout develop'
 alias proc='ps ax | grep'
 alias 'gmo-master'='git merge origin/master'
 alias 'gmo-develop'='git merge origin/develop'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[ -s "/home/haukot/.nvm/nvm.sh" ] && . "/home/haukot/.nvm/nvm.sh" # This loads nvm
