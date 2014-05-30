@@ -71,6 +71,7 @@
 ;;; End Requires
 ;;; ---------------------------------------------------------------------------
 
+
 (nav-disable-overeager-window-splitting)
 
 (windmove-default-keybindings) 
@@ -87,3 +88,5 @@
 (global-rainbow-delimiters-mode)
 
 (put 'upcase-region 'disabled nil)
+
+

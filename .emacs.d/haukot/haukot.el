@@ -19,7 +19,7 @@
                         '(show-paren-delay 0)
                         '(frame-title-format '("%f - " user-real-login-name "@" system-name)))
   (add-to-list 'custom-theme-load-path "~/.emacs.d/haukot/themes/")
-  (load-theme 'monokai t)
+  ;(load-theme 'solarized-dark t)
   (fset 'yes-or-no-p 'y-or-n-p)
   (column-number-mode t)
   (global-linum-mode t)
@@ -49,7 +49,7 @@
 ;;; ---------------------------------------------------------------------------
 
 
-(global-set-key [f6] 'nav-toggle)
+(global-set-key [f6] 'sr-speedbar-toggle)
 (global-set-key (kbd "<f7>") 'fullscreen-mode-fullscreen-toggle)
 
 ;;; ---------------------------------------------------------------------------
@@ -73,7 +73,9 @@
 
 ;; Erlang mode
 (add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode)) 
+(add-to-list 'auto-mode-alist '("\\.escript?$" . erlang-mode)) 
 (add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
+
 ;(add-hook 'erlang-mode-hook 'prog-mode)
 
 ;; Rainbow Delimiters ((()))
