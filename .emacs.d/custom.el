@@ -21,7 +21,8 @@
  '(sr-speedbar-right-side nil)
  '(sr-speedbar-width-console 30)
  '(sr-speedbar-width-x 30)
- '(tab-width 2))
+ '(tab-width 2)
+ '(wakatime-cli-path "/home/haukot/temp/wakatime/wakatime-cli.py"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

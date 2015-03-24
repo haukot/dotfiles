@@ -1,0 +1,1 @@
+("~/programming/projects/simcase_bigdata/collector/" "~/programming/projects/hosting_project/" "~/programming/projects/simcase_bigdata/rails/" "~/dotfiles/" "~/ffpanel/")

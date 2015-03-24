@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/05/15 19:01:51 /home/haukot/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/02/26 20:35:21 /home/haukot/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -16,5 +16,5 @@
   ("stat" "\\stat")
   ("gid-integer" 0)
   ("readlink" "\\readlink"))
- (["scpc" nil "ws" nil]
+ (["scp" nil "http" nil nil]
   nil))

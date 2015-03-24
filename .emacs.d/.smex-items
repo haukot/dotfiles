@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- load-theme
  package-list-packages
- byte-compile-file
- compile
- set-variable
- font-lock-mode
+ html-mode
+ image-mode
+ load-theme
  paredit-mode
+ javascript-mode
+ yari
 )
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 24)
+ (package-list-packages . 32)
  (speedbar-add-localized-speedbar-support . 1)
  (speedbar-frame-mode . 2)
  (speedbar . 2)
@@ -27,8 +27,8 @@
  (rainbow-delimiters-mode . 6)
  (web-mode . 2)
  (server-start . 2)
- (erlang-mode . 5)
- (evil-mode . 3)
+ (erlang-mode . 7)
+ (evil-mode . 5)
  (w3 . 1)
  (yari . 5)
  (yari-helm . 1)
@@ -47,7 +47,7 @@
  (erlang-font-lock-level-4 . 3)
  (erlang-font-lock-level-3 . 3)
  (show-paren-mode . 3)
- (paredit-mode . 7)
+ (paredit-mode . 21)
  (disable-paredit-mode . 1)
  (revert-buffer-with-coding-system . 1)
  (color-theme-solarized . 1)
@@ -57,4 +57,22 @@
  (erlang-font-lock-level-0 . 1)
  (compile . 1)
  (byte-compile-file . 1)
+ (whitespace-mode . 3)
+ (emmet-mode . 3)
+ (zencoding-mode . 2)
+ (delete-trailing-whitespace . 1)
+ (javascript-mode . 11)
+ (html-mode . 19)
+ (emerge-files . 1)
+ (jsx-mode . 2)
+ (sass-mode . 1)
+ (kill-line . 1)
+ (image-mode . 11)
+ (autopair-global-mode . 1)
+ (projectile-mode . 1)
+ (projectile-global-mode . 1)
+ (helm-M-x . 2)
+ (helm-mode . 1)
+ (helm-buffers-list . 3)
+ (helm-mini . 1)
 )

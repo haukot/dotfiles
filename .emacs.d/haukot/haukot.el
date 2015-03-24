@@ -6,7 +6,7 @@
 
   (when (string-equal system-type "gnu/linux")
     (if (find-font (font-spec :name "Nitti Light"))
-        (set-default-font "Nitti Light-14")
+        (set-default-font "Nitti Light-12")
       (set-default-font "Monospace-11")))
 
 
@@ -32,6 +32,7 @@
   ;; Show Paren mode
   (show-paren-mode t)
   (set-face-attribute 'show-paren-match-face nil :underline t)
+  (set-face-attribute 'default nil :height 120)
   ;; ---------------
   (tool-bar-mode t)
   (which-function-mode t)
@@ -63,17 +64,17 @@
 ;;; Emacs Mode's
 ;;; ---------------------------------------------------------------------------
 
-;; CSS and Rainbow modes 
-;(defun all-css-modes() (css-mode) (rainbow-mode)) 
+;; CSS and Rainbow modes
+;(defun all-css-modes() (css-mode) (rainbow-mode))
 
-;; Load both major and minor modes in one call based on file type 
-;(add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes)) 
+;; Load both major and minor modes in one call based on file type
+;(add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
 ;(add-hook 'sass-mode-hook 'rainbow-mode)
 
 
 ;; Erlang mode
-(add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode)) 
-(add-to-list 'auto-mode-alist '("\\.escript?$" . erlang-mode)) 
+(add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.escript?$" . erlang-mode))
 (add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
 
 ;(add-hook 'erlang-mode-hook 'prog-mode)
