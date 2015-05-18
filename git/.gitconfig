@@ -6,10 +6,12 @@
 	ci = commit
 	co = checkout
 	cim = commit -m
+	ciq = commit -q
   ame = commit --amend
   graph = "log --all --graph --pretty=format:'%Cred%h%Creset%x09%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
   hist = log --all --graph --decorate=full --date-order --color
   dif = diff -C --stat -p
+  difc = diff -C --stat -p --cached
   put = push origin HEAD
   up = pull --rebase
   feat = flow feature
