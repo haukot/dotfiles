@@ -6,7 +6,6 @@
 	ci = commit
 	co = checkout
 	cim = commit -m
-	ciq = commit -q
   ame = commit --amend
   graph = "log --all --graph --pretty=format:'%Cred%h%Creset%x09%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
   hist = log --all --graph --decorate=full --date-order --color
@@ -33,3 +32,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[push]
+	default = simple
