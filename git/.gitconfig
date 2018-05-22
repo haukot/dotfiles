@@ -13,6 +13,8 @@
   difc = diff -C --stat -p --cached
   put = push origin HEAD
   up = pull --rebase
+  mr = lab merge-request
+
   feat = flow feature
   hot = flow hotfix
   rels = flow release
@@ -34,3 +36,7 @@
 	untracked = cyan
 [push]
 	default = simple
+[credential]
+	helper = store
+[core]
+	excludesfile = /home/haukot/.gitignore_global
