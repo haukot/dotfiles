@@ -7,5 +7,30 @@
 
 # ec ~/.bashrc
 
-emacsclient -n -c "$@" || emacs --daemon
+# You can also pass it multiple files, it will open them all.  Unbury-buffer
+# will cycle through those files in order
+
+# The compliment to the script is et, which opens emacs in the terminal
+# attached to a daemon
+
+# If you want to execute elisp, pass in -e whatever.
+# You may also want to stop the output from returning to the terminal, like
+# ec -e "(message \"Hello\")" > /dev/null
+
+# emacsclient options for reference
+# -a "" starts emacs daemon and reattaches
+# -c creates a new frame
+# -n returns control back to the terminal
+# -e eval the script
+
+# Number of current visible frames,
+# Emacs daemon always has a visible frame called F1
+visible_frames() {
+  emacsclient -a "" -e '(length (visible-frame-list))'
+}
+
+# try switching to the frame incase it is just minimized
+# will start a server if not running
+test "$(visible_frames)" -eq "1"
+
 emacsclient -n -c "$@"
