@@ -7,4 +7,5 @@
 
 # ec ~/.bashrc
 
+emacsclient -n -c "$@" || emacs --daemon
 emacsclient -n -c "$@"
