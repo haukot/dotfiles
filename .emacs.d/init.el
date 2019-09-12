@@ -57,7 +57,9 @@
 											projectile
 											projectile-rails
 											rainbow-delimiters
-											rainbow-mode)
+											rainbow-mode
+                                            tide
+                                            )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -115,6 +117,7 @@
 (load-user-file "evil_macroses.el")
 (load-user-file "utils.el")
 (load-user-file "erlang.el")
+(load-user-file "go.el")
 (load-user-file "eshell.el")
 
 (require 'alchemist)

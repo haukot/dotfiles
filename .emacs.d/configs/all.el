@@ -24,6 +24,9 @@
 ;;; End Requires
 ;;; ---------------------------------------------------------------------------
 
+;; (when (version<= "26.0.50" emacs-version )
+;;   (global-display-line-numbers-mode))
+
 
 ;;; emmet-mode
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
@@ -80,6 +83,7 @@
 
 
 ;;(global-whitespace-mode)
+(setq-default fill-column 90)
 
 ;;; rainbow-delimiters
 
