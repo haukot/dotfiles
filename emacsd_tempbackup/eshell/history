@@ -1,7 +1,0 @@
-erl
-sudo -s
-sudo -s
-erl &
-ps -ax | grep erl
-sudo kill 4213
-sudo su
