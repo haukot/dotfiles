@@ -3,10 +3,15 @@
 ;;; ---------------------------------------------------------------------------
 
 (require 'package)
+;; (add-to-list 'package-archives
+;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+;; (add-to-list 'package-archives
+;;              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
+             '("melpa-n" . "https://melpa.org/packages/") t)
 
 (setq package-enable-at-startup nil)
 (package-initialize)
@@ -35,6 +40,7 @@
 											highlight-indentation ;; why
 											jump ;; why
 											less-css-mode
+                                            ag
 											sass-mode
 											jsx-mode
 											yasnippet
@@ -74,7 +80,6 @@
 ;	)
 
 
-
 (add-to-list 'load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/packages/emacs-nav-49")
 (add-to-list 'load-path "~/.emacs.d/haukot/powerline")
@@ -112,6 +117,8 @@
 (load-user-file "starter_kit.el")
 (load-user-file "helm.el")
 (load-user-file "projectile.el")
+(load-user-file "evil.el")
+(load-user-file "vterm.el")
 (load-user-file "wakatime.el")
 (load-user-file "js.el")
 (load-user-file "evil_macroses.el")
@@ -121,3 +128,21 @@
 (load-user-file "eshell.el")
 
 (require 'alchemist)
+
+
+;; (set-face-background 'fringe "grey")
+(fringe-mode '(8 . 0))
+(window-divider-mode)
+(set-face-attribute 'fringe nil :background "white")
+(set-face-attribute 'window-divider nil :background "white" :foreground "white")
+(set-face-attribute 'window-divider-last-pixel nil :background "white" :foreground "white")
+;; (set-window-margins nil nil)
+
+;;;; To change powerline(bottom bar) color
+;; (set-face-background 'mode-line "white")
+;; (set-face-background 'mode-line-inactive "white")
+(set-face-foreground 'powerline-active1 "grey40")
+(set-face-background 'powerline-active1 "grey40")
+;; (set-face-background 'powerline-active2 "white")
+
+(menu-bar-mode -1)

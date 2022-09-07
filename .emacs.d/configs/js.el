@@ -4,6 +4,8 @@
 ;; turn on flychecking globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
+
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
@@ -41,14 +43,12 @@
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
   (company-mode +1))
-
-(flycheck-add-next-checker 'javascript-eslint 'javascript-tide 'append)
-
-
-(add-hook 'js2-mode-hook (lambda ()
-  (setup-tide-mode)))
-(add-hook 'js-mode-hook (lambda ()
-  (setup-tide-mode)))
+;;;; Disabled auto tide-mode because it eats memory
+;; (flycheck-add-next-checker 'javascript-eslint 'javascript-tide 'append)
+;; (add-hook 'js2-mode-hook (lambda ()
+;;   (setup-tide-mode)))
+;; (add-hook 'js-mode-hook (lambda ()
+;;   (setup-tide-mode)))
 
 (evil-define-key 'normal tide-mode-map
   "gt" 'tide-jump-to-definition
@@ -63,3 +63,9 @@
   (kbd "RET") 'tide-goto-reference
   ;; quit
   "q" 'quit-window)
+
+
+(add-to-list 'auto-mode-alist '("\\.vue$" . vue-mode))
+(add-hook 'mmm-mode-hook
+          (lambda ()
+            (set-face-background 'mmm-default-submode-face nil)))

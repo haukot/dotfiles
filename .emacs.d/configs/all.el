@@ -11,7 +11,10 @@
 
 (require 'flymake)
 (require 'flycheck) ;; http://www.flycheck.org/manual/latest/index.html
+
+(setq evil-want-keybinding nil) ;; for evil-collections
 (require 'evil)
+
 (require 'powerline)
 (require 'powerline-evil-theme)
 (require 'yasnippet)
@@ -19,6 +22,7 @@
 (require 'nav)
 ;;(require 'whitespace)
 (require 'emmet-mode)
+(require 'tide)
 
 ;;; ---------------------------------------------------------------------------
 ;;; End Requires
@@ -166,3 +170,6 @@
              (visual-line-mode)
              )
            )
+
+;; ruby no encoding string
+(setq ruby-insert-encoding-magic-comment nil)

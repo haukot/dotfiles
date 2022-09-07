@@ -1,7 +1,12 @@
 (require 'helm)
 (require 'helm-config)
+(ido-mode 0)
+(ido-mode nil)
 (helm-mode 1)
 (helm-mode nil)
+
+(setq helm-buffer-max-length 50)
+(setq helm-ag-insert-at-point 'symbol)
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
@@ -13,8 +18,8 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-(when (executable-find "curl")
-  (setq helm-google-suggest-use-curl-p t))
+;; (when (executable-find "curl")
+;;   (setq helm-google-suggest-use-curl-p t))
 
 
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -34,6 +39,7 @@
     (helm-maybe-exit-minibuffer)))
 (advice-add 'helm-execute-persistent-action :around #'fu/helm-find-files-navigate-forward)
 
+;;(define-key helm-find-files-map (kbd "/") 'helm-execute-persistent-action)
 (define-key helm-find-files-map (kbd "C-e") 'helm-execute-persistent-action)
 ; optimize backspase
 (defun fu/helm-find-files-navigate-back (orig-fun &rest args)

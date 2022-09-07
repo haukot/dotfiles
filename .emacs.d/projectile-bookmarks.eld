@@ -1,1 +1,0 @@
-("~/programming/projects/simcase_bigdata/js_source/" "~/programming/projects/simcase_bigdata/collector/" "~/programming/projects/simcase_bigdata/rails/" "~/programming/projects/simcase_bigdata/ansible/" "~/programming/projects/simcase_bigdata/ruby_workers/")
