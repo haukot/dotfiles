@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 7 1)
+	   [(1 8 0)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "7aadf4b9838ad83da9f4e6128aa9a450c66220ad"))])
+	     (:commit . "c210a75a2582bfd8e28f177747d3a9ec89fc2f3e"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -116,7 +116,7 @@
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
  (boxquote .
-	   [(2 2)
+	   [(2 3)
 	    ((cl-lib
 	      (0 5)))
 	    "Quote text with a semi-box." tar
@@ -124,7 +124,8 @@
 	     (:keywords "quoting")
 	     (:maintainer "Dave Pearson" . "davep@davep.org")
 	     (:authors
-	      ("Dave Pearson" . "davep@davep.org")))])
+	      ("Dave Pearson" . "davep@davep.org"))
+	     (:commit . "fe676396fa7e4372e01bf2c3d9a62e8d53615d46"))])
  (buttercup .
 	    [(1 26)
 	     ((emacs
@@ -786,7 +787,7 @@
 		  ("David Vazquez Pua" . "davazp@gmail.com"))
 		 (:commit . "fe8d7e2db5581cd0cb7a69563bc44f0669f76322"))])
  (gruvbox-theme .
-		[(1 30 0)
+		[(1 30 1)
 		 ((autothemer
 		   (0 2)))
 		 "A retro-groove colour theme for Emacs" tar
@@ -794,7 +795,7 @@
 		  (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
 		  (:authors
 		   ("Jason Milkins" . "jasonm23@gmail.com"))
-		  (:commit . "e9f8e6ee52727f6008c125b71a26c80cfa59c0af"))])
+		  (:commit . "3177b458dcbd5db6135a8d57fd5b765131e4da6a"))])
  (guru-mode .
 	    [(1 0)
 	     nil "Become an Emacs guru" tar
@@ -838,9 +839,9 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 7)
+       [(3 8 8)
 	((helm-core
-	  (3 8 7))
+	  (3 8 8))
 	 (popup
 	  (0 5 3)))
 	"Helm is an Emacs incremental and narrowing framework" tar
@@ -848,19 +849,19 @@
 	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:authors
 	  ("Thierry Volpiatto" . "thievol@posteo.net"))
-	 (:commit . "4ede199d5d1b7050486a0fdeecbbbf49fef31118"))])
+	 (:commit . "0a9a1e32cf130d181b26e23919402c8c25f41996"))])
  (helm-core .
-	    [(3 8 7)
+	    [(3 8 8)
 	     ((emacs
 	       (25 1))
 	      (async
-	       (1 9 4)))
+	       (1 9 7)))
 	     "Development files for Helm" tar
 	     ((:url . "https://emacs-helm.github.io/helm/")
 	      (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	      (:authors
 	       ("Thierry Volpiatto" . "thievol@posteo.net"))
-	      (:commit . "4ede199d5d1b7050486a0fdeecbbbf49fef31118"))])
+	      (:commit . "0a9a1e32cf130d181b26e23919402c8c25f41996"))])
  (highlight-parentheses .
 			[(2 1 1)
 			 ((emacs
@@ -1092,23 +1093,22 @@
 		   (:authors
 		    ("Christoph Paulik" . "cpaulik@gmail.com")))])
  (mentor .
-	 [(0 3 5)
+	 [(0 4)
 	  ((emacs
 	    (25 1))
 	   (xml-rpc
 	    (1 6 15))
 	   (seq
 	    (1 11))
-	   (cl-lib
-	    (0 5))
 	   (async
 	    (1 9 3)))
 	  "Frontend for the rTorrent bittorrent client" tar
-	  ((:keywords "comm" "processes" "bittorrent")
+	  ((:url . "https://github.com/skangas/mentor")
+	   (:keywords "comm" "processes" "bittorrent")
 	   (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
 	   (:authors
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
-	   (:url . "https://elpa.nongnu.org/nongnu/mentor.html"))])
+	   (:commit . "4ce024e17bf8ae079b2cd67af475b3e636c82be1"))])
  (moe-theme .
 	    [(1 0 2)
 	     nil "A colorful eye-candy theme. Moe, moe, kyun!" tar
@@ -1244,7 +1244,7 @@
 		 ("Bastian Bechtold")
 		 ("Christian Schwarzgruber")))])
  (org-mime .
-	   [(0 3 1)
+	   [(0 3 2)
 	    ((emacs
 	      (25 1)))
 	    "org html export for text/html MIME emails" tar
@@ -1253,7 +1253,7 @@
 	     (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 	     (:authors
 	      ("Eric Schulte"))
-	     (:commit . "cf96f585c68ad14751a3f73d937cbfcb890171b9"))])
+	     (:commit . "cc00afcf0291633324364c1c83bfe2833cfdc1bf"))])
  (org-present .
 	      [(0 1)
 	       ((org
@@ -1364,15 +1364,16 @@
 	      (:authors
 	       ("Andreas Politz" . "politza@fh-trier.de")))])
  (php-mode .
-	   [(1 24 0)
+	   [(1 24 1)
 	    ((emacs
 	      (25 2)))
 	    "Major mode for editing PHP code" tar
 	    ((:url . "https://github.com/emacs-php/php-mode")
+	     (:keywords "languages" "php")
 	     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
 	     (:authors
 	      ("Eric James Michael Ritz"))
-	     (:keywords "languages" "php"))])
+	     (:commit . "ae3b0b184e096b8bd916516ae7db908dbb27ec1e"))])
  (popon .
 	[(0 9)
 	 ((emacs
@@ -1616,7 +1617,7 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 0 7)
+	[(1 0 10)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
@@ -1625,7 +1626,18 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:authors
 	   ("Random User"))
-	  (:commit . "eefe94f308d7006a498b17fc9acf01790b793bcd"))])
+	  (:commit . "b10ab60a4e567a1fb7d7702d146ed7055b203113"))])
+ (sweeprolog .
+	     [(0 5 3)
+	      ((emacs
+		(28)))
+	      "Embedded SWI-Prolog" tar
+	      ((:url . "https://git.sr.ht/~eshel/sweep")
+	       (:keywords "prolog" "languages" "extensions")
+	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
+	       (:authors
+		("Eshel Yaron" . "me@eshelyaron.com"))
+	       (:commit . "f996c4dcbf6271d0bbdcccac35a4ff64106ce77a"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
@@ -1727,15 +1739,27 @@
 	    (:maintainer "Sergei Nosov <sergei.nosov [at] gmail.com>")
 	    (:authors
 	     ("Sergei Nosov <sergei.nosov [at] gmail.com>")))])
+ (treeview .
+	   [(1 1 1)
+	    ((emacs
+	      (24 4)))
+	    "A generic tree navigation library" tar
+	    ((:url . "https://github.com/tilmanrassy/emacs-treeview")
+	     (:keywords "lisp" "tools" "internal" "convenience")
+	     (:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
+	     (:authors
+	      ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
+	     (:commit . "b68f77bf102b289e7b0e97f767bb7ffff9a5835b"))])
  (tuareg .
-	 [(2 3 0)
-	  ((caml
-	    (3 12 0 1))
-	   (emacs
-	    (24 4)))
-	  "OCaml mode for Emacs." tar
+	 [(3 0 1)
+	  ((emacs
+	    (26 3))
+	   (caml
+	    (4 8)))
+	  "OCaml mode" tar
 	  ((:url . "https://github.com/ocaml/tuareg")
-	   (:maintainer "Albert Cohen" . "Albert.Cohen@inria.fr")
+	   (:keywords "ocaml" "languages")
+	   (:maintainer "Christophe Troestler" . "Christophe.Troestler@umons.ac.be")
 	   (:authors
 	    ("Albert Cohen" . "Albert.Cohen@inria.fr")
 	    ("Sam Steingold" . "sds@gnu.org")
@@ -1743,7 +1767,7 @@
 	    ("Till Varoquaux" . "till@pps.jussieu.fr")
 	    ("Sean McLaughlin" . "seanmcl@gmail.com")
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-	   (:keywords "ocaml" "languages"))])
+	   (:commit . "4d94293cc5a7bba6cd043e29968719ce597d65f5"))])
  (typescript-mode .
 		  [(0 4)
 		   ((emacs
@@ -1873,7 +1897,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 21 20220829140316)
+	       [(18 2 20221004113716)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1882,7 +1906,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "d3d11ab8224bc1472f848c04ce6b024d04762571"))])
+		 (:commit . "e7c77fa7337c92d12209007b77b5ad62aedea6b0"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar

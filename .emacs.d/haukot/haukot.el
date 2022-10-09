@@ -15,14 +15,12 @@
 
   (custom-set-variables '(echo-keystrokes 0.01)
 			'(inhibit-startup-screen t)
-			'(linum-format " %d ")
                         '(show-paren-delay 0)
                         '(frame-title-format '("%f - " user-real-login-name "@" system-name)))
   (add-to-list 'custom-theme-load-path "~/.emacs.d/haukot/themes/")
   ;(load-theme 'solarized-dark t)
   (fset 'yes-or-no-p 'y-or-n-p)
   (column-number-mode t)
-  (global-linum-mode t)
   (global-hl-line-mode t)
   (menu-bar-mode t)
   (scroll-bar-mode -1)
@@ -88,5 +86,3 @@
 ;;; ---------------------------------------------------------------------------
 ;;; End Emacs Mode's
 ;;; ---------------------------------------------------------------------------
-
-

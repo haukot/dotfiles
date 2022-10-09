@@ -132,7 +132,7 @@
 
 ;; (electric-pair-mode t)
 
-(global-linum-mode)
+(global-display-line-numbers-mode)
 
 ;; rename current open file
 (setq-default indent-tabs-mode nil)

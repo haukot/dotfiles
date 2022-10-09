@@ -1,3 +1,4 @@
+(require 'dired)
 (require 'helm)
 (require 'helm-config)
 (ido-mode 0)
@@ -7,6 +8,8 @@
 
 (setq helm-buffer-max-length 50)
 (setq helm-ag-insert-at-point 'symbol)
+;;(setq helm-buffer-details-flag nil)
+
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
