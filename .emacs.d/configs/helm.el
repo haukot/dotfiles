@@ -50,3 +50,8 @@
       (helm-find-files-up-one-level 1)
     (apply orig-fun args)))
 (advice-add 'helm-ff-delete-char-backward :around #'fu/helm-find-files-navigate-back)
+
+
+
+;; Эту строку я удалил в elpa в helm-buffers, т.к. с ней после долгой работы C-x b (helm-mini) начинал сильно лагать
+;; https://github.com/emacs-helm/helm/blob/9b13fc0e3112d17b2d6dca8e920630c68d064b55/helm-buffers.el#L445

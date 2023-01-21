@@ -65,6 +65,11 @@
 											rainbow-delimiters
 											rainbow-mode
                                             tide
+                                            ;; for copilot
+                                            dash
+                                            editorconfig
+                                            s
+                                            ;; end for copilot
                                             )
   "A list of packages to ensure are installed at launch.")
 
@@ -78,6 +83,35 @@
 ;       it? " package))
 ;	   (package-install package))))
 ;	)
+
+;; ;; NOTE: we disabled package.el.
+;; ;; because: "While it is technically possible to use both package.el and
+;; ;; straight.el at the same time, there is no real reason to, and it might
+;; ;; result in oddities like packages getting loaded more than once."
+;; ;;;;;;;;;
+;; ;; straight.el
+;; (setq straight-recipes-emacsmirror-use-mirror nil)
+;; (setq straight-recipes-gnu-elpa-use-mirror nil)
+;; (defvar bootstrap-version)
+;; (let ((bootstrap-file
+;;        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+;;       (bootstrap-version 6))
+;;   (unless (file-exists-p bootstrap-file)
+;;     (with-current-buffer
+;;         (url-retrieve-synchronously
+;;          "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+;;          'silent 'inhibit-cookies)
+;;       (goto-char (point-max))
+;;       (eval-print-last-sexp)))
+;;   (load bootstrap-file nil 'nomessage))
+
+;; ;;;;;;;;
+;; ;;;;;;;;
+
+;; ;; need https://github.com/radian-software/straight.el for this
+;; (use-package copilot
+;;   :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el"))
+;;   :ensure t)
 
 
 (add-to-list 'load-path "~/.emacs.d/elpa")
@@ -126,6 +160,7 @@
 (load-user-file "erlang.el")
 (load-user-file "go.el")
 (load-user-file "eshell.el")
+(load-user-file "copilot.el")
 
 (require 'alchemist)
 
