@@ -6,3 +6,5 @@
 ;; https://github.com/casouri/vundo, undo-fu, undo-fu-session - замены для undo-tree
 (global-undo-tree-mode)
 (evil-set-undo-system 'undo-tree)
+
+(define-key evil-normal-state-map "'" 'evil-goto-mark)

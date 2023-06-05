@@ -52,3 +52,32 @@
 
 ;; (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
 ;; (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+
+
+;; Disable in comments
+(defun my-in-comment-p ()
+  "Return t if the point is in a comment, nil otherwise."
+  (nth 4 (syntax-ppss)))
+(add-to-list 'copilot-disable-display-predicates #'my-in-comment-p)
+
+;; Cancel copilot overlay on C-g
+;; from https://robert.kra.hn/posts/2023-02-22-copilot-emacs-setup/#ctrl-g--cancel
+(defun rk/copilot-quit ()
+  "Run `copilot-clear-overlay' or `keyboard-quit'. If copilot is
+cleared, make sure the overlay doesn't come back too soon."
+  (interactive)
+  (condition-case err
+      (when copilot--overlay
+        (lexical-let ((pre-copilot-disable-predicates copilot-disable-predicates))
+          (setq copilot-disable-predicates (list (lambda () t)))
+          (copilot-clear-overlay)
+          (run-with-idle-timer
+           1.0
+           nil
+           (lambda ()
+             (setq copilot-disable-predicates pre-copilot-disable-predicates)))))
+    (error handler)))
+(advice-add 'keyboard-quit :before #'rk/copilot-quit)
+
+(define-key global-map (kbd "C-f") nil) ;; was forward-char before
+(define-key copilot-mode-map (kbd "C-f") #'copilot-accept-completion-by-word)

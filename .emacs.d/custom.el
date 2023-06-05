@@ -15,7 +15,7 @@
  '(inhibit-startup-screen t)
  '(linum-format " %d ")
  '(package-selected-packages
-   '(s editorconfig dash zygospore evil-collection vterm evil-snipe evil-goggles evil projectile doom-modeline olivetti writeroom-mode coffee-mode vue-mode helm typescript-mode slim-mode tide xref-js2 flycheck-gometalinter yasnippet yaml-mode web-mode wakatime-mode tao-theme spacegray-theme smex sass-mode ruby-end rainbow-mode rainbow-delimiters projectile-rails php-mode multishell matlab-mode marmalade markdown-mode magit less-css-mode jump jsx-mode json-reformat json-mode js2-mode jade-mode highlight-indentation helm-projectile helm-ag go-mode fullscreen-mode flymake-shell flymake-ruby flymake-php flymake-haml flycheck-pos-tip flx-ido find-file-in-project evil-surround evil-paredit evil-matchit evil-commentary erlang emmet-mode autopair alchemist))
+   '(enh-ruby-mode s editorconfig dash zygospore evil-collection vterm evil-snipe evil-goggles evil projectile doom-modeline olivetti writeroom-mode coffee-mode vue-mode helm typescript-mode slim-mode tide xref-js2 flycheck-gometalinter yasnippet yaml-mode web-mode wakatime-mode tao-theme spacegray-theme smex sass-mode ruby-end rainbow-mode rainbow-delimiters projectile-rails php-mode multishell matlab-mode marmalade markdown-mode magit less-css-mode jump jsx-mode json-reformat json-mode js2-mode jade-mode highlight-indentation helm-projectile helm-ag go-mode fullscreen-mode flymake-shell flymake-ruby flymake-php flymake-haml flycheck-pos-tip flx-ido find-file-in-project evil-surround evil-paredit evil-matchit evil-commentary erlang emmet-mode autopair alchemist))
  '(ring-bell-function 'ignore)
  '(show-paren-delay 0)
  '(speedbar-default-position 'left)

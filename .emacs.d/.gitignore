@@ -6,3 +6,4 @@ tramp
 network-security.data
 session.*
 srecode-map.el
+saved_sessions

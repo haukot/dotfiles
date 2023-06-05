@@ -171,5 +171,5 @@
              )
            )
 
-;; ruby no encoding string
-(setq ruby-insert-encoding-magic-comment nil)
+;; vertical aligment for code
+(global-set-key (kbd "C-c =") 'align-regexp)

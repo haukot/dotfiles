@@ -161,6 +161,7 @@
 (load-user-file "go.el")
 (load-user-file "eshell.el")
 (load-user-file "copilot.el")
+(load-user-file "ruby.el")
 
 (require 'alchemist)
 
