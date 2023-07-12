@@ -173,3 +173,19 @@
 
 ;; vertical aligment for code
 (global-set-key (kbd "C-c =") 'align-regexp)
+
+
+
+;; dumb-jump mode, to go to definition (gd in evil)
+(add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+
+;; from https://github.com/jacktasia/dumb-jump/blob/90130b85fec948acb7c6f623d2c3982533955bf6/dumb-jump.el#L2109C1-L2114C13
+;; For enh-ruby-mode
+(defun my-dumb-jump-get-language-from-mode (orig-fun &rest args)
+  "Handle enh-ruby-mode as ruby."
+  (let ((mode (dumb-jump-get-mode-base-name)))
+    (if (string= mode "enh-ruby")
+        "ruby"
+      (apply orig-fun args))))
+(advice-add 'dumb-jump-get-language-from-mode
+            :around #'my-dumb-jump-get-language-from-mode)
