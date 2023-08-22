@@ -52,6 +52,9 @@
 (advice-add 'helm-ff-delete-char-backward :around #'fu/helm-find-files-navigate-back)
 
 
-
 ;; Эту строку я удалил в elpa в helm-buffers, т.к. с ней после долгой работы C-x b (helm-mini) начинал сильно лагать
 ;; https://github.com/emacs-helm/helm/blob/9b13fc0e3112d17b2d6dca8e920630c68d064b55/helm-buffers.el#L445
+
+(defun helm-buffers-sort-transformer@donot-sort (_ candidates _)
+  candidates)
+(advice-add 'helm-buffers-sort-transformer :around 'helm-buffers-sort-transformer@donot-sort)

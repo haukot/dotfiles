@@ -119,3 +119,31 @@
 (defun rspec--docker-default-wrapper (docker-command docker-container command)
   "Function for wrapping a command for execution inside a dockerized environment. "
   (format "%s %s 'sh -c \"%s\"'" docker-command docker-container command))
+
+
+;;; Keybindings
+(defun insert-content-line-above-cursor (content)
+  "Insert content on the line above the cursor"
+  (interactive)
+  (beginning-of-line)
+  (newline-and-indent)
+  (previous-line)
+  (insert content)
+  (indent-according-to-mode)
+  (newline-and-indent)
+  (save-buffer))
+
+(defun insert-binding-pry-above-cursor ()
+  "Insert 'binding.pry' on the line above the cursor in enh-ruby-mode."
+  (interactive)
+  (when (eq major-mode 'enh-ruby-mode)
+    (insert-content-line-above-cursor "binding.pry")))
+
+(defun insert-testthis-above-cursor ()
+  "Insert 'testthis' on the line above the cursor in enh-ruby-mode."
+  (interactive)
+  (when (eq major-mode 'enh-ruby-mode)
+    (insert-content-line-above-cursor "testthis")))
+
+(define-key enh-ruby-mode-map (kbd "<f5>") 'insert-binding-pry-above-cursor)
+(define-key enh-ruby-mode-map (kbd "<f6>") 'insert-testthis-above-cursor)
