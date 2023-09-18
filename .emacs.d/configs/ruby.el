@@ -145,5 +145,6 @@
   (when (eq major-mode 'enh-ruby-mode)
     (insert-content-line-above-cursor "testthis")))
 
-(define-key enh-ruby-mode-map (kbd "<f5>") 'insert-binding-pry-above-cursor)
-(define-key enh-ruby-mode-map (kbd "<f6>") 'insert-testthis-above-cursor)
+(with-eval-after-load 'evil
+  (define-key enh-ruby-mode-map (kbd "<f5>") 'insert-binding-pry-above-cursor)
+  (define-key enh-ruby-mode-map (kbd "<f6>") 'insert-testthis-above-cursor))
