@@ -1,0 +1,727 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Jun  5 16:58:33 2023
+;; Desktop file format version 208
+;; Emacs version 28.0.50
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (25725 45513 426279 913000) (desktop . "208") "haukot@haupc" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 6) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 0) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (height . 46) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (environment "_=/usr/bin/emacsclient" "LC_TIME=ru_RU.UTF-8" "rvm_only_path_flag=" "rvm_ruby_make_install=" "WYSCOUT_DEV_GROUP_ID=200" "SESSION_MANAGER=local/haupc:@/tmp/.ICE-unix/6611,unix/haupc:/tmp/.ICE-unix/6611" "rvm_proxy=" "rvm_gemstone_package_file=" "IRBRC=/home/haukot/.rvm/rubies/ruby-3.2.2/.irbrc" "rvm_gemstone_url=" "NVM_INC=/home/haukot/.nvm/versions/node/v16.19.0/include/node" "LC_IDENTIFICATION=ru_RU.UTF-8" "PATH=/home/haukot/Android/Sdk/tools:/home/haukot/Android/Sdk/platform-tools:/usr/local/pgsql/bin:/home/haukot/apps/anaconda/bin:/home/haukot/.linuxbrew/bin:/usr/local/cuda-7.5/bin:/home/haukot/.composer/vendor/bin:/home/haukot/anaconda3/condabin:/home/haukot/Android/Sdk/tools:/home/haukot/Android/Sdk/platform-tools:/home/haukot/.nvm/versions/node/v16.19.0/bin:/usr/local/pgsql/bin:/home/haukot/apps/anaconda/bin:/home/haukot/.linuxbrew/bin:/usr/local/cuda-7.5/bin:/home/haukot/.composer/vendor/bin:/home/haukot/.rvm/gems/ruby-3.2.2/bin:/home/haukot/.rvm/gems/ruby-3.2.2@global/bin:/home/haukot/.rvm/rubies/ruby-3.2.2/bin:/home/haukot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/haukot/.rvm/bin:/home/haukot/.rvm/bin:/usr/local/go/bin:/home/haukot/gopath/bin:/home/haukot/.rvm/bin:/home/haukot/temp/mahout/bin:/home/haukot/.local/bin/:/home/haukot/.fzf/bin:/home/haukot/.rvm/bin:/usr/local/go/bin:/home/haukot/gopath/bin:/home/haukot/.rvm/bin:/home/haukot/temp/mahout/bin:/home/haukot/.local/bin/" "LESS_TERMCAP_us=[04;38;5;146m" "XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg" "LESS_TERMCAP_ue=[0m" "MY_RUBY_HOME=/home/haukot/.rvm/rubies/ruby-3.2.2" "XAUTHORITY=/run/user/1000/gdm/Xauthority" "rvm_bin_flag=" "XDG_RUNTIME_DIR=/run/user/1000" "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" "LOGNAME=haukot" "GNOME_DESKTOP_SESSION_ID=this-is-deprecated" "rvm_ruby_mode=" "GDMSESSION=ubuntu" "LC_TELEPHONE=ru_RU.UTF-8" "MANPATH=/usr/local/pgsql/share/man:/home/haukot/.nvm/versions/node/v16.19.0/share/man:/usr/local/pgsql/share/man:" "SHLVL=3" "XDG_SEAT=seat0" "TMUX_PANE=%44" "NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist" "rvm_ruby_make=" "rvm_prefix=/home/haukot" "GNOME_TERMINAL_SERVICE=:1.90" "WYSCOUT_DEV_ACCESS_TOKEN=vlada" "GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1" "XDG_CURRENT_DESKTOP=ubuntu:GNOME" "blackbox=/home/haukot/programming/projects/blackbox_challenge" "NVM_BIN=/home/haukot/.nvm/versions/node/v16.19.0/bin" "rvm_alias_expanded=" "XMODIFIERS=@im=ibus" "QT_IM_MODULE=ibus" "rvm_hook=" "SHELL=/bin/zsh" "TERM=screen" "VTE_VERSION=5202" "WINDOWPATH=2" "VISUAL=vim" "rvm_path=/home/haukot/.rvm" "GTK_MODULES=gail:atk-bridge" "rvm_script_name=" "LC_NUMERIC=ru_RU.UTF-8" "LESS_TERMCAP_me=[0m" "LESS_TERMCAP_md=[01;38;5;74m" "SPARK_HOME=/home/haukot/temp/spark-1.1.0" "LC_ADDRESS=ru_RU.UTF-8" "LESS_TERMCAP_mb=[01;31m" "rvm_use_flag=" "GEM_PATH=/home/haukot/.rvm/gems/ruby-3.2.2:/home/haukot/.rvm/gems/ruby-3.2.2@global" "XDG_SESSION_DESKTOP=ubuntu" "rvm_silent_flag=" "_CE_CONDA=" "simcase=/home/haukot/programming/projects/simcase_bigdata" "PGDATA=/usr/local/pgsql/data" "XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop" "XDG_SESSION_TYPE=x11" "TMUX=/tmp/tmux-1000/default,9857,0" "QT_ACCESSIBILITY=1" "CUDA_HOME=/usr/local/cuda-7.5" "rvm_quiet_flag=" "SSH_AGENT_PID=7497" "rvm_ruby_bits=" "LC_CTYPE=en_US.UTF-8" "CONDA_PYTHON_EXE=/home/haukot/anaconda3/bin/python" "HOME=/home/haukot" "PWD=/home/haukot/.local/share/JetBrains/IdeaIC2023.1/github-copilot-intellij" "DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path" "GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/c81d3ff9_5414_43ad_85e4_1735d29fac6a" "GOPATH=/home/haukot/gopath" "rvm_pretty_print_flag=" "DESKTOP_SESSION=ubuntu" "LSCOLORS=Gxfxcxdxbxegedabagacad" "PAGER=less" "USER=haukot" "CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt" "MAHOUT_HOME=/home/haukot/temp/mahout" "XDG_SESSION_ID=2" "LC_NAME=ru_RU.UTF-8" "LESS_TERMCAP_se=[0m" "rvm_nightly_flag=" "LESS_TERMCAP_so=[38;5;246m" "_CE_M=" "S_COLORS=auto" "MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path" "rvm_ruby_file=" "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh" "XDG_VTNR=2" "rvm_niceness=" "JAVA_HOME=/usr/lib/jvm/java-8-oracle" "USERNAME=haukot" "WYSCOUT_DEV_SUBGROUP_ID=1589" "DESKTOP_AUTOSTART_ID=10fae0641e51147654168473025914598100000066110007" "GEM_HOME=/home/haukot/.rvm/gems/ruby-3.2.2" "NVM_CD_FLAGS=-q" "COLORTERM=truecolor" "RUBY_VERSION=ruby-3.2.2" "rvm_version=1.29.12 (latest)" "rvm_sdk=" "EDITOR=vim" "GNOME_SHELL_SESSION_MODE=ubuntu" "OLDPWD=/home/haukot/.local/share/JetBrains/IdeaIC2023.1/github-copilot-intellij/copilot-agent" "rvm_bin_path=/home/haukot/.rvm/bin" "DISPLAY=:0" "LESS=-R" "LANG=en_US.UTF-8" "XDG_MENU_PREFIX=gnome-" "ANDROID_HOME=/home/haukot/Android/Sdk" "LC_MONETARY=ru_RU.UTF-8" "LC_PAPER=ru_RU.UTF-8" "myblog=/home/haukot/programming/blog" "LC_MEASUREMENT=ru_RU.UTF-8" "CONDA_EXE=/home/haukot/anaconda3/bin/conda" "LD_LIBRARY_PATH=/home/haukot/.linuxbrew/lib:/usr/local/cuda-7.5/lib64:/home/haukot/.linuxbrew/lib:/usr/local/cuda-7.5/lib64:" "NVM_DIR=/home/haukot/.nvm" "CONDA_SHLVL=0" "rvm_docs_type=" "GREP_COLOR=1;32") (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (powerline-cache . "Unprintable entity") (last-focus-update) (tabs (current-tab (name . "*scratch*") (explicit-name))) (frameset--id . "C484-7DA2-B548-92B0") (frameset--mini t) (width . 175) (modeline . t) (unsplittable) (left . 0) (top . 27) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 5) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 45) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1600) (pixel-height . 827) (total-width . 178) (total-height . 45) (normal-height . 1.0) (normal-width . 1.0) (buffer "agent.js.parsed.js" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 2776488) (start . 2775610)) (prev-buffers ("agent.js.parsed" 1 1) ("*scratch*" 1 151) ("*Help*" 1 1) ("agent.js.parsed.js" 3341198 3342136) ("ClientCapabilities.java" 1 292))) (((minibuffer . t) (undecorated) (override-redirect) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 6) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 0) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (height . 46) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (environment "_=/usr/bin/emacsclient" "LC_TIME=ru_RU.UTF-8" "rvm_only_path_flag=" "rvm_ruby_make_install=" "WYSCOUT_DEV_GROUP_ID=200" "SESSION_MANAGER=local/haupc:@/tmp/.ICE-unix/6611,unix/haupc:/tmp/.ICE-unix/6611" "rvm_proxy=" "rvm_gemstone_package_file=" "IRBRC=/home/haukot/.rvm/rubies/ruby-3.2.2/.irbrc" "rvm_gemstone_url=" "NVM_INC=/home/haukot/.nvm/versions/node/v16.19.0/include/node" "LC_IDENTIFICATION=ru_RU.UTF-8" "PATH=/home/haukot/Android/Sdk/tools:/home/haukot/Android/Sdk/platform-tools:/usr/local/pgsql/bin:/home/haukot/apps/anaconda/bin:/home/haukot/.linuxbrew/bin:/usr/local/cuda-7.5/bin:/home/haukot/.composer/vendor/bin:/home/haukot/anaconda3/condabin:/home/haukot/Android/Sdk/tools:/home/haukot/Android/Sdk/platform-tools:/home/haukot/.nvm/versions/node/v16.19.0/bin:/usr/local/pgsql/bin:/home/haukot/apps/anaconda/bin:/home/haukot/.linuxbrew/bin:/usr/local/cuda-7.5/bin:/home/haukot/.composer/vendor/bin:/home/haukot/.rvm/gems/ruby-3.2.2/bin:/home/haukot/.rvm/gems/ruby-3.2.2@global/bin:/home/haukot/.rvm/rubies/ruby-3.2.2/bin:/home/haukot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/haukot/.rvm/bin:/home/haukot/.rvm/bin:/usr/local/go/bin:/home/haukot/gopath/bin:/home/haukot/.rvm/bin:/home/haukot/temp/mahout/bin:/home/haukot/.local/bin/:/home/haukot/.fzf/bin:/home/haukot/.rvm/bin:/usr/local/go/bin:/home/haukot/gopath/bin:/home/haukot/.rvm/bin:/home/haukot/temp/mahout/bin:/home/haukot/.local/bin/" "LESS_TERMCAP_us=[04;38;5;146m" "XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg" "LESS_TERMCAP_ue=[0m" "MY_RUBY_HOME=/home/haukot/.rvm/rubies/ruby-3.2.2" "XAUTHORITY=/run/user/1000/gdm/Xauthority" "rvm_bin_flag=" "XDG_RUNTIME_DIR=/run/user/1000" "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" "LOGNAME=haukot" "GNOME_DESKTOP_SESSION_ID=this-is-deprecated" "rvm_ruby_mode=" "GDMSESSION=ubuntu" "LC_TELEPHONE=ru_RU.UTF-8" "MANPATH=/usr/local/pgsql/share/man:/home/haukot/.nvm/versions/node/v16.19.0/share/man:/usr/local/pgsql/share/man:" "SHLVL=3" "XDG_SEAT=seat0" "TMUX_PANE=%41" "NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist" "rvm_ruby_make=" "rvm_prefix=/home/haukot" "GNOME_TERMINAL_SERVICE=:1.90" "WYSCOUT_DEV_ACCESS_TOKEN=vlada" "GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1" "XDG_CURRENT_DESKTOP=ubuntu:GNOME" "blackbox=/home/haukot/programming/projects/blackbox_challenge" "NVM_BIN=/home/haukot/.nvm/versions/node/v16.19.0/bin" "rvm_alias_expanded=" "XMODIFIERS=@im=ibus" "QT_IM_MODULE=ibus" "rvm_hook=" "SHELL=/bin/zsh" "TERM=screen" "VTE_VERSION=5202" "WINDOWPATH=2" "VISUAL=vim" "rvm_path=/home/haukot/.rvm" "GTK_MODULES=gail:atk-bridge" "rvm_script_name=" "LC_NUMERIC=ru_RU.UTF-8" "LESS_TERMCAP_me=[0m" "LESS_TERMCAP_md=[01;38;5;74m" "SPARK_HOME=/home/haukot/temp/spark-1.1.0" "LC_ADDRESS=ru_RU.UTF-8" "LESS_TERMCAP_mb=[01;31m" "rvm_use_flag=" "GEM_PATH=/home/haukot/.rvm/gems/ruby-3.2.2:/home/haukot/.rvm/gems/ruby-3.2.2@global" "XDG_SESSION_DESKTOP=ubuntu" "rvm_silent_flag=" "_CE_CONDA=" "simcase=/home/haukot/programming/projects/simcase_bigdata" "PGDATA=/usr/local/pgsql/data" "XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop" "XDG_SESSION_TYPE=x11" "TMUX=/tmp/tmux-1000/default,9857,0" "QT_ACCESSIBILITY=1" "CUDA_HOME=/usr/local/cuda-7.5" "rvm_quiet_flag=" "SSH_AGENT_PID=7497" "rvm_ruby_bits=" "LC_CTYPE=en_US.UTF-8" "CONDA_PYTHON_EXE=/home/haukot/anaconda3/bin/python" "HOME=/home/haukot" "PWD=/home/haukot/Downloads/vs_copilot/intelij-copilot-sources" "DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path" "GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/c81d3ff9_5414_43ad_85e4_1735d29fac6a" "GOPATH=/home/haukot/gopath" "rvm_pretty_print_flag=" "DESKTOP_SESSION=ubuntu" "LSCOLORS=Gxfxcxdxbxegedabagacad" "PAGER=less" "USER=haukot" "CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt" "MAHOUT_HOME=/home/haukot/temp/mahout" "XDG_SESSION_ID=2" "LC_NAME=ru_RU.UTF-8" "LESS_TERMCAP_se=[0m" "rvm_nightly_flag=" "LESS_TERMCAP_so=[38;5;246m" "_CE_M=" "S_COLORS=auto" "MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path" "rvm_ruby_file=" "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh" "XDG_VTNR=2" "rvm_niceness=" "JAVA_HOME=/usr/lib/jvm/java-8-oracle" "USERNAME=haukot" "WYSCOUT_DEV_SUBGROUP_ID=1589" "DESKTOP_AUTOSTART_ID=10fae0641e51147654168473025914598100000066110007" "GEM_HOME=/home/haukot/.rvm/gems/ruby-3.2.2" "NVM_CD_FLAGS=-q" "COLORTERM=truecolor" "RUBY_VERSION=ruby-3.2.2" "rvm_version=1.29.12 (latest)" "rvm_sdk=" "EDITOR=vim" "GNOME_SHELL_SESSION_MODE=ubuntu" "OLDPWD=/home/haukot/Downloads/vs_copilot/github-copilot-intellij/lib" "rvm_bin_path=/home/haukot/.rvm/bin" "DISPLAY=:0" "LESS=-R" "LANG=en_US.UTF-8" "XDG_MENU_PREFIX=gnome-" "ANDROID_HOME=/home/haukot/Android/Sdk" "LC_MONETARY=ru_RU.UTF-8" "LC_PAPER=ru_RU.UTF-8" "myblog=/home/haukot/programming/blog" "LC_MEASUREMENT=ru_RU.UTF-8" "CONDA_EXE=/home/haukot/anaconda3/bin/conda" "LD_LIBRARY_PATH=/home/haukot/.linuxbrew/lib:/usr/local/cuda-7.5/lib64:/home/haukot/.linuxbrew/lib:/usr/local/cuda-7.5/lib64:" "NVM_DIR=/home/haukot/.nvm" "CONDA_SHLVL=0" "rvm_docs_type=" "GREP_COLOR=1;32") (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (powerline-cache . "Unprintable entity") (last-focus-update) (frameset--id . "8196-7A27-7E67-BB5F") (frameset--mini t) (width . 175) (modeline . t) (unsplittable) (left . 0) (top . 27) (icon-name) (display . ":0") (explicit-name)) ((min-height . 12) (min-width . 20) (min-height-ignore . 6) (min-width-ignore . 11) (min-height-safe . 3) (min-width-safe . 4) (min-pixel-height . 216) (min-pixel-width . 180) (min-pixel-height-ignore . 108) (min-pixel-width-ignore . 99) (min-pixel-height-safe . 54) (min-pixel-width-safe . 36)) vc (pixel-width . 1600) (pixel-height . 827) (total-width . 178) (total-height . 46) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1600) (pixel-height . 414) (total-width . 178) (total-height . 23) (normal-height . 0.5) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 799) (pixel-height . 414) (total-width . 89) (total-height . 23) (normal-height . 1.0) (normal-width . 0.5) (buffer "WorkspaceFoldersChangeEvent.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1888) (start . 1)) (prev-buffers ("AgentWorkspaceFolders.java" 2154 2900) ("DidChangeWorkspaceFolders.java" 1 1427) ("WorkspaceFoldersChangeEvent.java" 1 2326) ("JsonRPC.java" 1390 2323))) (leaf (last . t) (pixel-width . 801) (pixel-height . 414) (total-width . 89) (total-height . 23) (normal-height . 1.0) (normal-width . 0.5) (buffer "AgentWorkspaceFolders.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 2474) (start . 2393)))) (hc (last . t) (pixel-width . 1600) (pixel-height . 413) (total-width . 178) (total-height . 23) (normal-height . 0.5) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 799) (pixel-height . 413) (total-width . 89) (total-height . 23) (normal-height . 1.0) (normal-width . 0.5) (buffer "ClientCapabilities.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 292) (start . 1)) (prev-buffers ("DidChangeWorkspaceFolders.java" 253 1427) ("AgentWorkspaceFolders.java" 2154 2658))) (vc (last . t) (pixel-width . 801) (pixel-height . 413) (total-width . 89) (total-height . 23) (normal-height . 1.0) (normal-width . 0.5) (combination-limit) (leaf (pixel-width . 801) (pixel-height . 202) (total-width . 89) (total-height . 11) (normal-height . 0.5) (normal-width . 1.0) (buffer "VSCodeJsonRpc.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 2081) (start . 1591)) (prev-buffers ("JsonRPC.java" 1350 2075))) (leaf (last . t) (pixel-width . 801) (pixel-height . 211) (total-width . 89) (total-height . 12) (normal-height . 0.5) (normal-width . 1.0) (buffer "VirtualFileUri.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 2056) (start . 1759)) (prev-buffers ("DidChangeWorkspaceFolders.java" 253 1427)))))) (((minibuffer . t) (undecorated) (override-redirect) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 6) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 0) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (height . 46) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (environment "_=/usr/bin/emacsclient" "LC_TIME=ru_RU.UTF-8" "rvm_only_path_flag=" "rvm_ruby_make_install=" "WYSCOUT_DEV_GROUP_ID=200" "SESSION_MANAGER=local/haupc:@/tmp/.ICE-unix/6611,unix/haupc:/tmp/.ICE-unix/6611" "rvm_proxy=" "rvm_gemstone_package_file=" "IRBRC=/home/haukot/.rvm/rubies/ruby-3.2.2/.irbrc" "rvm_gemstone_url=" "NVM_INC=/home/haukot/.nvm/versions/node/v16.19.0/include/node" "LC_IDENTIFICATION=ru_RU.UTF-8" "PATH=/home/haukot/Android/Sdk/tools:/home/haukot/Android/Sdk/platform-tools:/usr/local/pgsql/bin:/home/haukot/apps/anaconda/bin:/home/haukot/.linuxbrew/bin:/usr/local/cuda-7.5/bin:/home/haukot/.composer/vendor/bin:/home/haukot/anaconda3/condabin:/home/haukot/Android/Sdk/tools:/home/haukot/Android/Sdk/platform-tools:/home/haukot/.nvm/versions/node/v16.19.0/bin:/usr/local/pgsql/bin:/home/haukot/apps/anaconda/bin:/home/haukot/.linuxbrew/bin:/usr/local/cuda-7.5/bin:/home/haukot/.composer/vendor/bin:/home/haukot/.rvm/gems/ruby-3.2.2/bin:/home/haukot/.rvm/gems/ruby-3.2.2@global/bin:/home/haukot/.rvm/rubies/ruby-3.2.2/bin:/home/haukot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/haukot/.rvm/bin:/home/haukot/.rvm/bin:/usr/local/go/bin:/home/haukot/gopath/bin:/home/haukot/.rvm/bin:/home/haukot/temp/mahout/bin:/home/haukot/.local/bin/:/home/haukot/.fzf/bin:/home/haukot/.rvm/bin:/usr/local/go/bin:/home/haukot/gopath/bin:/home/haukot/.rvm/bin:/home/haukot/temp/mahout/bin:/home/haukot/.local/bin/" "LESS_TERMCAP_us=[04;38;5;146m" "XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg" "LESS_TERMCAP_ue=[0m" "MY_RUBY_HOME=/home/haukot/.rvm/rubies/ruby-3.2.2" "XAUTHORITY=/run/user/1000/gdm/Xauthority" "rvm_bin_flag=" "XDG_RUNTIME_DIR=/run/user/1000" "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" "LOGNAME=haukot" "GNOME_DESKTOP_SESSION_ID=this-is-deprecated" "rvm_ruby_mode=" "GDMSESSION=ubuntu" "LC_TELEPHONE=ru_RU.UTF-8" "MANPATH=/usr/local/pgsql/share/man:/home/haukot/.nvm/versions/node/v16.19.0/share/man:/usr/local/pgsql/share/man:" "SHLVL=3" "XDG_SEAT=seat0" "TMUX_PANE=%41" "NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist" "rvm_ruby_make=" "rvm_prefix=/home/haukot" "GNOME_TERMINAL_SERVICE=:1.90" "WYSCOUT_DEV_ACCESS_TOKEN=vlada" "GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1" "XDG_CURRENT_DESKTOP=ubuntu:GNOME" "blackbox=/home/haukot/programming/projects/blackbox_challenge" "NVM_BIN=/home/haukot/.nvm/versions/node/v16.19.0/bin" "rvm_alias_expanded=" "XMODIFIERS=@im=ibus" "QT_IM_MODULE=ibus" "rvm_hook=" "SHELL=/bin/zsh" "TERM=screen" "VTE_VERSION=5202" "WINDOWPATH=2" "VISUAL=vim" "rvm_path=/home/haukot/.rvm" "GTK_MODULES=gail:atk-bridge" "rvm_script_name=" "LC_NUMERIC=ru_RU.UTF-8" "LESS_TERMCAP_me=[0m" "LESS_TERMCAP_md=[01;38;5;74m" "SPARK_HOME=/home/haukot/temp/spark-1.1.0" "LC_ADDRESS=ru_RU.UTF-8" "LESS_TERMCAP_mb=[01;31m" "rvm_use_flag=" "GEM_PATH=/home/haukot/.rvm/gems/ruby-3.2.2:/home/haukot/.rvm/gems/ruby-3.2.2@global" "XDG_SESSION_DESKTOP=ubuntu" "rvm_silent_flag=" "_CE_CONDA=" "simcase=/home/haukot/programming/projects/simcase_bigdata" "PGDATA=/usr/local/pgsql/data" "XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop" "XDG_SESSION_TYPE=x11" "TMUX=/tmp/tmux-1000/default,9857,0" "QT_ACCESSIBILITY=1" "CUDA_HOME=/usr/local/cuda-7.5" "rvm_quiet_flag=" "SSH_AGENT_PID=7497" "rvm_ruby_bits=" "LC_CTYPE=en_US.UTF-8" "CONDA_PYTHON_EXE=/home/haukot/anaconda3/bin/python" "HOME=/home/haukot" "PWD=/home/haukot/Downloads/vs_copilot/intelij-copilot-sources" "DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path" "GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/c81d3ff9_5414_43ad_85e4_1735d29fac6a" "GOPATH=/home/haukot/gopath" "rvm_pretty_print_flag=" "DESKTOP_SESSION=ubuntu" "LSCOLORS=Gxfxcxdxbxegedabagacad" "PAGER=less" "USER=haukot" "CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt" "MAHOUT_HOME=/home/haukot/temp/mahout" "XDG_SESSION_ID=2" "LC_NAME=ru_RU.UTF-8" "LESS_TERMCAP_se=[0m" "rvm_nightly_flag=" "LESS_TERMCAP_so=[38;5;246m" "_CE_M=" "S_COLORS=auto" "MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path" "rvm_ruby_file=" "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh" "XDG_VTNR=2" "rvm_niceness=" "JAVA_HOME=/usr/lib/jvm/java-8-oracle" "USERNAME=haukot" "WYSCOUT_DEV_SUBGROUP_ID=1589" "DESKTOP_AUTOSTART_ID=10fae0641e51147654168473025914598100000066110007" "GEM_HOME=/home/haukot/.rvm/gems/ruby-3.2.2" "NVM_CD_FLAGS=-q" "COLORTERM=truecolor" "RUBY_VERSION=ruby-3.2.2" "rvm_version=1.29.12 (latest)" "rvm_sdk=" "EDITOR=vim" "GNOME_SHELL_SESSION_MODE=ubuntu" "OLDPWD=/home/haukot/Downloads/vs_copilot/github-copilot-intellij/lib" "rvm_bin_path=/home/haukot/.rvm/bin" "DISPLAY=:0" "LESS=-R" "LANG=en_US.UTF-8" "XDG_MENU_PREFIX=gnome-" "ANDROID_HOME=/home/haukot/Android/Sdk" "LC_MONETARY=ru_RU.UTF-8" "LC_PAPER=ru_RU.UTF-8" "myblog=/home/haukot/programming/blog" "LC_MEASUREMENT=ru_RU.UTF-8" "CONDA_EXE=/home/haukot/anaconda3/bin/conda" "LD_LIBRARY_PATH=/home/haukot/.linuxbrew/lib:/usr/local/cuda-7.5/lib64:/home/haukot/.linuxbrew/lib:/usr/local/cuda-7.5/lib64:" "NVM_DIR=/home/haukot/.nvm" "CONDA_SHLVL=0" "rvm_docs_type=" "GREP_COLOR=1;32") (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (powerline-cache . "Unprintable entity") (last-focus-update . t) (tabs (current-tab (name . "LSPEditorListener.java") (explicit-name))) (frameset--id . "C257-66FF-D2B4-ECF0") (frameset--mini t . t) (width . 175) (modeline . t) (unsplittable) (left . 0) (top . 27) (icon-name) (display . ":0") (explicit-name)) ((min-height . 8) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 11) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 144) (min-pixel-width . 180) (min-pixel-height-ignore . 72) (min-pixel-width-ignore . 99) (min-pixel-height-safe . 36) (min-pixel-width-safe . 36)) hc (pixel-width . 1600) (pixel-height . 827) (total-width . 178) (total-height . 46) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (vc (pixel-width . 799) (pixel-height . 827) (total-width . 89) (total-height . 46) (normal-height . 1.0) (normal-width . 0.5) (combination-limit) (leaf (pixel-width . 799) (pixel-height . 413) (total-width . 89) (total-height . 23) (normal-height . 0.5) (normal-width . 1.0) (buffer "LSPAsyncFileChangesListener.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 4455) (start . 3916)) (prev-buffers ("LSPUtil.java" 4362 4828) ("LSPManagerAgentRestartListener.java" 1 1) ("LSPDocumentListener.java" 1 762) ("LSPEditorListener.java" 820 1704) ("LSPAsyncFileChangesListener.java" 3916 4455) ("LanguageInfoManager.java" 717 1535) ("LSPManager.java" 9898 10813) ("LanguageInfo.java" 265 1504) ("TextDocumentItem.java" 1 105) ("DidChangeWorkspaceFolders.java" 253 712) ("WorkspaceFolderListener.java" 1615 2180))) (leaf (last . t) (pixel-width . 799) (pixel-height . 414) (total-width . 89) (total-height . 23) (normal-height . 0.5) (normal-width . 1.0) (buffer "AgentWorkspaceFolders.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 4045) (start . 3609)) (prev-buffers ("LSPUtil.java" 4362 4828)))) (vc (last . t) (pixel-width . 801) (pixel-height . 827) (total-width . 89) (total-height . 46) (normal-height . 1.0) (normal-width . 0.5) (combination-limit) (leaf (pixel-width . 801) (pixel-height . 413) (total-width . 89) (total-height . 23) (normal-height . 0.5) (normal-width . 1.0) (buffer "LSPEditorListener.java" (selected . t) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 902) (start . 710)) (prev-buffers ("LSPManager.java" 9375 10411) ("DidChangeCommand.java" 1184 1900) ("LanguageTable.java" 5635 6336) ("CopilotBundle.java" 1 695) ("LanguageChoice.java" 1729 2074) ("DefaultLanguageInfoSupport.java" 1362 1945) ("VSCodeLanguageMap.java" 345 814) ("ExtensionOverrideLanguageInfoSupport.java" 1983 2127) ("LSPUtil.java" 4362 4885) ("*intelij-copilot-sources-shell*" 1 113) ("WorkspaceFolder.java" 1 671) ("WorkspaceFolderListener.java" 840 1282))) (leaf (last . t) (pixel-width . 801) (pixel-height . 414) (total-width . 89) (total-height . 23) (normal-height . 0.5) (normal-width . 1.0) (buffer "LSPEditorListener.java" (selected) (hscroll . 0) (fringes 8 0 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1394) (start . 830))))) (((minibuffer . t) (display-type . mono) (background-mode . dark) (scroll-bar-foreground . "white") (cursor-color . "white") (powerline-cache . "Unprintable entity") (right-fringe . 0) (left-fringe . 8) (right-divider-width . 6) (bottom-divider-width . 0) (menu-bar-lines . 0) (foreground-color . "unspecified-fg") (background-color . "unspecified-bg") (font . "tty") (height . 26) (width . 80) (modeline . t) (unsplittable) (tab-bar-lines . 0) (tool-bar-lines . 0) (frameset--id . "8753-4010-DB7A-2696") (frameset--mini t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 80) (pixel-height . 25) (total-width . 80) (total-height . 25) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 0 0 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 145) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '(#("delete" 0 6 (isearch-case-fold-search t)) #("courses" 0 7 (isearch-case-fold-search t)) #("ChatGpt::In" 0 11 (isearch-case-fold-search nil)) #("uuid" 0 4 (isearch-case-fold-search t)) #("[" 0 1 (isearch-case-fold-search t)) #("capa" 0 4 (isearch-case-fold-search t)) #("c" 0 1 (isearch-case-fold-search t)) #("alist" 0 5 (isearch-case-fold-search t)) #("log-ma" 0 6 (isearch-case-fold-search t)) #("events" 0 6 (isearch-case-fold-search t)) #("copi" 0 4 (isearch-case-fold-search t)) #("max" 0 3 (isearch-case-fold-search t)) #("-mode" 0 5 (isearch-case-fold-search t)) #("defvar" 0 6 (isearch-case-fold-search t)) #("deefvar" 0 7 (isearch-case-fold-search t)) #("log-" 0 4 (isearch-case-fold-search t))))
+(setq register-alist '((48 . #("FileEditorManagerListener" 0 25 (fontified t face font-lock-type-face))) (115 . [48 121 116 40 79 45 115 112 101 99 32 15 112 40 41 32 45 62 escape 84 40]) (102 . [99 115 116 91 106 64 100 106 48 64 100 106 48 64 100 107 107 107 52 74 74 104 120 97 44 escape 48 50 64 101 down 48]) (101 . [102 44 97 32 escape]) (100 . [99 102 62 34 delete escape 36 100 70 60 114 34 97 44 escape])))
+(setq file-name-history '("~/programming/projects/slurm/slurm_crm/config/database.yml" "~/programming/projects/slurm/slurm/app/api/edu/api/v2/courses.rb" "~/programming/projects/slurm/slurm/app/models/product.rb" "/home/haukot/programming/projects/slurm/slurm/app/api/edu/api/v2/products.rb" "~/programming/projects/cybermango/code/ecwid_ai/db/schema.rb" "/home/haukot/programming/projects/cybermango/code/ecwid_ai/Gemfile" "~/programming/projects/opensource/copilot.el/readme.md" "~/programming/projects/opensource/copilot.el/copilot.el" "~/.emacs.d/packages/copilot.el/copilot.el" #("~/programming/projects/cybermango/code/ecwid_ai/app/models/ecwid/app_instance.rb" 1 80 (match-part "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/models/ecwid/app_instance.rb")) "~/programming/projects/simcase_bigdata/rails/deploy_prod.sh" #("~/programming/projects/simcase_bigdata/country_currency_service/Makefile" 1 72 (match-part "/home/haukot/programming/projects/simcase_bigdata/country_currency_service/Makefile")) #("~/programming/projects/cybermango/code/ecwid_ai/app/assets/stylesheets/application.css.scss" 1 91 (match-part "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/assets/stylesheets/application.css.scss")) "/home/haukot/programming/projects/opensource/copilot.el/copilot.el" "/home/haukot/Downloads/jsviewer.js" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPAsyncFileChangesListener.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPUtil.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPManagerAgentRestartListener.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPDocumentListener.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPEditorListener.java" "~/.emacs.d/init.el" "~/.emacs.d/configs/all.el" "~/.emacs.d/configs/ruby.el" "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/ExtensionOverrideLanguageInfoSupport.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/settings/LanguageTable.java" #("~/.emacs.d/configs/copilot.el" 1 29 (match-part "/home/haukot/.emacs.d/configs/copilot.el")) "/home/haukot/.local/share/JetBrains/IdeaIC2023.1/github-copilot-intellij/copilot-agent/bin/copilot-agent-linux" "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/WorkspaceFoldersChangeEvent.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/rpc/JsonRpcNotification.java" "~/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/WorkspaceFolder.java" "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPManager.java" "~/programming/projects/cybermango/code/ecwid_ai/app/controllers/web/v1/ecwid/products_controller.rb" "~/programming/projects/cybermango/code/ecwid_ai/app/models/ecwid/app.rb" "~/programming/projects/cybermango/code/ecwid_ai/app/models/chat_gpt/interaction.rb" "/home/haukot/programming/projects/cybermango/code/ecwid_ai/Gemfile" "/home/haukot/Downloads/vs_copilot/github-copilot-intellij/lib/core-1.2.8.jar" "~/.emacs.d/packages/copilot.el/dist/agent.js.LICENSE.txt" "/home/haukot/.emacs.d/packages/copilot.el/dist/agent.js.parsed.js" "/home/haukot/.emacs.d/packages/copilot.el/dist/agent.js.parsed" "/home/haukot/.emacs.d/packages/copilot.el/dist/index.html"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPEditorListener.java"
+  "LSPEditorListener.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  902
+  '(969 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25725 45513 414524 622000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (738 1638 1342))))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/packages/copilot.el/dist/agent.js.parsed.js"
+  "agent.js.parsed.js"
+  'js-mode
+  '(auto-fill-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  2776488
+  '(2766601 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 25594 998677 629000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring (3009966 3342021 133725 2766804 3338396 3007175 2787050 2766301 2589557 2775987 1163574 1163575 2782471 151716 151717 2773704))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/ClientCapabilities.java"
+  "ClientCapabilities.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  292
+  '(292 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25725 36177 5753 757000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/db/schema.rb"
+  "schema.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  916
+  '(884 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 37796 258492 718000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/slurm/slurm_crm/config/database.yml"
+  "database.yml"
+  'yaml-mode
+  '(flycheck-mode yas-minor-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 44341 579632 958000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/slurm/slurm/app/models/product.rb"
+  "product.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  1351
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 44341 451449 80000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/slurm/slurm/app/api/edu/api/v2/courses.rb"
+  "courses.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  316
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 44341 451447 666000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/slurm/slurm/app/api/edu/api/v1/courses.rb"
+  "courses.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  5519
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 38496 265832 979000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/slurm/slurm/app/api/edu/api/v2/products.rb"
+  "products.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  29
+  '(2783 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 38462 855585 908000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring (373 1))))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/services/chat_gpt/generate_description.rb"
+  "generate_description.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  896
+  '(99 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 37762 727181 737000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/Gemfile"
+  "Gemfile"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25725 36180 342114 449000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/opensource/copilot.el/readme.md"
+  "readme.md"
+  'markdown-mode
+  '(visual-line-mode flycheck-mode yas-minor-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode)
+  4425
+  '(4667 nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-display-time 25724 29924 618672 834000) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (4666 4599 4586 4585 4556 714 714 714 714 714 714 714 714 714 714 714))))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/configs/ruby.el"
+  "ruby.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  945
+  '(945 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 29924 618452 671000) (buffer-file-coding-system . prefer-utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring (944))))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/opensource/copilot.el/copilot.el"
+  "copilot.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  6000
+  '(5369 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 29455 294618 480000) (buffer-file-coding-system . prefer-utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring (956 9649 205 24 12559 12356 12356 12356 12356 12356))))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/packages/copilot.el/copilot.el"
+  "copilot.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  5964
+  '(6046 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 29924 618452 464000) (buffer-file-coding-system . prefer-utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring (10654 43 85 5093 15 2138 2020 11 13590 1722 59 13573 86 956 956 956))))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/models/ecwid/app_instance.rb"
+  "app_instance.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  490
+  '(490 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25724 26203 433079 146000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/simcase_bigdata/rails/deploy_prod.sh"
+  "deploy_prod.sh"
+  'sh-mode
+  '(auto-fill-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  469
+  '(469 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 26121 971249 278000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring (1 468))))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/simcase_bigdata/country_currency_service/Makefile"
+  "Makefile"
+  'makefile-gmake-mode
+  '(auto-fill-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-display-time 25724 26024 376814 243000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/packages/copilot.el/dist/agent.js.parsed"
+  "agent.js.parsed"
+  'fundamental-mode
+  '(yas-minor-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25724 25594 998500 292000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/assets/stylesheets/application.css.scss"
+  "application.css.scss"
+  'less-css-mode
+  '(auto-fill-mode flycheck-mode yas-minor-mode emmet-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  975
+  '(976 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 25082 303125 941000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/ExtensionOverrideLanguageInfoSupport.java"
+  "ExtensionOverrideLanguageInfoSupport.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  577
+  '(577 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 45209 818112 790000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (2508 548 560 2127))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPManager.java"
+  "LSPManager.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  10411
+  '(5442 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 17102 11778 750000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (10432 7377 7376 3422 5968 5969 3979 3724 3227 2162 11859 10993 10518 8164 7862 6252))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPAsyncFileChangesListener.java"
+  "LSPAsyncFileChangesListener.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  4455
+  '(4456 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25725 45513 414523 628000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (6149 5481))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPUtil.java"
+  "LSPUtil.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  4828
+  '(4930 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 17062 133375 870000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (4725))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPManagerAgentRestartListener.java"
+  "LSPManagerAgentRestartListener.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 17054 514377 68000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lsp/LSPDocumentListener.java"
+  "LSPDocumentListener.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  762
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 17050 234265 838000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/AgentWorkspaceFolders.java"
+  "AgentWorkspaceFolders.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  4045
+  '(2955 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25725 45513 414524 186000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (3354 3219 1378 1169 965 929 2770 1354 2781 2658 2523 235 1660 2868 2881 2629))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/LanguageInfoManager.java"
+  "LanguageInfoManager.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1535
+  '(1536 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 14297 875033 385000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/textDocument/TextDocumentContentChangeEvent.java"
+  "TextDocumentContentChangeEvent.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  84
+  '(781 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 14150 433085 687000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (164 168 182))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/rpc/JsonRPC.java"
+  "JsonRPC.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1963
+  '(2241 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 14055 705694 301000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (2075 2091 2544 2544 2293 2516 2544 2435 2504 2515 2387 2515 2597 2544 2122 1983))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/textDocument/DidChangeCommand.java"
+  "DidChangeCommand.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1900
+  '(1900 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 14012 753605 130000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/settings/LanguageTable.java"
+  "LanguageTable.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  6336
+  '(6335 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25724 13927 896625 82000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  5442
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 25724 13489 815569 130000) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/configs/all.el"
+  "all.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25724 13482 95296 187000) (buffer-file-coding-system . prefer-utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/CopilotBundle.java"
+  "CopilotBundle.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  695
+  '(696 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 41098 877622 936000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/settings/LanguageChoice.java"
+  "LanguageChoice.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  2074
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 41037 996500 507000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/DefaultLanguageInfoSupport.java"
+  "DefaultLanguageInfoSupport.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1945
+  '(1945 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 41004 858082 591000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/fallback/VSCodeLanguageMap.java"
+  "VSCodeLanguageMap.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  814
+  '(814 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 40965 701325 202000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/LanguageInfo.java"
+  "LanguageInfo.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1504
+  '(1504 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 40713 703829 15000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (1697 1618 1280 246 87 1520))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/textDocument/TextDocumentItem.java"
+  "TextDocumentItem.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  105
+  '(2094 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 40594 445391 419000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (750 737 580 528 387 283 218))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/DidChangeWorkspaceFolders.java"
+  "DidChangeWorkspaceFolders.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  712
+  '(707 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 40560 780531 548000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (1849 295 1597 112 323))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/WorkspaceFolderListener.java"
+  "WorkspaceFolderListener.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  2180
+  '(12 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 40197 92133 683000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (1282 2103 1974 1630 1286))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/VirtualFileUri.java"
+  "VirtualFileUri.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  2056
+  '(3112 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 39323 887224 689000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (3362 2062 792 782 1969 2008 2285 1969 2008 2234 2165 2192 2011 2234 2888 2459))))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/models/ecwid/app.rb"
+  "app.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  32
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25723 37647 992767 731000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/configs/copilot.el"
+  "copilot.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  231
+  '(231 nil)
+  nil
+  nil
+  '((buffer-display-time 25723 37647 992768 55000) (buffer-file-coding-system . prefer-utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/WorkspaceFolder.java"
+  "WorkspaceFolder.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  671
+  '(672 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 40773 869890 685000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (308 215 1034 223 672 316 688 834 691 694 946 1060 197 198))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/vscodeRpc/VSCodeJsonRpc.java"
+  "VSCodeJsonRpc.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  2081
+  '(2082 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 39323 887224 451000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (2012))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/WorkspaceFoldersChangeEvent.java"
+  "WorkspaceFoldersChangeEvent.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  1888
+  '(1782 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 39323 887223 553000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (2326 1648 1932 1731 1756 1833 1836 1932 1731 1859 1887 1932 1879))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/CopilotAgentProcessServiceImpl.java"
+  "CopilotAgentProcessServiceImpl.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  15348
+  '(15348 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 32382 379974 986000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring (17469 15281))))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/RestartableCopilotAgentProcessService.java"
+  "RestartableCopilotAgentProcessService.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  10920
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 32352 628140 397000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/rpc/JsonRpcNotification.java"
+  "JsonRpcNotification.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  138
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 32085 783808 123000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/commands/EditorSettings.java"
+  "EditorSettings.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  3689
+  '(3690 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 31492 39211 625000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/commands/ConfigurationChangeCommand.java"
+  "ConfigurationChangeCommand.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  415
+  '(415 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 26939 544184 944000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/intelij-copilot-sources/com/github/copilot/lang/agent/lsp/InitializeCommand.java"
+  "InitializeCommand.java"
+  'java-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  2003
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25723 26803 276302 742000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode) (fill-column . 80))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/github-copilot-intellij/lib/core-1.2.8.jar"
+  "core-1.2.8.jar"
+  'archive-mode
+  '(yas-minor-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode)
+  9861
+  '(10996 nil)
+  t
+  nil
+  '((buffer-display-time 25723 24276 944769 785000) (buffer-file-coding-system . no-conversion-multibyte) (truncate-lines . t))
+  '((mark-ring (10996))))
+
+(desktop-create-buffer 208
+  "/home/haukot/programming/projects/cybermango/code/ecwid_ai/app/models/chat_gpt/interaction.rb"
+  "interaction.rb"
+  'enh-ruby-mode
+  '(auto-fill-mode abbrev-mode flycheck-mode yas-minor-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode inf-ruby-minor-mode projectile-rails-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode ruby-end-mode)
+  93
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25723 37647 992767 563000) (buffer-file-coding-system . undecided-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/Downloads/vs_copilot/github-copilot-intellij/lib/core-1.2.8.jar:com/github/copilot/lang/agent/lsp/WorkspaceCapabilities.class"
+  "WorkspaceCapabilities.class (core-1.2.8.jar)"
+  'fundamental-mode
+  '(yas-minor-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode)
+  1490
+  '(1490 nil)
+  nil
+  nil
+  '((buffer-display-time 25723 22094 552804 689000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/packages/copilot.el/dist/agent.js.LICENSE.txt"
+  "agent.js.LICENSE.txt"
+  'text-mode
+  '(flycheck-mode yas-minor-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode)
+  977
+  '(977 nil)
+  nil
+  nil
+  '((buffer-display-time 25723 21547 244023 611000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haukot/.emacs.d/packages/copilot.el/dist/index.html"
+  "index.html"
+  'mhtml-mode
+  '(auto-fill-mode flycheck-mode yas-minor-mode emmet-mode rainbow-delimiters-mode flx-ido-mode evil-commentary-mode helm-mode projectile-mode evil-snipe-local-mode undo-tree-mode evil-collection-unimpaired-mode copilot-mode)
+  34
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25723 21429 459543 0) (buffer-file-coding-system . utf-8-unix) (column-number-mode . t) (overwrite-mode))
+  '((mark-ring nil)))
+

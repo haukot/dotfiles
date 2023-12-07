@@ -1,3 +1,4 @@
+(load-file "~/.emacs.d/packages/copilot.el/copilot-balancer.el")
 (load-file "~/.emacs.d/packages/copilot.el/copilot.el")
 
 (require 's)
@@ -36,7 +37,7 @@
         )
     )
 
-(defun enabled-copilot ()
+(defun enable-copilot ()
   (interactive)
   (add-hook 'prog-mode-hook 'copilot-mode)
   (dolist (buf (buffer-list))
