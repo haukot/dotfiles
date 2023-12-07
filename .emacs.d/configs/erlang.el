@@ -1,5 +1,5 @@
 ;(require 'erlang-flymake)
-(require 'erlang)
+(require 'erlang-start)
 
 (setq erlang-indent-level 2)
 
