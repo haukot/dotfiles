@@ -1,3 +1,20 @@
+;;; Для дебага(не прям работало)
+
+;; https://github.com/Malabarba/elisp-bug-hunter - для bisect'a ошибок при стартапе
+
+;; Эта штука должна была работать для warning'ов при стартапе - но почему-то не работает
+;; (defun dont-delay-compile-warnings (fun type &rest args)
+;;       (let ((after-init-time t))
+;;         (apply fun type args)))
+;; (advice-add 'display-warning :around #'dont-delay-compile-warnings)
+
+;; emacs --debug-init
+
+(setq debug-on-error t)
+;; (setq warning-minimum-level :debug)
+(setq debug-on-message ".*be defined as a symbol.*")
+
+
 ;;; ---------------------------------------------------------------------------
 ;;; Packages
 ;;; ---------------------------------------------------------------------------
@@ -118,7 +135,9 @@
 (add-to-list 'load-path "~/.emacs.d/packages/emacs-nav-49")
 (add-to-list 'load-path "~/.emacs.d/haukot/powerline")
 (add-to-list 'load-path "~/.emacs.d/haukot/configs/")
-(add-to-list 'load-path "~/.emacs.d/haukot/haukot.el")
+;;(add-to-list 'load-path "~/.emacs.d/haukot/")
+
+;; (add-to-list 'load-path "~/.emacs.d/haukot/haukot.el")
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 ;;;https://github.com/eschulte/yasnippets-rails not in dotfiles
 
@@ -163,8 +182,6 @@
 (load-user-file "copilot.el")
 (load-user-file "ruby.el")
 
-(require 'alchemist)
-
 
 ;; (set-face-background 'fringe "grey")
 (fringe-mode '(8 . 0))
@@ -182,3 +199,5 @@
 ;; (set-face-background 'powerline-active2 "white")
 
 (menu-bar-mode -1)
+
+(setq magit-auto-revert-mode nil)

@@ -1,3 +1,8 @@
+;; Похоже этот файл не используется? Т.к. должна подгружаться папка, а не он сам. И его
+;; подгрузка ломает
+;; Возможно он подгружался, если запускать через `emacs` а не через `ec`?
+;; И поэтому были различия при их запусках
+
 ;;; ---------------------------------------------------------------------------
 ;;; User Interface
 ;;; ---------------------------------------------------------------------------
@@ -6,8 +11,10 @@
 
   (when (string-equal system-type "gnu/linux")
     (if (find-font (font-spec :name "Nitti Light"))
-        (set-default-font "Nitti Light-12")
-      (set-default-font "Monospace-11")))
+        (set-frame-font "Nitti Light-12")
+      (set-frame-font "DejaVu Sans Mono-12")))
+
+
 
 
 
@@ -29,7 +36,7 @@
   (setq truncate-partial-width-windows nil)
   ;; Show Paren mode
   (show-paren-mode t)
-  (set-face-attribute 'show-paren-match-face nil :underline t)
+  (set-face-attribute 'show-paren-match nil :underline t)
   (set-face-attribute 'default nil :height 120)
   ;; ---------------
   (tool-bar-mode t)
