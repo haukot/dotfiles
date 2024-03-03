@@ -82,3 +82,7 @@ cleared, make sure the overlay doesn't come back too soon."
 
 (define-key global-map (kbd "C-f") nil) ;; was forward-char before
 (define-key copilot-mode-map (kbd "C-f") #'copilot-accept-completion-by-word)
+
+;; выключаем warning про неустановленную индентацию (был в emacs-lisp-mode)
+;; https://github.com/copilot-emacs/copilot.el/issues/220
+(setq copilot-indent-offset-warning-disable t)

@@ -60,3 +60,6 @@
  '(ediff-odd-diff-A ((((class color) (min-colors 89)) (:background "#93a1a1" :foreground "#fdf6e3"))))
  '(ediff-odd-diff-C ((t (:background "blue" :foreground "White"))))
  '(region ((t (:extend t :background "salmon" :distant-foreground "gtk_selection_fg_color")))))
+
+(set-face-attribute 'default nil :height 110)
+;; (add-to-list 'default-frame-alist '(alpha-background . 85))

@@ -137,7 +137,7 @@
   "Insert 'binding.pry' on the line above the cursor in enh-ruby-mode."
   (interactive)
   (when (eq major-mode 'enh-ruby-mode)
-    (insert-content-line-above-cursor "binding.pry")))
+    (insert-content-line-above-cursor "byebug")))
 
 (defun insert-testthis-above-cursor ()
   "Insert 'testthis' on the line above the cursor in enh-ruby-mode."
@@ -148,4 +148,5 @@
 ;; enh-ruby-mode-map does not exist here
 ;; (with-eval-after-load 'evil
 ;;   (define-key enh-ruby-mode-map (kbd "<f5>") 'insert-binding-pry-above-cursor)
+;;   )
 ;;   (define-key enh-ruby-mode-map (kbd "<f6>") 'insert-testthis-above-cursor))
