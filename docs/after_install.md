@@ -4,3 +4,7 @@
 ```
 update-desktop-database ~/.local/share/applications/
 ```
+
+
+Чтобы пакеты не автообновлялись каждый день
+`snap refresh --hold=forever`

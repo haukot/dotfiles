@@ -1,0 +1,9 @@
+hint2_activation_key: A-s
+hint_fgcolor: #ff3333ff
+hint_bgcolor: #ffffffff
+
+hint_border_radius: 4
+hint_size: 20
+hint2_chars: neoiashtqdrwfu:p
+hint2_grid_size: 4
+hint2_size: 16
