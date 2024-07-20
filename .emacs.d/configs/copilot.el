@@ -54,7 +54,6 @@
 ;; (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
 ;; (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
 
-
 ;; Disable in comments
 (defun my-in-comment-p ()
   "Return t if the point is in a comment, nil otherwise."

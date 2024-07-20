@@ -36,14 +36,20 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ; return in find-files
-(defun fu/helm-find-files-navigate-forward (orig-fun &rest args)
+;; (defun fu/helm-find-files-navigate-forward (orig-fun &rest args)
+;;   (if (file-directory-p (helm-get-selection))
+;;       (apply orig-fun args)
+;;     (helm-maybe-exit-minibuffer)))
+;; (advice-add 'helm-execute-persistent-action :around #'fu/helm-find-files-navigate-forward)
+(defun fu/helm-find-files-navigate-forward-or-exit ()
+  "Navigate into directories or exit minibuffer for files in Helm."
+  (interactive)
   (if (file-directory-p (helm-get-selection))
-      (apply orig-fun args)
-    (helm-maybe-exit-minibuffer)))
-(advice-add 'helm-execute-persistent-action :around #'fu/helm-find-files-navigate-forward)
+      (helm-execute-persistent-action)
+    (helm-exit-minibuffer)))
 
 ;;(define-key helm-find-files-map (kbd "/") 'helm-execute-persistent-action)
-(define-key helm-find-files-map (kbd "C-e") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "C-e") 'fu/helm-find-files-navigate-forward-or-exit)
 ; optimize backspase
 (defun fu/helm-find-files-navigate-back (orig-fun &rest args)
   (if (= (length helm-pattern) (length (helm-find-files-initial-input)))

@@ -10,9 +10,9 @@
 
 ;; emacs --debug-init
 
-(setq debug-on-error t)
+;; (setq debug-on-error t)
 ;; (setq warning-minimum-level :debug)
-(setq debug-on-message ".*be defined as a symbol.*")
+;; (setq debug-on-message ".*be defined as a symbol.*")
 
 
 ;;; ---------------------------------------------------------------------------
@@ -181,6 +181,7 @@
 (load-user-file "eshell.el")
 (load-user-file "copilot.el")
 (load-user-file "ruby.el")
+(load-user-file "move.el")
 
 
 ;; (set-face-background 'fringe "grey")

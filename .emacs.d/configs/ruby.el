@@ -150,3 +150,12 @@
 ;;   (define-key enh-ruby-mode-map (kbd "<f5>") 'insert-binding-pry-above-cursor)
 ;;   )
 ;;   (define-key enh-ruby-mode-map (kbd "<f6>") 'insert-testthis-above-cursor))
+
+
+(add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
+
+;; проставляем комменты для haml-mode, чтобы копилот в них не работал
+(add-hook 'haml-mode-hook
+          (lambda ()
+            (modify-syntax-entry ?# "< b" haml-mode-syntax-table)
+            (modify-syntax-entry ?\n "> b" haml-mode-syntax-table)))

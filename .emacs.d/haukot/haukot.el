@@ -15,9 +15,6 @@
       (set-frame-font "DejaVu Sans Mono-12")))
 
 
-
-
-
 ;;; ui
 
   (custom-set-variables '(echo-keystrokes 0.01)
