@@ -36,6 +36,8 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
+
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -77,6 +79,14 @@
 ;; (add-hook 'vue-mode-hook #'lsp!)
 ;; npm install -g vue-language-server
 ;; doom refresh
+
+
+(defun load-user-file (file)
+  (interactive "f")
+  "Load a file in current user's configuration directory"
+  (load-file (expand-file-name file "~/.config/doom/configs")))
+(load-user-file "copilot.el")
+
 
 ;; переключения по окнам через Shift-Arrows
 (windmove-default-keybindings)
@@ -315,8 +325,6 @@ appropriate.  In tables, insert a new row or end the table."
 (setq gac-default-message "Auto-commit: %F %T")
 
 (add-hook 'org-mode-hook 'git-auto-commit-mode)
-
-(add-load-path! (expand-file-name "configs/copilot.el"))
 
 
 ;;; Отлючаем автокомментарии, т.к. по+default-want-RET-continue-commentsка только бесят

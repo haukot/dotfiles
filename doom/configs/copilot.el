@@ -3,11 +3,44 @@
 
 (define-key global-map (kbd "C-f") nil) ;; was forward-char before
 
+(defun disable-copilot ()
+  (interactive)
+  (remove-hook 'prog-mode-hook 'copilot-mode)
+    (dolist (buf (buffer-list))
+        (with-current-buffer buf
+        (when (bound-and-true-p copilot-mode)
+          (copilot-mode -1)))
+        )
+    )
+
+(defun enable-copilot ()
+  (interactive)
+  (add-hook 'prog-mode-hook 'copilot-mode)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (derived-mode-p 'prog-mode)
+        (copilot-mode 1))))
+  )
+
+;; from https://github.com/copilot-emacs/copilot.el/issues/249
+(after! (evil copilot)
+  (add-hook 'prog-mode-hook 'copilot-mode)
+
+  ;; Define the custom function that either accepts the completion or does the default behavior
+  (defun my/copilot-tab-or-default ()
+    (interactive)
+    (if (and (bound-and-true-p copilot-mode))
+        (copilot-accept-completion)
+      (evil-insert 1))) ; Default action to insert a tab. Adjust as needed.
+
+  ;; Bind the custom function to <tab> in Evil's insert state
+  (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
+
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
-              ("<tab>" . #'my/copilot-tab)
-              ("TAB" . #'my/copilot-tab)
+              ;; ("<tab>" . #'my/copilot-tab)
+              ;; ("TAB" . #'my/copilot-tab)
               ("C-<tab>" . 'copilot-next-completion)
               ("C-<iso-lefttab>" . 'copilot-previous-completion)
               ("C-f" . 'copilot-accept-completion-by-word))
@@ -19,29 +52,10 @@
   ;; (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
   ;; (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
 
-  (defun my/copilot-tab ()
-    (interactive)
-    (or (copilot-accept-completion)
-        (indent-for-tab-command)))
-
-  (defun disable-copilot ()
-    (interactive)
-    (remove-hook 'prog-mode-hook 'copilot-mode)
-    (dolist (buf (buffer-list))
-      (with-current-buffer buf
-        (when (bound-and-true-p copilot-mode)
-          (copilot-mode -1)))
-      )
-    )
-
-  (defun enable-copilot ()
-    (interactive)
-    (add-hook 'prog-mode-hook 'copilot-mode)
-    (dolist (buf (buffer-list))
-      (with-current-buffer buf
-        (when (derived-mode-p 'prog-mode)
-          (copilot-mode 1))))
-    )
+  ;; (defun my/copilot-tab ()
+  ;;   (interactive)
+  ;;   (or (copilot-accept-completion)
+  ;;       (indent-for-tab-command)))
 
 
   ;; (with-eval-after-load 'company
@@ -85,6 +99,7 @@ cleared, make sure the overlay doesn't come back too soon."
   ;; (define-key copilot-completion-map (kbd "C-<tab>") 'copilot-next-completion)
   ;; (define-key copilot-completion-map (kbd "C-<iso-lefttab>") 'copilot-previous-completion)
   ;; (define-key copilot-completion-map (kbd "C-f") #'copilot-accept-completion-by-word)
+
 
   ;; выключаем warning про неустановленную индентацию (был в emacs-lisp-mode)
   ;; https://github.com/copilot-emacs/copilot.el/issues/220
