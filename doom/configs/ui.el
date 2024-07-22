@@ -38,6 +38,7 @@
           (propertize (concat line-col " ") 'face 'font-lock-constant-face)))))
   )
 
+;;; Topbar
 (after! frame
   (setq frame-title-format
     '((:eval (if (buffer-file-name)

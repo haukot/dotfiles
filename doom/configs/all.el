@@ -11,3 +11,14 @@
   (message "Saved"))
 
 (advice-add 'save-buffer :after #'my/save-buffer-message)
+
+
+;; Vertico
+;; TODO: имеет смысл только если vertico снизу в минибуффере показывать? Иначе все
+;; равно нормально не видно
+;;
+;; (when (modulep! :completion vertico)
+;;   (after! consult
+;;           (setq consult--customize-alist nil)
+;;     (consult-customize
+;;             :preview-key '(:debounce 0.4 any))))
