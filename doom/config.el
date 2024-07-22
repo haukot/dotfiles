@@ -89,6 +89,7 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file "~/.config/doom/configs")))
 
+(load-user-file "code.el")
 (load-user-file "copilot.el")
 (load-user-file "org.el")
 (load-user-file "ui.el")
