@@ -22,3 +22,6 @@
 ;;           (setq consult--customize-alist nil)
 ;;     (consult-customize
 ;;             :preview-key '(:debounce 0.4 any))))
+
+(after! undo
+        (setq undo-tree-enable-undo-in-region nil))
