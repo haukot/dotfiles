@@ -5,9 +5,16 @@
 ;; Другой символ для folded в org-mode
 (setq org-ellipsis " ▼")
 (after! org
-  (set-face-attribute 'org-ellipsis nil :foreground "deep sky blue" :underline nil))
+        (set-face-attribute 'org-ellipsis nil :foreground "deep sky blue" :underline nil))
 
+;; SPC-e to capture
+(map! :leader "e" #'org-capture)
 
+(defun haukot/org-capture-project-notes ()
+  (interactive)
+  (org-capture nil "pn"))
+;; SPC p n - project notes
+(map! :leader "p n" #'haukot/org-capture-project-notes)
 
 ;;;
 ;;;
@@ -232,3 +239,20 @@ appropriate.  In tables, insert a new row or end the table."
 
 
 (add-hook 'org-mode-hook 'git-auto-commit-mode)
+
+
+
+
+
+  ;; (defun org-capture-inbox ()
+  ;;   (interactive)
+  ;;   (call-interactively 'org-store-link)
+  ;;   (org-capture nil "i"))
+  ;; (define-key global-map (kbd "C-c i") 'org-capture-inbox)
+
+;; (define-key global-map (kbd ))
+;; (after! org
+;;   (add-to-list 'org-capture-templates** [ ]
+
+;;                '("nt" "Todo" entry (file my-org-tasks-file)
+;;                   "* TODO %?\n  %i\n  %a"))
