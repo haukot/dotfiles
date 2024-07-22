@@ -5,3 +5,9 @@
 (setq-default standard-indent 2)
 (setq-default tab-always-indent 'complete)
 (setq lisp-indent-offset 2)
+
+(defun my/save-buffer-message (&rest _)
+  "Display a message in the minibuffer after saving a file."
+  (message "File saved!"))
+
+(advice-add 'save-buffer :after #'my/save-buffer-message)
