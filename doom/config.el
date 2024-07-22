@@ -91,6 +91,7 @@
 
 (load-user-file "copilot.el")
 (load-user-file "org.el")
+(load-user-file "ui.el")
 
 
 ;; переключения по окнам через Shift-Arrows
@@ -99,9 +100,30 @@
 ;; Отключение подтверждения о закрытии
 (setq confirm-kill-emacs nil)
 
-
-
 ;;; Отлючаем автокомментарии, т.к. по+default-want-RET-continue-commentsка только бесят
 ;;; Оставляем по return
 ;; (setq +default-want-RET-continue-comments nil)
 (setq +evil-want-o/O-to-continue-comments nil)
+
+(map! "C-c p f" #'projectile-find-file)
+
+(setq persp-keymap-prefix  (kbd "C-c p p"))
+(map! "C-c p s" #'+default/search-project-for-symbol-at-point);#'+default/search-project)
+
+(map! :map vertico-map
+      :after vertico
+      :desc "Go do current" "C-e" #'vertico-insert
+      :desc "Directory up" "C-l" #'vertico-directory-up)
+
+;; disable custom C-x ... in insert mode https://github.com/doomemacs/doomemacs/blob/f5b3958331cebf66383bf22bdc8b61cd44eca645/modules/editor/evil/config.el#L580
+(after! evil
+        (map! (:prefix "C-x"
+                      :i "C-l" nil
+                      :i "C-k" nil
+                      :i "C-f" nil
+                      :i "C-]" nil
+                      :i "s"   nil
+                      :i "C-s" nil
+                      :i "C-o" nil
+                      :i "C-n" nil
+                      :i "C-p" nil)))
