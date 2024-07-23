@@ -25,3 +25,7 @@
 
 (after! undo
         (setq undo-tree-enable-undo-in-region nil))
+
+;; Disable auto completion(because Copilot is main completion engine)
+(setq company-idle-delay nil)
+(global-set-key (kbd "C-c c") #'company-manual-begin)

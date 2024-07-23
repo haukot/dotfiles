@@ -44,3 +44,27 @@
     '((:eval (if (buffer-file-name)
                (concat (abbreviate-file-name (buffer-file-name)) " - Doom Emacs")
                (concat "%b - Doom Emacs"))))))
+
+
+;;; Centaur Tabs
+(after! centaur-tabs
+  (custom-set-faces
+   '(centaur-tabs-default ((t (:background "#f0f0f0" :foreground "#505050"))))
+   '(centaur-tabs-selected ((t (:background "#ffffff" :foreground "#000000"))))
+   '(centaur-tabs-unselected ((t (:background "#e0e0e0" :foreground "#707070"))))
+   '(centaur-tabs-selected-modified ((t (:background "#ffffff" :foreground "brown"))))
+   '(centaur-tabs-unselected-modified ((t (:background "#e0e0e0" :foreground "brown"))))
+   '(centaur-tabs-active-bar-face ((t (:background "#f0f0f0" :height 2))))
+   '(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected :foreground "brown"))))
+   '(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected :foreground "brown")))))
+
+  ;; Enable keybindings
+  (global-set-key (kbd "C-<tab>") 'centaur-tabs-forward)
+  (global-set-key (kbd "C-<iso-lefttab>") 'centaur-tabs-backward))
+
+;; because default is https://github.com/doomemacs/doomemacs/blob/f5b3958331cebf66383bf22bdc8b61cd44eca645/modules/config/default/%2Bevil-bindings.el#L333
+(map!
+        :i "C-<tab>" #'centaur-tabs-forward
+        :nv "C-<tab>" #'centaur-tabs-forward
+        "C-<tab>" #'centaur-tabs-forward
+        "C-<tab>" #'centaur-tabs-forward)

@@ -36,6 +36,7 @@
 ;; `load-theme' function. This is the default:
 
 ;; load default emacs theme (default doom theme is 'doom-one)
+
 (setq doom-theme nil)
 
 
