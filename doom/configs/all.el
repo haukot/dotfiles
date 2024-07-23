@@ -29,3 +29,23 @@
 ;; Disable auto completion(because Copilot is main completion engine)
 (setq company-idle-delay nil)
 (global-set-key (kbd "C-c c") #'company-manual-begin)
+
+;; (setq lsp-log-io t)
+
+(after! lsp-mode
+        (setq lsp-disabled-clients
+                '(
+                         ;; ruby-ls ;; solargraph ;; TODO disable
+                         ruby-syntax-tree-ls
+                         rubocop-ls
+                         sorbet-ls
+                         steep-ls
+                         semgrep-ls ;; что это?
+                         typeprof-ls
+                         ))
+        (setq lsp-ruby-lsp-use-bundler nil)
+
+        ;; (defun lsp-ruby-lsp--build-command ()
+        ;;         (append '("BUNDLE_GEMFILE=/home/haukot/programming/projects/slurm/slurm/.my-ruby-lsp/Gemfile bundle exec ruby-lsp")))
+        )
+;; (add-hook 'ruby-mode-hook (lambda () (setq-local lsp-enabled-clients '(ruby-ls))))
