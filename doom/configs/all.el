@@ -23,6 +23,15 @@
 ;;     (consult-customize
 ;;             :preview-key '(:debounce 0.4 any))))
 
+;; Отключаем группирование по названию файла в поиске по проекту
+;; т.к. занимает много места
+(after! consult
+        (consult-customize
+                +default/search-project-for-symbol-at-point
+                +default/search-project
+                :group nil :sort t))
+
+;;; Undo tree
 (after! undo
         (setq undo-tree-enable-undo-in-region nil))
 
@@ -35,7 +44,7 @@
 (after! lsp-mode
         (setq lsp-disabled-clients
                 '(
-                         ;; ruby-ls ;; solargraph ;; TODO disable
+                         ;; ruby-ls ;; - solargraph ;; TODO disable
                          ruby-syntax-tree-ls
                          rubocop-ls
                          sorbet-ls
