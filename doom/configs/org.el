@@ -26,6 +26,8 @@
 (map! :leader "n p" #'haukot/org-capture-project-notes)
 ;; SPC n d - daily notes
 (map! :leader "n d" #'org-roam-dailies-capture-today)
+;; SPC n n n - inbox notes
+
 
 ;;;
 ;;;
@@ -286,3 +288,21 @@ appropriate.  In tables, insert a new row or end the table."
                         #'org-roam-reflinks-insert-section
                         #'org-roam-unlinked-references-insert-section))
         )
+
+
+;; Tags
+(setq org-tag-alist '(
+                             ("почитать" . ?r)
+                            ("посмотреть" . ?n)
+                             ("org" . ?o)
+                             ("emacs" . ?e)
+                             ("programming" . ?p)
+                             ("собеседования" . ?c)
+                             ("резюме" . nil)
+                             ))
+;; ;; Tag colors
+;; (setq org-tag-faces
+;;       '(
+;;         ("meeting"   . (:foreground "yellow1"       :weight bold))
+;;         )
+;;       )

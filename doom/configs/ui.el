@@ -3,6 +3,17 @@
 (custom-set-faces
   '(region ((t (:extend t :background "salmon" :distant-foreground "gtk_selection_fg_color")))))
 
+;; Pdf pages in modeline
+(setq +modeline-pdf-page nil)
+
+(defun +modeline-update-pdf-pages ()
+  "Update PDF pages."
+  (setq +modeline-pdf-page
+        (format "  P%d/%d "
+                (eval `(pdf-view-current-page))
+                (pdf-cache-number-of-pages))))
+(add-hook 'pdf-view-change-page-hook #'+modeline-update-pdf-pages)
+
 ;;; Modeline
 (setq-default mode-line-format
   (list
@@ -19,6 +30,7 @@
          (propertize display-name
                      'face '(:foreground "brown4" :weight bold)
                      'help-echo (or file-name "Buffer has no file name"))))
+    '(:eval (propertize +modeline-pdf-page))
     " "
     ;; Right-aligned section that includes project name, major mode, and line:col
     '(:eval
