@@ -246,7 +246,6 @@ appropriate.  In tables, insert a new row or end the table."
 (setq gac-automatically-add-new-files-p t)
 (setq gac-debounce-interval 1)
 
-
 (add-hook 'org-mode-hook 'git-auto-commit-mode)
 
 

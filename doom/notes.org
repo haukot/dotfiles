@@ -1,0 +1,10 @@
+* Inbox
+** TODO [2024-07-28 Sun 06:33] Git autocommit не сохраняет удаленные файлы
+(setq gac-automatically-add-new-files-p t)
+
+Т.к. он работает на добавление в git commit файла из названия текущего буфера, а видимо после закрытия буффера файла и нет?
+
+https://github.com/ryuslash/git-auto-commit-mode/blob/master/git-auto-commit-mode.el#L171-L184
+
+[[file:~/.config/doom/configs/org.el::setq gac-automatically-add-new-files-p t]]
+

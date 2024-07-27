@@ -54,3 +54,6 @@
 ;; (setq mouse-wheel-progressive-speed nil)
 ;; (setq mouse-wheel-scroll-amount '(0.01))
 ;; (setq mouse-wheel-scroll-amount-horizontal '(0.0001))
+
+
+(setq org-download-screenshot-method "flameshot")
