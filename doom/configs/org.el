@@ -308,7 +308,7 @@ appropriate.  In tables, insert a new row or end the table."
 ;;       )
 
 
-;; Org-protocol for browser extenion
+;; Org-protocol for browser extension https://github.com/sprig/org-capture-extension
 ; чтобы не падало когда линки с []
 (defun transform-square-brackets-to-round-ones(string-to-transform)
   "Transforms ?[ into ( and ?] into ), other chars left unchanged."
@@ -318,7 +318,7 @@ appropriate.  In tables, insert a new row or end the table."
 ;; p - если что-то выделено для страницы, L - если нет
 (after! org-protocol
         (add-to-list 'org-capture-templates '("p" "Protocol Content" entry (file+headline +org-capture-notes-file "Inbox")
-                                                     "* %^{Title}\n[[%:link][%(transform-square-brackets-to-round-ones \"%:description\")]] \n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?" :prepend t))
+                                                     "* %u %^{Title}\n[[%:link][%:link]](%(transform-square-brackets-to-round-ones \"%:description\")) \n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?" :prepend t))
         (add-to-list 'org-capture-templates '("L" "Protocol Link" entry (file+headline +org-capture-notes-file "Inbox")
-                                                     "* %? [[%:link][%(transform-square-brackets-to-round-ones \"%:description\")]]\n" :prepend t)
+                                                     "* %u %? [[%:link][%:link]](%(transform-square-brackets-to-round-ones \"%:description\"))\n" :prepend t)
                 ))
