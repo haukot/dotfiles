@@ -11,6 +11,7 @@
 ;;
 (package! nvm)
 (package! vue-mode)
+(package! org-tidy)
 (package! git-auto-commit-mode)
 (package! copilot
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))

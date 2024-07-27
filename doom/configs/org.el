@@ -5,16 +5,27 @@
 ;; Другой символ для folded в org-mode
 (setq org-ellipsis " ▼")
 (after! org
-        (set-face-attribute 'org-ellipsis nil :foreground "deep sky blue" :underline nil))
+        (set-face-attribute 'org-ellipsis nil :foreground "sky blue" :underline nil)
+        (set-face-attribute 'org-drawer nil :inherit 'default :foreground "grey54" :background nil :weight 'normal :slant 'normal)
 
-;; SPC-e to capture
-(map! :leader "e" #'org-capture)
+        ;; (custom-set-faces
+        ;;         '(org-level-2 ((t 'font-lock-comment-face))))
+
+        ;; (set-face-attribute 'org-special-keyword nil
+        ;;         :foreground "blue"        ;; Example: Set the text color to blue
+        ;;         :background "white"       ;; Example: Set background color to black
+        ;;         :weight 'bold             ;; Example: Make the font bold
+        ;;         :underline t)
+        )
+
 
 (defun haukot/org-capture-project-notes ()
   (interactive)
   (org-capture nil "pn"))
-;; SPC p n - project notes
-(map! :leader "p n" #'haukot/org-capture-project-notes)
+;; SPC n p - project notes
+(map! :leader "n p" #'haukot/org-capture-project-notes)
+;; SPC n d - daily notes
+(map! :leader "n d" #'org-roam-dailies-capture-today)
 
 ;;;
 ;;;
@@ -30,7 +41,6 @@
 
 ;; (define-key org-mode-map (kbd "RET") 'my-org-return)
 ;; (define-key org-mode-map (kbd "C-<return>") 'org-insert-item)
-
 
 ;;; from https://tecosaur.github.io/emacs-config/config.html#nicer-org-return
 (defun unpackaged/org-element-descendant-of (type element)
@@ -128,14 +138,11 @@ appropriate.  In tables, insert a new row or end the table."
       ;; All other cases: call `org-return-indent'.
       (org-return t)))))
 
-
 ;;;###autoload
 (map!
  :after evil-org
  :map evil-org-mode-map
  :i [return] #'unpackaged/org-return-dwim)
-
-
 
 
 
@@ -226,7 +233,7 @@ appropriate.  In tables, insert a new row or end the table."
 ;; create dir
 ;; (make-directory "/media/data/ObsidianNotesVault/NewVault/org/roam")
 (setq org-directory "/media/data/ObsidianNotesVault/NewVault/org")
-(setq org-roam-directory (file-truename "/media/data/ObsidianNotesVault/NewVault/org"))
+(setq org-roam-directory (file-truename "/media/data/ObsidianNotesVault/NewVault/org/roam"))
 
 
 ;;;
@@ -241,9 +248,6 @@ appropriate.  In tables, insert a new row or end the table."
 (add-hook 'org-mode-hook 'git-auto-commit-mode)
 
 
-
-
-
   ;; (defun org-capture-inbox ()
   ;;   (interactive)
   ;;   (call-interactively 'org-store-link)
@@ -256,3 +260,29 @@ appropriate.  In tables, insert a new row or end the table."
 
 ;;                '("nt" "Todo" entry (file my-org-tasks-file)
 ;;                   "* TODO %?\n  %i\n  %a"))
+
+
+;; Чтобы org-goto можно было удобно пользоваться(из https://www.n16f.net/blog/org-mode-headline-tips/)
+(setq org-goto-interface 'outline-path-completion)
+(setq org-outline-path-complete-in-steps nil)
+(setq org-goto-max-level 2)
+
+;; В org-buffer чтобы можно было кликать мышкой(по умолчанию RET)
+(after! org
+        (define-key org-roam-mode-map [mouse-1] #'org-roam-preview-visit))
+
+;; Прячем :PROPERTIES:
+;; org-tidy-untidy-buffer for one, org-tidy-toggle for all
+(use-package org-tidy
+  :ensure t
+  :hook
+  (org-mode . org-tidy-mode))
+
+
+(after! org
+        ;; то что должно показываться в org-roam buffer (https://github.com/org-roam/org-roam/blob/main/doc/org-roam.org#configuring-what-is-displayed-in-the-buffer)
+        (setq org-roam-mode-sections
+                (list #'org-roam-backlinks-insert-section
+                        #'org-roam-reflinks-insert-section
+                        #'org-roam-unlinked-references-insert-section))
+        )
