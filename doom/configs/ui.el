@@ -30,7 +30,7 @@
          (propertize display-name
                      'face '(:foreground "brown4" :weight bold)
                      'help-echo (or file-name "Buffer has no file name"))))
-    '(:eval (propertize +modeline-pdf-page))
+    '(:eval (propertize (if +modeline-pdf-page +modeline-pdf-page "")))
     " "
     ;; Right-aligned section that includes project name, major mode, and line:col
     '(:eval

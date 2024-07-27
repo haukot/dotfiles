@@ -234,8 +234,8 @@ appropriate.  In tables, insert a new row or end the table."
 
 ;; create dir
 ;; (make-directory "/media/data/ObsidianNotesVault/NewVault/org/roam")
-(setq org-directory "/media/data/ObsidianNotesVault/NewVault/org")
-(setq org-roam-directory (file-truename "/media/data/ObsidianNotesVault/NewVault/org/roam"))
+(setq org-directory "/media/data/ObsidianNotesVault/NewVault/org/")
+(setq org-roam-directory (file-truename "/media/data/ObsidianNotesVault/NewVault/org/roam/"))
 
 
 ;;;
@@ -306,3 +306,19 @@ appropriate.  In tables, insert a new row or end the table."
 ;;         ("meeting"   . (:foreground "yellow1"       :weight bold))
 ;;         )
 ;;       )
+
+
+;; Org-protocol for browser extenion
+; чтобы не падало когда линки с []
+(defun transform-square-brackets-to-round-ones(string-to-transform)
+  "Transforms ?[ into ( and ?] into ), other chars left unchanged."
+        (concat
+                (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform))
+        )
+;; p - если что-то выделено для страницы, L - если нет
+(after! org-protocol
+        (add-to-list 'org-capture-templates '("p" "Protocol Content" entry (file+headline +org-capture-notes-file "Inbox")
+                                                     "* %^{Title}\n[[%:link][%(transform-square-brackets-to-round-ones \"%:description\")]] \n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?" :prepend t))
+        (add-to-list 'org-capture-templates '("L" "Protocol Link" entry (file+headline +org-capture-notes-file "Inbox")
+                                                     "* %? [[%:link][%(transform-square-brackets-to-round-ones \"%:description\")]]\n" :prepend t)
+                ))
