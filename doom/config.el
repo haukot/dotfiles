@@ -94,6 +94,7 @@
 (load-user-file "copilot.el")
 (load-user-file "org.el")
 (load-user-file "ui.el")
+(load-user-file "utils.el")
 (load-user-file "vertico-consult.el")
 
 
