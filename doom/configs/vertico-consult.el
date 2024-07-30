@@ -10,14 +10,29 @@
 ;;     (consult-customize
 ;;             :preview-key '(:debounce 0.4 any))))
 
+
+
+;; Vertico - сортировка поиска в файлах по алфавиту, а остальное по частоте и алфавиту
+;; дефолтная функция - vertico-sort-history-length-alpha (https://github.com/minad/vertico/blob/main/vertico.el#L94C36-L94C69)
+;; Сортировку через ripgrep использовать не можем т.к. тогда он будет не parallel (она была бы к параметрам consult)
+(defun my-custom-vertico-sort (candidates)
+  "Custom sort function for Vertico candidates."
+  (sort candidates #'string-lessp))
+(defun my-advice-for-custom-sort (orig-fn &rest args)
+  "Advice to set custom vertico sort function temporarily."
+  (let ((vertico-sort-function #'my-custom-vertico-sort))
+    (apply orig-fn args)))
+(advice-add '+default/search-project-for-symbol-at-point :around #'my-advice-for-custom-sort)
+(advice-add '+default/search-project :around #'my-advice-for-custom-sort)
+
 (after! consult
         ;; Отключаем группирование по названию файла в поиске по проекту
         ;; т.к. занимает много места
         (consult-customize
                 +default/search-project-for-symbol-at-point
                 +default/search-project
-                ;; consult-buffer ; тут отключаем group т.к. ломает сортировку
-                :group nil :sort t)
+                :group nil
+                :sort t)
 
         ;; тут отключаем group т.к. ломает сортировку
         ;;  sort nil включает дефолтную сортировку емакса по времени открытия

@@ -1,5 +1,7 @@
 ;;; code.el --- asht                                 -*- lexical-binding: t; -*-
 
+(global-auto-revert-mode -1)
+
 (setq tab-width 2)
 (setq indent-tabs-mode nil)
 (setq standard-indent 2)
@@ -68,3 +70,28 @@
 (add-hook! 'prog-mode-hook
   (electric-pair-local-mode -1))
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+
+;; make % in evil normal mode to go between beginning and end of ruby functions and blocks
+(use-package! evil-matchit
+  :after evil
+  :config
+  (global-evil-matchit-mode 1))
+
+;;
+;; make C-x 1 to run C-x 1, and C-x 1 to C-x 1 + C-x 3
+;;
+(defun my-delete-other-windows-then-split-vertically-and-focus-right ()
+  "Delete other windows, split vertically, and focus on the right window."
+  (interactive)
+  (delete-other-windows)
+  (let ((new-window (split-window-right)))
+    (select-window new-window)))
+
+(defun my-original-delete-other-windows ()
+  "The original functionality of delete-other-windows (C-x 1)."
+  (interactive)
+  (delete-other-windows))
+
+(map! "C-x 1" #'my-delete-other-windows-then-split-vertically-and-focus-right
+      "C-x 5" #'my-original-delete-other-windows)
