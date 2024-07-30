@@ -57,3 +57,14 @@
 
 
 (setq org-download-screenshot-method "flameshot")
+
+;; flycheck only after save
+(after! flycheck
+  (setq flycheck-check-syntax-automatically '(save mode-enabled)))
+
+;; disable auto parenthesis
+(after! smartparens
+  (smartparens-global-mode -1))
+(add-hook! 'prog-mode-hook
+  (electric-pair-local-mode -1))
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)

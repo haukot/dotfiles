@@ -5,6 +5,9 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
 
+;; NOTE: Если https://git.savannah.gnu.org/git/emacs/nongnu.git/ лежит,
+;; то закомментить https://github.com/doomemacs/doomemacs/issues/7171#issuecomment-1483751287
+;; в /home/haukot/.config/emacs/lisp/doom-packages.el
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
@@ -15,6 +18,8 @@
 (package! git-auto-commit-mode)
 (package! copilot
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
+
+(package! evil-matchit)
 
 
 ;; To install a package directly from a remote git repo, you must specify a

@@ -1,4 +1,11 @@
 * Inbox
+** [2024-07-30 Tue 20:56] Если doom sync падает с  unable to access 'https://git.savannah.gnu.org/git/emacs/nongnu.git/
+
+Закомментировать эти 4 строки
+
+[[file:~/.config/emacs/lisp/doom-packages.el:::repo "https://git.savannah.gnu.org/git/emacs/nongnu.git"]]
+
+Из https://github.com/doomemacs/doomemacs/issues/7171#issuecomment-1483751287
 ** TODO [2024-07-28 Sun 06:33] Git autocommit не сохраняет удаленные файлы
 (setq gac-automatically-add-new-files-p t)
 
