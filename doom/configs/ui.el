@@ -3,6 +3,20 @@
 (custom-set-faces
   '(region ((t (:extend t :background "salmon" :distant-foreground "gtk_selection_fg_color")))))
 
+;; (set-background-color "ivory")
+;; (set-background-color "khaki")
+;; (set-background-color "pink")
+(set-background-color "wheat")
+(custom-set-faces '(window-divider ((t (:foreground "grey")))))
+(custom-set-faces '(fringe ((t (:background "wheat1")))))
+(custom-set-faces '(top-bar ((t (:background "wheat1")))))
+
+;; Set the color for the mode line
+(set-face-attribute 'mode-line nil :background "wheat1" :foreground "black" :box nil)
+(set-face-attribute 'mode-line-inactive nil :background "wheat3" :foreground "gray50" :box nil)
+;; colors for line numbers
+;; (custom-set-faces '(line-number ((t (:background "wheat" :foreground "grey50")))))
+
 ;; Pdf pages in modeline
 (setq +modeline-pdf-page nil)
 
@@ -60,19 +74,22 @@
 
 ;;; Centaur Tabs
 (after! centaur-tabs
-  (custom-set-faces
-   '(centaur-tabs-default ((t (:background "#f0f0f0" :foreground "#505050"))))
-   '(centaur-tabs-selected ((t (:background "#ffffff" :foreground "#000000"))))
-   '(centaur-tabs-unselected ((t (:background "#e0e0e0" :foreground "#707070"))))
-   '(centaur-tabs-selected-modified ((t (:background "#ffffff" :foreground "brown"))))
-   '(centaur-tabs-unselected-modified ((t (:background "#e0e0e0" :foreground "brown"))))
-   '(centaur-tabs-active-bar-face ((t (:background "#f0f0f0" :height 2))))
-   '(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected :foreground "brown"))))
-   '(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected :foreground "brown")))))
+        (custom-set-faces
+                '(centaur-tabs-default ((t (:inherit nil :background "wheat3" :foreground "black"))))
+                '(centaur-tabs-selected ((t (:background "wheat1" :foreground "#000000"))))
+                '(centaur-tabs-unselected ((t (:background "#e0e0e0" :foreground "#707070"))))
+                '(centaur-tabs-selected-modified ((t (:background "wheat1" :foreground "brown"))))
+                '(centaur-tabs-unselected-modified ((t (:background "wheat1" :foreground "brown"))))
+                '(centaur-tabs-active-bar-face ((t (:background "wheat1" :height 2))))
+                '(centaur-tabs-modified-marker-selected ((t (:inherit 'centaur-tabs-selected :foreground "brown"))))
+                '(centaur-tabs-modified-marker-unselected ((t (:inherit 'centaur-tabs-unselected :foreground "brown"))))
+                )
+        ;; такой же face на headline как на default
+        (centaur-tabs-headline-match)
 
-  ;; Enable keybindings
-  (global-set-key (kbd "C-<tab>") 'centaur-tabs-forward)
-  (global-set-key (kbd "C-<iso-lefttab>") 'centaur-tabs-backward))
+        ;; Enable keybindings
+        (global-set-key (kbd "C-<tab>") 'centaur-tabs-forward)
+        (global-set-key (kbd "C-<iso-lefttab>") 'centaur-tabs-backward))
 
 ;; because default is https://github.com/doomemacs/doomemacs/blob/f5b3958331cebf66383bf22bdc8b61cd44eca645/modules/config/default/%2Bevil-bindings.el#L333
 (map!

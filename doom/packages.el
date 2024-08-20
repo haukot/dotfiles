@@ -16,10 +16,12 @@
 (package! vue-mode)
 (package! org-tidy)
 (package! git-auto-commit-mode)
+(package! nov)
 (package! copilot
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
 
 (package! evil-matchit)
+(package! gnuplot)
 
 
 ;; To install a package directly from a remote git repo, you must specify a

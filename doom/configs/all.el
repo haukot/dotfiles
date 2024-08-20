@@ -6,7 +6,12 @@
 (setq indent-tabs-mode nil)
 (setq standard-indent 2)
 (setq tab-always-indent 'complete)
-(setq lisp-indent-offset 2)
+;; 2 spaces for all lisp modes
+(setq-default
+  lisp-indent-offset 2
+  lisp-body-indent 2
+  lisp-backquote-indentation 2
+  scheme-indent-offset 2)
 
 (defun my/save-buffer-message (&rest _)
   "Display a message in the minibuffer after saving a file."
@@ -95,3 +100,9 @@
 
 (map! "C-x 1" #'my-delete-other-windows-then-split-vertically-and-focus-right
       "C-x 5" #'my-original-delete-other-windows)
+
+;; Отключение lsp
+;; (remove-hook 'ruby-mode-local-vars-hook #'lsp!)
+
+(map! :map dired-mode-map
+      "<backspace>" #'dired-up-directory)
