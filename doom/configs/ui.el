@@ -3,19 +3,35 @@
 (custom-set-faces
   '(region ((t (:extend t :background "salmon" :distant-foreground "gtk_selection_fg_color")))))
 
-;; (set-background-color "ivory")
-;; (set-background-color "khaki")
-;; (set-background-color "pink")
-(set-background-color "wheat")
-(custom-set-faces '(window-divider ((t (:foreground "grey")))))
-(custom-set-faces '(fringe ((t (:background "wheat1")))))
-(custom-set-faces '(top-bar ((t (:background "wheat1")))))
+(custom-set-faces! '(cursor :background "wheat4"))
+(setq evil-normal-state-cursor '("wheat4" box))
+(setq evil-insert-state-cursor '("wheat4" bar))
+(setq evil-visual-state-cursor '("wheat4" hollow))
+(setq evil-operator-state-cursor '("wheat4" (hbar . 10)))
 
-;; Set the color for the mode line
-(set-face-attribute 'mode-line nil :background "wheat1" :foreground "black" :box nil)
-(set-face-attribute 'mode-line-inactive nil :background "wheat3" :foreground "gray50" :box nil)
-;; colors for line numbers
-;; (custom-set-faces '(line-number ((t (:background "wheat" :foreground "grey50")))))
+(custom-theme-set-faces! 'user
+  `(default :background "wheat")
+  `(window-divider :foreground "grey")
+  `(fringe :background "wheat1")
+  `(line-number :background "wheat1" :foreground "grey50")
+  `(line-number-current-line :background "wheat2" :foreground "grey30" :weight bold)
+  `(mode-line :background "wheat1" :foreground "black" :box nil)
+  `(mode-line-inactive :background "wheat3" :foreground "gray50" :box nil)
+  `(cursor :background "wheat4"))
+        ;; ;; (set-background-color "ivory")
+        ;; ;; (set-background-color "khaki")
+        ;; ;; (set-background-color "pink")
+        ;; (set-background-color "wheat")
+        ;; (custom-set-faces '(window-divider ((t (:foreground "grey")))))
+        ;; (custom-set-faces '(fringe ((t (:background "wheat1")))))
+        ;; (custom-set-faces '(top-bar ((t (:background "wheat1")))))
+
+        ;; ;; Set the color for the mode line
+        ;; (set-face-attribute 'mode-line nil :background "wheat1" :foreground "black" :box nil)
+        ;; (set-face-attribute 'mode-line-inactive nil :background "wheat3" :foreground "gray50" :box nil)
+        ;; ;; colors for line numbers
+        ;; ;; (custom-set-faces '(line-number ((t (:background "wheat" :foreground "grey50")))))
+        ;; )
 
 ;; Pdf pages in modeline
 (setq +modeline-pdf-page nil)
