@@ -106,3 +106,14 @@
 
 (map! :map dired-mode-map
       "<backspace>" #'dired-up-directory)
+
+;; чтобы перемещение между окнами в insert state работало
+;; почему-то влево-вправо не было
+(map! :map evil-insert-state-map
+      "S-<left>"  #'windmove-left
+      "S-<right>" #'windmove-right
+      "S-<up>"    #'windmove-up
+      "S-<down>"  #'windmove-down)
+
+(map! :map evil-insert-state-map "<tab>" #'indent-according-to-mode)
+(map! :map evil-normal-state-map "<tab>" #'indent-according-to-mode)
