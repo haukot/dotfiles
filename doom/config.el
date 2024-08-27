@@ -90,12 +90,20 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file "~/.config/doom/configs")))
 
+(defun load-custom-file (file)
+  (interactive "f")
+  "Load a file in current user's custom files directory"
+  (load-file (expand-file-name file "~/.config/doom/custom")))
+
 (load-user-file "all.el")
 (load-user-file "copilot.el")
 (load-user-file "org.el")
 (load-user-file "ui.el")
 (load-user-file "utils.el")
 (load-user-file "vertico-consult.el")
+
+
+(load-custom-file "org-refile-attach.el")
 
 
 ;; переключения по окнам через Shift-Arrows
