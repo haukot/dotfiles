@@ -43,8 +43,27 @@
         ;;   ;; (setq consult-buffer-sources
         ;;   ;;       (cons 'consult--source-buffer
         ;;   ;;             (delq 'consult--source-buffer consult-buffer-sources)))
+
         )
 
+;; Показываем название буфера и его путь начиная от рута проекта
+;; от дублирований названий типо step.rb<1> step.rb<2>
+(after! consult
+  (defun consult--buffer-pair (buffer)
+    "Return a buffer-name and full-path pair for BUFFER."
+    (when (buffer-live-p buffer)
+      (let* ((path (buffer-file-name buffer))
+             (proj-root (when path
+                         (with-current-buffer buffer
+                           (projectile-project-root))))
+             (display-name
+              (if (and path proj-root)
+                  (concat
+                   (file-name-nondirectory (directory-file-name proj-root))
+                   "/"
+                   (file-relative-name path (file-name-directory proj-root)))
+                (or path (buffer-name buffer)))))
+        (cons display-name buffer)))))
 
 ;; make pgdown pgup working
 (after! vertico
