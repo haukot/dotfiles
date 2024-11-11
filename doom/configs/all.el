@@ -13,12 +13,8 @@
   lisp-backquote-indentation 2
   scheme-indent-offset 2)
 
-(defun my/save-buffer-message (&rest _)
-  "Display a message in the minibuffer after saving a file."
-  (message "Saved"))
-
-(advice-add 'save-buffer :after #'my/save-buffer-message)
-
+;; показываем обычное сохранение emacs'a
+(setq save-silently nil)
 
 ;;; Undo tree
 (after! undo

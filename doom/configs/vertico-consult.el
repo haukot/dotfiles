@@ -70,3 +70,9 @@
   (define-key vertico-map (kbd "<prior>") #'vertico-scroll-down)
   (define-key vertico-map (kbd "<next>") #'vertico-scroll-up)
   (vertico-buffer-mode))
+
+(after! vertico
+  ;; Для открытия буффера и редактирования поиска(например C-p-s)
+  (define-key vertico-map (kbd "C-c C-e") #'+vertico/embark-export-write)
+  ;; почему-то не работает, сама функция ничего не делает?
+  (define-key vertico-map (kbd "C-c C-o") #'+vertico/embark-preview))
