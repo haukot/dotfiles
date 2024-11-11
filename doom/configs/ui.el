@@ -3,6 +3,10 @@
 (custom-set-faces
   '(region ((t (:extend t :background "salmon" :distant-foreground "gtk_selection_fg_color")))))
 
+
+(custom-set-faces
+  '(region ((t (:extend t :background "salmon" :distant-foreground "gtk_selection_fg_color")))))
+
 (custom-set-faces! '(cursor :background "wheat4"))
 (setq evil-normal-state-cursor '("wheat4" box))
 (setq evil-insert-state-cursor '("wheat4" bar))
@@ -113,3 +117,16 @@
         :nv "C-<tab>" #'centaur-tabs-forward
         "C-<tab>" #'centaur-tabs-forward
         "C-<tab>" #'centaur-tabs-forward)
+
+
+;; для vue.js
+(custom-set-faces
+ '(mmm-default-submode-face ((t (:background nil)))))
+
+
+
+;; Т.к. по умолчанию в doom emacs он умеет работать только с helm и ivy, и не работает с vertico\consult
+;; и показывает уродливый серый попап
+;; https://github.com/doomemacs/doomemacs/blob/fdcab58a1b28a3b2bde23789e2a4c9c1391070b6/modules/tools/lookup/config.el#L142
+(after! dumb-jump
+ (setq dumb-jump-selector 'completing-read))

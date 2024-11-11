@@ -93,13 +93,13 @@
   (let ((new-window (split-window-right)))
     (select-window new-window)))
 
-(defun my-original-delete-other-windows ()
-  "The original functionality of delete-other-windows (C-x 1)."
-  (interactive)
-  (delete-other-windows))
+;; (defun my-original-delete-other-windows ()
+;;   "The original functionality of delete-other-windows (C-x 1)."
+;;   (interactive)
+;;   (delete-other-windows))
 
-(map! "C-x 1" #'my-delete-other-windows-then-split-vertically-and-focus-right
-      "C-x 5" #'my-original-delete-other-windows)
+(map! "C-x `" #'my-delete-other-windows-then-split-vertically-and-focus-right)
+      ;; "C-x 5" #'my-original-delete-other-windows)
 
 ;; Отключение lsp
 ;; (remove-hook 'ruby-mode-local-vars-hook #'lsp!)

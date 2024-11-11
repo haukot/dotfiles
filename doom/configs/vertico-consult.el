@@ -49,4 +49,5 @@
 ;; make pgdown pgup working
 (after! vertico
   (define-key vertico-map (kbd "<prior>") #'vertico-scroll-down)
-  (define-key vertico-map (kbd "<next>") #'vertico-scroll-up))
+  (define-key vertico-map (kbd "<next>") #'vertico-scroll-up)
+  (vertico-buffer-mode))

@@ -141,3 +141,5 @@
                       :i "C-p" nil)))
 
 (global-set-key (kbd "C-x C-r") 'rename-visited-file)
+
+(setq lsp-enable-suggest-server-download nil)
