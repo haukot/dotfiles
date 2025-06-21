@@ -5,69 +5,84 @@ xkb_symbols "base" {
 
     // Use Right-Alt as Level-3 switch
     include "level3(caps_switch)"
-include "level5(modifier_mapping)"
-//include "workman_ru_ctrl(ctrlfix)"
+    include "level5(modifier_mapping)"
 
-replace key <RALT> {                    // some laptops use <ALGR>
+    replace key <MENU> {                    // some laptops use <ALGR>
+        type[Group1] = "ONE_LEVEL",
+        symbols[Group1]= [ ISO_Level5_Lock ]
+    };
+
+
+    key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC_CTRL";
+
+key <CAPS> {
     type[Group1] = "ONE_LEVEL",
-    symbols[Group1]= [ ISO_Level5_Lock ]
+    symbols[Group1] = [ BackSpace ]
+};
+replace key <TAB> {
+    // type[Group1]= "EIGHT_LEVEL",            // any 6- or 8-level type works
+    symbols[Group1]= [ Tab, ISO_Left_Tab,
+                       Tab, ISO_Left_Tab,
+                       Tab, ISO_Left_Tab,
+                       Tab, ISO_Left_Tab ]
 };
 
+    // ─── Тильда (ё/Ё) ─────────────────────────────
+    key <TLDE> { [ grave, asciitilde, NoSymbol, NoSymbol,
+                   Cyrillic_io, Cyrillic_IO ] };
 
-key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC_CTRL";
+    // ─── Цифровой ряд ────────────────────────────
+    key <AE01> { [ 1, exclam, NoSymbol, NoSymbol, 1, exclam ] };
+    key <AE02> { [ 2, at,     NoSymbol, NoSymbol, 2, quotedbl ] };
+    key <AE03> { [ 3, numbersign, NoSymbol, NoSymbol, 3, numerosign ] };
+    key <AE04> { [ 4, dollar, NoSymbol, NoSymbol, 4, semicolon ] };
+    key <AE05> { [ 5, percent, NoSymbol, NoSymbol, 5, percent ] };
+    key <AE06> { [ 6, asciicircum, NoSymbol, NoSymbol, 6, colon ] };
+    key <AE07> { [ 7, ampersand,  NoSymbol, NoSymbol, 7, question ] };
+    key <AE08> { [ 8, asterisk,   NoSymbol, NoSymbol, 8, asterisk ] };
+    key <AE09> { [ 9, parenleft,  NoSymbol, NoSymbol, 9, parenleft ] };
+    key <AE10> { [ 0, parenright, NoSymbol, NoSymbol, 0, parenright ] };
+    key <AE11> { [ minus, underscore, NoSymbol, NoSymbol, minus, underscore ] };
+    key <AE12> { [ equal, plus,     NoSymbol, NoSymbol, equal, plus ] };
 
-    // Row 1 ──────────────────────────────────────────────────────────────────
-    key <TLDE> { [ grave,      asciitilde,  dead_grave,  dead_tilde        ] }; // free for dead keys
-    key <AE01> { [ 1,          exclam,      NoSymbol,    NoSymbol          ] };
-    key <AE02> { [ 2,          at,          NoSymbol,    NoSymbol          ] };
-    key <AE03> { [ 3,          numbersign,  NoSymbol,    NoSymbol          ] };
-    key <AE04> { [ 4,          dollar,      NoSymbol,    NoSymbol          ] };
-    key <AE05> { [ 5,          percent,     NoSymbol,    NoSymbol          ] };
-    key <AE06> { [ 6,          asciicircum, NoSymbol,    NoSymbol          ] };
-    key <AE07> { [ 7,          ampersand,   NoSymbol,    NoSymbol          ] };
-    key <AE08> { [ 8,          asterisk,    NoSymbol,    NoSymbol          ] };
-    key <AE09> { [ 9,          parenleft,   NoSymbol,    NoSymbol          ] };
-    key <AE10> { [ 0,          parenright,  NoSymbol,    NoSymbol          ] };
-    key <AE11> { [ minus,      underscore,  NoSymbol,    NoSymbol          ] };
-    key <AE12> { [ equal,      plus,        NoSymbol,    NoSymbol          ] };
+    // ─── Q-ряд: ЙЦУКЕНГШЩЗХЪ ─────────────────────
+    key <AD01> { [ q, Q, NoSymbol, NoSymbol, Cyrillic_shorti,  Cyrillic_SHORTI ] }; // й
+    key <AD02> { [ d, D, NoSymbol, NoSymbol, Cyrillic_tse,     Cyrillic_TSE    ] }; // ц
+    key <AD03> { [ r, R, NoSymbol, NoSymbol, Cyrillic_u,       Cyrillic_U      ] }; // у
+    key <AD04> { [ w, W, NoSymbol, NoSymbol, Cyrillic_ka,      Cyrillic_KA     ] }; // к
+    key <AD05> { [ b, B, NoSymbol, NoSymbol, Cyrillic_ie,      Cyrillic_IE     ] }; // е
+    key <AD06> { [ j, J, NoSymbol, NoSymbol, Cyrillic_en,      Cyrillic_EN     ] }; // н
+    key <AD07> { [ f, F, NoSymbol, NoSymbol, Cyrillic_ghe,     Cyrillic_GHE    ] }; // г
+    key <AD08> { [ u, U, NoSymbol, NoSymbol, Cyrillic_sha,     Cyrillic_SHA    ] }; // ш
+    key <AD09> { [ p, P, NoSymbol, NoSymbol, Cyrillic_shcha,   Cyrillic_SHCHA  ] }; // щ
+    key <AD10> { [ colon, semicolon, NoSymbol, NoSymbol, Cyrillic_ze,        Cyrillic_ZE ] }; // з
+    key <AD11> { [ bracketleft, braceleft, NoSymbol, NoSymbol, Cyrillic_ha,   Cyrillic_HA ] }; // х
+    key <AD12> { [ bracketright, braceright, NoSymbol, NoSymbol, Cyrillic_hardsign, Cyrillic_HARDSIGN ] }; // ъ
 
-    // Row 2 (Workman: q d r w b j f u p ;)
-    key <AD01> { [              q,  Q, NoSymbol, NoSymbol,  Cyrillic_shorti,  Cyrillic_SHORTI ] }; // й
-    key <AD02> { [              d,  D, NoSymbol, NoSymbol,  Cyrillic_ve,      Cyrillic_VE     ] }; // в
-    key <AD03> { [              r,  R, NoSymbol, NoSymbol,  Cyrillic_er,      Cyrillic_ER     ] }; // р
-    key <AD04> { [              w,  W, NoSymbol, NoSymbol,  Cyrillic_tse,     Cyrillic_TSE    ] }; // ц
-    key <AD05> { [              b,  B, NoSymbol, NoSymbol,  Cyrillic_i,       Cyrillic_I      ] }; // и
-    key <AD06> { [              j,  J, NoSymbol, NoSymbol,  Cyrillic_zhe,     Cyrillic_ZHE    ] }; // ж
-    key <AD07> { [              f,  F, NoSymbol, NoSymbol,  Cyrillic_a,       Cyrillic_A      ] }; // а
-    key <AD08> { [              u,  U, NoSymbol, NoSymbol,  Cyrillic_ghe,     Cyrillic_GHE    ] }; // г
-    key <AD09> { [              p,  P, NoSymbol, NoSymbol,  Cyrillic_sha,     Cyrillic_SHA    ] }; // ш
-    key <AD10> { [ semicolon, semicolon, Cyrillic_shcha, Cyrillic_SHCHA  ] }; // щ
-    key <AD11> { [ bracketleft,  braceleft,  Cyrillic_ha,  Cyrillic_HA  ] }; // х
-    key <AD12> { [ bracketright, braceright, Cyrillic_hardsign, Cyrillic_HARDSIGN ] }; // ъ
+    // ─── A-ряд: ФЫВАПРОЛДЖЭ ──────────────────────
+    key <AC01> { [ a, A, NoSymbol, NoSymbol, Cyrillic_ef,      Cyrillic_EF      ] }; // ф
+    key <AC02> { [ s, S, NoSymbol, NoSymbol, Cyrillic_yeru,    Cyrillic_YERU    ] }; // ы
+    key <AC03> { [ h, H, NoSymbol, NoSymbol, Cyrillic_ve,      Cyrillic_VE      ] }; // в
+    key <AC04> { [ t, T, NoSymbol, NoSymbol, Cyrillic_a,       Cyrillic_A       ] }; // а
+    key <AC05> { [ g, G, NoSymbol, NoSymbol, Cyrillic_pe,      Cyrillic_PE      ] }; // п
+    key <AC06> { [ y, Y, NoSymbol, NoSymbol, Cyrillic_er,      Cyrillic_ER      ] }; // р
+    key <AC07> { [ n, N, NoSymbol, NoSymbol, Cyrillic_o,       Cyrillic_O       ] }; // о
+    key <AC08> { [ e, E, NoSymbol, NoSymbol, Cyrillic_el,      Cyrillic_EL      ] }; // л
+    key <AC09> { [ o, O, NoSymbol, NoSymbol, Cyrillic_de,      Cyrillic_DE      ] }; // д
+    key <AC10> { [ i, I, NoSymbol, NoSymbol, Cyrillic_zhe,     Cyrillic_ZHE     ] }; // ж
+    key <AC11> { [ apostrophe, quotedbl, NoSymbol, NoSymbol,
+                   Cyrillic_e,           Cyrillic_E           ] }; // э
 
-    // Row 3 (Workman: a s h t g y n e o i ')
-    key <AC01> { [              a,  A, Cyrillic_ya,      Cyrillic_YA     ] }; // я
-    key <AC02> { [              s,  S, Cyrillic_es,      Cyrillic_ES     ] }; // с
-    key <AC03> { [              h,  H, Cyrillic_en,      Cyrillic_EN     ] }; // н
-    key <AC04> { [              t,  T, Cyrillic_te,      Cyrillic_TE     ] }; // т
-    key <AC05> { [              g,  G, Cyrillic_softsign,Cyrillic_SOFTSIGN ] }; // ь
-    key <AC06> { [              y,  Y, Cyrillic_yeru,    Cyrillic_YERU   ] }; // ы
-    key <AC07> { [              n,  N, Cyrillic_e,       Cyrillic_E      ] }; // э
-    key <AC08> { [              e,  E, Cyrillic_ie,      Cyrillic_IE     ] }; // е
-    key <AC09> { [              o,  O, Cyrillic_o,       Cyrillic_O      ] }; // о
-    key <AC10> { [              i,  I, Cyrillic_i,       Cyrillic_I      ] }; // и (duplicate for ergonomics)
-    key <AC11> { [ apostrophe, quotedbl, Cyrillic_io,    Cyrillic_IO     ] }; // ё
+    // ─── Z-ряд: ЯЧСМИТЬБЮ. ───────────────────────
+    key <AB01> { [ z, Z, NoSymbol, NoSymbol, Cyrillic_ya,      Cyrillic_YA      ] }; // я
+    key <AB02> { [ x, X, NoSymbol, NoSymbol, Cyrillic_che,     Cyrillic_CHE     ] }; // ч
+    key <AB03> { [ m, M, NoSymbol, NoSymbol, Cyrillic_es,      Cyrillic_ES      ] }; // с
+    key <AB04> { [ c, C, NoSymbol, NoSymbol, Cyrillic_em,      Cyrillic_EM      ] }; // м
+    key <AB05> { [ v, V, NoSymbol, NoSymbol, Cyrillic_i,       Cyrillic_I       ] }; // и
+    key <AB06> { [ k, K, NoSymbol, NoSymbol, Cyrillic_te,      Cyrillic_TE      ] }; // т
+    key <AB07> { [ l, L, NoSymbol, NoSymbol, Cyrillic_softsign,Cyrillic_SOFTSIGN] }; // ь
+    key <AB08> { [ comma, less, NoSymbol, NoSymbol,  Cyrillic_be,  Cyrillic_BE  ] }; // б
+    key <AB09> { [ period, greater, NoSymbol, NoSymbol, Cyrillic_yu, Cyrillic_YU] }; // ю
+    key <AB10> { [ slash, question, NoSymbol, NoSymbol, period, comma ] }; // . и ,
 
-    // Row 4 (Workman: z x m c v k l , . /)
-    key <AB01> { [              z,  Z, Cyrillic_ze,      Cyrillic_ZE     ] }; // з
-    key <AB02> { [              x,  X, Cyrillic_ha,      Cyrillic_HA     ] }; // х (extra)
-    key <AB03> { [              m,  M, Cyrillic_em,      Cyrillic_EM     ] }; // м
-    key <AB04> { [              c,  C, Cyrillic_es,      Cyrillic_ES     ] }; // с (duplicate)
-    key <AB05> { [              v,  V, Cyrillic_ve,      Cyrillic_VE     ] }; // в (duplicate)
-    key <AB06> { [              k,  K, Cyrillic_ka,      Cyrillic_KA     ] }; // к
-    key <AB07> { [              l,  L, Cyrillic_el,      Cyrillic_EL     ] }; // л
-    key <AB08> { [      comma,  less, Cyrillic_be,      Cyrillic_BE     ] }; // б
-    key <AB09> { [     period, greater, Cyrillic_yu,     Cyrillic_YU     ] }; // ю
-    key <AB10> { [      slash,  question, Cyrillic_che,  Cyrillic_CHE    ] }; // ч
 };
-

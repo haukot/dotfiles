@@ -1,7 +1,7 @@
 partial xkb_types "ctrlfix" {
 
     type "EIGHT_LEVEL_SEMIALPHABETIC_CTRL" {
- modifiers = Shift+Lock+Control+LevelThree+LevelFive;
+ modifiers = Shift+Lock+Control+Mod1+LevelThree+LevelFive;
         map[None] = Level1;
         map[Shift] = Level2;
         map[Lock]  = Level2;
@@ -19,12 +19,14 @@ partial xkb_types "ctrlfix" {
         map[Lock+LevelThree+LevelFive] =  Level7;
         map[Lock+Shift+LevelThree+LevelFive] = Level8;
 
-       preserve[Lock+LevelThree] = Lock;
+        preserve[Lock+LevelThree] = Lock;
         preserve[Lock+Shift+LevelThree] = Lock;
         preserve[Lock+LevelFive] = Lock;
         preserve[Lock+Shift+LevelFive] = Lock;
         preserve[Lock+LevelThree+LevelFive] = Lock;
         preserve[Lock+Shift+LevelThree+LevelFive] = Lock;
+        preserve[Mod1+LevelFive] = Mod1;
+        preserve[Mod1+Shift+LevelFive] = Mod1;
 
         level_name[Level1] = "Base";
         level_name[Level2] = "Shift";
@@ -39,5 +41,7 @@ partial xkb_types "ctrlfix" {
         map[Control+Shift]                   = Level2;
         map[Control+LevelFive]               = Level1;
         map[Control+Shift+LevelFive]         = Level2;
+        // map[Mod1]                            = Level1;  // Alt -> Level1
+        // map[Mod1+LevelFive]                  = Level1;  // Alt+Level5 -> Level1
     };
 };
