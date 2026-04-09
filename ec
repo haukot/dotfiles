@@ -4,6 +4,11 @@
 # you pass in and changes the focus to emacs.  Without any arguments, it just
 # opens the current buffer or *scratch* if nothing else is open.
 
+# Pass through raw emacsclient options unchanged.
+if [ $# -gt 0 ] && [[ "$1" == -* ]]; then
+  exec emacsclient -a "" "$@"
+fi
+
 # Number of current visible frames,
 # Emacs daemon always has a visible frame called F1
 visible_frames() {

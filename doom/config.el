@@ -24,7 +24,7 @@
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
-(setq doom-font "DejaVu Sans Mono-12")
+(setq doom-font "DejaVu Sans Mono-14")
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -39,26 +39,60 @@
 
 (setq doom-theme nil)
 
-;; Fix narrow emacsclient frames in PaperWM.
-;; emacsclient -c creates narrow frames in daemon mode, so ec script uses
-;; make-frame + delayed resize instead.
+;; Fix narrow daemon frames in PaperWM.
+;; `emacsclient -c` gets bad initial geometry for later daemon frames and
+;; PaperWM may then retile new Emacs frames to a much narrower width.
+;; We avoid `emacsclient -c`, create the frame from elisp, keep it transparent
+;; initially, then enforce the target size the first time the WM reports a
+;; geometry change.
+(add-to-list 'default-frame-alist '(min-width . 80))
+(add-to-list 'default-frame-alist '(min-height . 24))
+
+(defvar ec-frame-width 80
+  "Target width for frames created by `ec-open-frame'.")
+
+(defvar ec-frame-height 24
+  "Target height for frames created by `ec-open-frame'.")
+
+;; По какой-то причине через emacs client периодически спавнились узкие окна в
+;; paperwm. Это костыль, чтобы окно показывать попозже, и верного размера
+(defun ec--paperwm-fix-frame (frame)
+  "Finalize FRAME geometry after the window manager has tiled it."
+  (let ((target (frame-parameter frame 'ec-target-size)))
+    (when (and target (frame-live-p frame) (display-graphic-p frame))
+      (pcase-let ((`(,width . ,height) target))
+        (if (or (< (frame-width frame) width)
+                (< (frame-height frame) height))
+            (progn
+              (set-frame-parameter frame 'user-size t)
+              (set-frame-size frame width height))
+          (modify-frame-parameters
+           frame '((alpha . (100 . 100))
+                   (no-accept-focus . nil)))
+          (set-frame-parameter frame 'ec-target-size nil)
+          (select-frame-set-input-focus frame))))))
+
+(add-hook 'window-size-change-functions #'ec--paperwm-fix-frame)
+
 (defun ec-open-frame (&rest files)
-  "Create a new GUI frame and open FILES in it.
-Uses delayed resize to counter PaperWM shrinking new windows."
-  (let* ((gui (car (seq-filter (lambda (f) (frame-parameter f 'display)) (frame-list))))
+  "Create a new GUI frame and open FILES in it."
+  (let* ((params `((alpha . (0 . 0))
+                   (no-accept-focus . t)
+                   ,@(when doom-font
+                       `((font . ,doom-font)))))
+         (gui (car (seq-filter (lambda (f) (frame-parameter f 'display)) (frame-list))))
          (f (if gui
-                (with-selected-frame gui (make-frame))
-              (make-frame `((display . ,(or (getenv "DISPLAY") ":0")))))))
+                (with-selected-frame gui (make-frame params))
+              (make-frame
+               (append `((display . ,(or (getenv "DISPLAY") ":0")))
+                       params)))))
+    (set-frame-parameter f 'ec-target-size (cons ec-frame-width ec-frame-height))
     (select-frame-set-input-focus f)
     (when files
       (dolist (file files)
         (find-file-noselect file))
       (set-window-buffer (frame-selected-window f)
                          (find-file-noselect (car files))))
-    (run-at-time 0.3 nil
-                 (lambda ()
-                   (when (frame-live-p f)
-                     (set-frame-size f 80 40))))
     nil))
 
 ;; Fix "dead frame" error with emacsclient in daemon mode
