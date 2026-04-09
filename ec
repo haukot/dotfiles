@@ -2,26 +2,7 @@
 
 # This script starts emacs daemon if it is not running, opens whatever file
 # you pass in and changes the focus to emacs.  Without any arguments, it just
-# opens the current buffer or *scratch* if nothing else is open.  The following
-# example will open ~/.bashrc
-
-# ec ~/.bashrc
-
-# You can also pass it multiple files, it will open them all.  Unbury-buffer
-# will cycle through those files in order
-
-# The compliment to the script is et, which opens emacs in the terminal
-# attached to a daemon
-
-# If you want to execute elisp, pass in -e whatever.
-# You may also want to stop the output from returning to the terminal, like
-# ec -e "(message \"Hello\")" > /dev/null
-
-# emacsclient options for reference
-# -a "" starts emacs daemon and reattaches
-# -c creates a new frame
-# -n returns control back to the terminal
-# -e eval the script
+# opens the current buffer or *scratch* if nothing else is open.
 
 # Number of current visible frames,
 # Emacs daemon always has a visible frame called F1
@@ -33,4 +14,14 @@ visible_frames() {
 # will start a server if not running
 test "$(visible_frames)" -eq "1"
 
-emacsclient -n -c "$@"
+# Build elisp to open frame with files
+if [ $# -eq 0 ]; then
+  emacsclient -e '(ec-open-frame)' > /dev/null 2>&1 &
+else
+  args=""
+  for f in "$@"; do
+    abs=$(realpath "$f" 2>/dev/null || echo "$f")
+    args="$args \"$abs\""
+  done
+  emacsclient -e "(ec-open-frame$args)" > /dev/null 2>&1 &
+fi

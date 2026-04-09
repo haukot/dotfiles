@@ -39,6 +39,32 @@
 
 (setq doom-theme nil)
 
+;; Fix narrow emacsclient frames in PaperWM.
+;; emacsclient -c creates narrow frames in daemon mode, so ec script uses
+;; make-frame + delayed resize instead.
+(defun ec-open-frame (&rest files)
+  "Create a new GUI frame and open FILES in it.
+Uses delayed resize to counter PaperWM shrinking new windows."
+  (let* ((gui (car (seq-filter (lambda (f) (frame-parameter f 'display)) (frame-list))))
+         (f (if gui
+                (with-selected-frame gui (make-frame))
+              (make-frame `((display . ,(or (getenv "DISPLAY") ":0")))))))
+    (select-frame-set-input-focus f)
+    (when files
+      (dolist (file files)
+        (find-file-noselect file))
+      (set-window-buffer (frame-selected-window f)
+                         (find-file-noselect (car files))))
+    (run-at-time 0.3 nil
+                 (lambda ()
+                   (when (frame-live-p f)
+                     (set-frame-size f 80 40))))
+    nil))
+
+;; Fix "dead frame" error with emacsclient in daemon mode
+(after! persp-mode
+  (setq persp-emacsclient-init-frame-behaviour-override "main"))
+
 
 
 
@@ -95,7 +121,13 @@
   "Load a file in current user's custom files directory"
   (load-file (expand-file-name file "~/.config/doom/custom")))
 
+
+(setq projectile-rails-expand-snippet nil)
+;; ;; Отключает кеш, т.к. не трекает новые файлы, и приходится руками запускать cache-invalidate
+;; (setq projectile-enable-caching nil)
+
 (load-user-file "all.el")
+(load-user-file "ruby.el")
 (load-user-file "copilot.el")
 (load-user-file "org.el")
 (load-user-file "ui.el")
@@ -140,6 +172,31 @@
                       :i "C-n" nil
                       :i "C-p" nil)))
 
+
+
+(defun my/magit-diff-develop ()
+  "Show diff between current branch and develop."
+  (interactive)
+  (magit-diff-range "develop"))
+
+;; Swap "SPC g b" (branch) and "SPC g B" (blame)
+(after! magit
+  ;; clear defaults
+  (map! :leader "g b" nil "g B" nil)
+
+  ;; TODO: Какого-то кейбиндинг поменялся, а вот описание в SPC g - нет
+  (map! :leader
+          (:prefix-map ("g" . "git")
+                  :desc "Magit blame" "b" #'magit-blame-addition
+                  :desc "Magit switch branch" "B" #'magit-branch-checkout))
+
+        (map! :leader
+                :prefix ("g" . "git")
+                :desc "Diff with develop" "d" #'my/magit-diff-develop))
+
+
 (global-set-key (kbd "C-x C-r") 'rename-visited-file)
 
 (setq lsp-enable-suggest-server-download nil)
+
+(defalias 'break-words-mode #'visual-line-mode)
