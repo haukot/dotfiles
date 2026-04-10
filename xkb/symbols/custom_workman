@@ -11,6 +11,20 @@ xkb_symbols "base" {
         type[Group1] = "ONE_LEVEL",
         symbols[Group1]= [ ISO_Level5_Lock ]
     };
+replace key <LWIN> {
+    type[Group1] = "ONE_LEVEL",
+    symbols[Group1] = [ Super_L ]
+};
+
+replace key <LALT> {
+    type[Group1] = "ONE_LEVEL",
+    symbols[Group1] = [ Alt_L ]
+};
+
+replace key <LCTL> {
+    type[Group1] = "ONE_LEVEL",
+    symbols[Group1] = [ Control_L ]
+};
 
 
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC_CTRL";
