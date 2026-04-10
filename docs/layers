@@ -4,3 +4,4 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['KP_8']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Control>KP_8']"
 
 And copy keyd config to /etc/keyd/default.conf
+sudo keyd reload
