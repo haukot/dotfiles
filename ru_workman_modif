@@ -1,0 +1,100 @@
+// Russian layout with Workman-consistent shortcuts on all Ctrl/Alt levels
+// 2025-04-23  (based on ru & us(workman) symbols)          © CC0
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    name[Group1]= "Russian (ЙЦУКЕН + Workman shortcuts)";
+
+    // base typing behaviour
+    include "ru"                             // levels 1-2 & AltGr (3-4)
+
+   // Use the eight-level type so we have distinct layers for
+    //  Ctrl, Ctrl+Shift, Ctrl+Alt, Ctrl+Alt+Shift.
+    // (defined in types/complete) :contentReference[oaicite:0]{index=0}
+    replace key <AD01> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_shorti,  Cyrillic_SHORTI, NoSymbol, NoSymbol,
+                          q, q, q, q ] };
+    replace key <AD02> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_tse,     Cyrillic_TSE,    NoSymbol, NoSymbol,
+                          d, d, d, d ] };
+    replace key <AD03> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_u,       Cyrillic_U,      NoSymbol, NoSymbol,
+                          r, r, r, r ] };
+    replace key <AD04> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ka,      Cyrillic_KA,     NoSymbol, NoSymbol,
+                          w, w, w, w ] };
+    replace key <AD05> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ie,      Cyrillic_IE,     NoSymbol, NoSymbol,
+                          b, b, b, b ] };
+    replace key <AD06> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_en,      Cyrillic_EN,     NoSymbol, NoSymbol,
+                          j, j, j, j ] };
+    replace key <AD07> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ghe,     Cyrillic_GHE,    NoSymbol, NoSymbol,
+                          f, f, f, f ] };
+    replace key <AD08> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_sha,     Cyrillic_SHA,    NoSymbol, NoSymbol,
+                          u, u, u, u ] };
+    replace key <AD09> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_shcha,   Cyrillic_SHCHA,  NoSymbol, NoSymbol,
+                          p, p, p, p ] };
+    replace key <AD10> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ze,      Cyrillic_ZE,     NoSymbol, NoSymbol,
+                          semicolon, semicolon, semicolon, semicolon ] };
+
+    // ── Home row ───────────────────────────────────────────────────────────
+    replace key <AC01> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ef,      Cyrillic_EF,     NoSymbol, NoSymbol,
+                          a, a, a, a ] };
+    replace key <AC02> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_yeru,    Cyrillic_YERU,   NoSymbol, NoSymbol,
+                          s, s, s, s ] };
+    replace key <AC03> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ve,      Cyrillic_VE,     NoSymbol, NoSymbol,
+                          h, h, h, h ] };
+    replace key <AC04> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_a,       Cyrillic_A,      NoSymbol, NoSymbol,
+                          t, t, t, t ] };
+    replace key <AC05> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_pe,      Cyrillic_PE,     NoSymbol, NoSymbol,
+                          g, g, g, g ] };
+    replace key <AC06> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_er,      Cyrillic_ER,     NoSymbol, NoSymbol,
+                          y, y, y, y ] };
+    replace key <AC07> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_o,       Cyrillic_O,      NoSymbol, NoSymbol,
+                          n, n, n, n ] };
+    replace key <AC08> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_el,      Cyrillic_EL,     NoSymbol, NoSymbol,
+                          e, e, e, e ] };
+    replace key <AC09> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_de,      Cyrillic_DE,     NoSymbol, NoSymbol,
+                          o, o, o, o ] };
+    replace key <AC10> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_zhe,     Cyrillic_ZHE,    NoSymbol, NoSymbol,
+                          i, i, i, i ] };
+
+    // ── Bottom row ─────────────────────────────────────────────────────────
+    replace key <AB01> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_ya,      Cyrillic_YA,     NoSymbol, NoSymbol,
+                          z, z, z, z ] };
+    replace key <AB02> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_che,     Cyrillic_CHE,    NoSymbol, NoSymbol,
+                          x, x, x, x ] };
+    replace key <AB03> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_es,      Cyrillic_ES,     NoSymbol, NoSymbol,
+                          m, m, m, m ] };
+    replace key <AB04> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_em,      Cyrillic_EM,     NoSymbol, NoSymbol,
+                          c, c, c, c ] };
+    replace key <AB05> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_i,       Cyrillic_I,      NoSymbol, NoSymbol,
+                          v, v, v, v ] };   //  ← paste now works
+    replace key <AB06> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_te,      Cyrillic_TE,     NoSymbol, NoSymbol,
+                          k, k, k, k ] };
+    replace key <AB07> { type="EIGHT_LEVEL_ALPHABETIC",
+        symbols[Group1]=[ Cyrillic_softsign,Cyrillic_SOFTSIGN,NoSymbol,NoSymbol,
+                          l, l, l, l ] };
+};
+
