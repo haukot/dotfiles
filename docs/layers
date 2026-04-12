@@ -1,7 +1,7 @@
 # Workspaces 1-8
 
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['KP_8']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Control>KP_8']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Super>KP_1']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Super>KP_2']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 "['<Super>KP_3']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 "['<Super>KP_4']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Super>KP_5']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Super>KP_6']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Super>KP_7']" && gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Super>KP_8']"
 
 And copy keyd config to /etc/keyd/default.conf
 sudo keyd reload
