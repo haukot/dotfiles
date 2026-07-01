@@ -1,13 +1,13 @@
 #!/bin/bash
 #
 # Session startup script.
-# Launches apps and places them on workspaces using wmctrl.
+# Launches apps from their target workspaces using wmctrl.
 #
-# Workspace layout (0-indexed):
-#   0 -> Chrome (restored session)
-#   2 -> Terminal + Emacs
-#   3 -> Telegram
-#   4 -> Vivaldi
+# Workspace layout:
+#   1 -> Chrome (restored session)
+#   3 -> Terminal + Emacs
+#   4 -> Telegram
+#   5 -> Vivaldi
 #   6 -> Terminal
 #   7 -> Terminal
 #   8 -> Terminal
@@ -16,6 +16,9 @@
 
 # Wait for GNOME Shell / PaperWM to be ready
 sleep 3
+
+CHROME_USER_DATA_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/google-chrome"
+CHROME_PROFILE="Default"
 
 ensure_workspaces() {
     local count="$1"
@@ -42,61 +45,48 @@ contains_window() {
     return 1
 }
 
-move_new_windows() {
-    local class="$1"
-    local workspace="$2"
-    local timeout="${3:-30}"
-    local settle="${4:-4}"
-    shift 4
+launch_on_workspace() {
+    local workspace="$1"
+    local class="$2"
+    shift
+    shift
     local before=()
-    local moved=()
-    local elapsed=0
-    local idle=0
-    local saw_window=0
+    local wmctrl_workspace=$((workspace - 1))
     local wid
 
     mapfile -t before < <(list_windows "$class")
+
+    wmctrl -s "$wmctrl_workspace"
+    sleep 0.5
     "$@" &
 
-    while [ "$elapsed" -lt "$timeout" ]; do
-        local moved_this_round=0
-
+    while true; do
         while read -r wid; do
             [ -z "$wid" ] && continue
-            contains_window "$wid" "${before[@]}" && continue
-            contains_window "$wid" "${moved[@]}" && continue
-
-            wmctrl -i -r "$wid" -t "$workspace"
-            moved+=("$wid")
-            saw_window=1
-            moved_this_round=1
+            contains_window "$wid" "${before[@]}" || return 0
         done < <(list_windows "$class")
 
-        if [ "$moved_this_round" -eq 1 ]; then
-            idle=0
-        elif [ "$saw_window" -eq 1 ]; then
-            idle=$((idle + 1))
-            [ "$idle" -ge "$settle" ] && return 0
-        fi
-
-        sleep 1
-        elapsed=$((elapsed + 1))
+        sleep 0.2
     done
+}
 
-    echo "Timeout waiting for new $class window" >&2
-    return 1
+launch_chrome() {
+    google-chrome-stable \
+        --user-data-dir="$CHROME_USER_DATA_DIR" \
+        --profile-directory="$CHROME_PROFILE" \
+        --restore-last-session
 }
 
 ensure_workspaces 9
 
-move_new_windows "google-chrome" 0 45 5 google-chrome-stable --restore-last-session
-move_new_windows "Gnome-terminal" 2 30 3 gnome-terminal --working-directory=/home/haukot/programming/projects/slurm/slurm -- tmux
-move_new_windows "emacs\\.Emacs" 2 30 3 ~/dotfiles/ec /home/haukot/programming/projects/slurm/slurm/Gemfile
-move_new_windows "TelegramDesktop" 3 30 3 telegram-desktop
-move_new_windows "Vivaldi-stable" 4 45 5 vivaldi-stable
+launch_on_workspace 3 "Gnome-terminal" gnome-terminal --working-directory=/home/haukot/programming/projects/slurm/slurm -- tmux
+launch_on_workspace 3 "emacs\\.Emacs" ~/dotfiles/ec /home/haukot/programming/projects/slurm/slurm/Gemfile
+launch_on_workspace 4 "TelegramDesktop" telegram-desktop
+launch_on_workspace 5 "Vivaldi-stable" vivaldi-stable
 
 for ws in 6 7 8; do
-    move_new_windows "Gnome-terminal" "$ws" 30 2 gnome-terminal
+    launch_on_workspace "$ws" "Gnome-terminal" gnome-terminal
 done
 
+launch_on_workspace 1 "google-chrome" launch_chrome
 wmctrl -s 0
