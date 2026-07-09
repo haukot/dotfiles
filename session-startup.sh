@@ -20,15 +20,6 @@ sleep 3
 CHROME_USER_DATA_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/google-chrome"
 CHROME_PROFILE="Default"
 
-ensure_workspaces() {
-    local count="$1"
-
-    # GNOME only keeps high-numbered workspaces reliably when dynamic
-    # workspaces are disabled.
-    gsettings set org.gnome.mutter dynamic-workspaces false >/dev/null 2>&1 || true
-    gsettings set org.gnome.desktop.wm.preferences num-workspaces "$count" >/dev/null 2>&1 || true
-}
-
 list_windows() {
     local class="$1"
     wmctrl -lx | awk -v pat="$class" 'BEGIN { IGNORECASE = 1 } $0 ~ pat { print $1 }'
@@ -57,7 +48,7 @@ launch_on_workspace() {
     mapfile -t before < <(list_windows "$class")
 
     wmctrl -s "$wmctrl_workspace"
-    sleep 0.5
+    sleep 1
     "$@" &
 
     while true; do
@@ -77,10 +68,9 @@ launch_chrome() {
         --restore-last-session
 }
 
-ensure_workspaces 9
-
 launch_on_workspace 3 "Gnome-terminal" gnome-terminal --working-directory=/home/haukot/programming/projects/slurm/slurm -- tmux
 launch_on_workspace 3 "emacs\\.Emacs" ~/dotfiles/ec /home/haukot/programming/projects/slurm/slurm/Gemfile
+sleep 1
 launch_on_workspace 4 "TelegramDesktop" telegram-desktop
 launch_on_workspace 5 "Vivaldi-stable" vivaldi-stable
 
