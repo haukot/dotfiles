@@ -157,8 +157,8 @@
 
 
 (setq projectile-rails-expand-snippet nil)
-;; ;; Отключает кеш, т.к. не трекает новые файлы, и приходится руками запускать cache-invalidate
-;; (setq projectile-enable-caching nil)
+;; Отключает кеш, т.к. не трекает новые файлы, и приходится руками запускать cache-invalidate
+(setq projectile-enable-caching nil)
 
 (load-user-file "all.el")
 (load-user-file "ruby.el")
