@@ -54,7 +54,10 @@ launch_on_workspace() {
     while true; do
         while read -r wid; do
             [ -z "$wid" ] && continue
-            contains_window "$wid" "${before[@]}" || return 0
+            if ! contains_window "$wid" "${before[@]}"; then
+                sleep 1
+                return 0
+            fi
         done < <(list_windows "$class")
 
         sleep 0.2
