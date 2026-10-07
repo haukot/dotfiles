@@ -1,0 +1,6 @@
+interface:
+  display_name: "Reconcile Specifications"
+  short_description: "Resolve two specifications requirement by requirement"
+  default_prompt: "Use $reconcile-specs to compare the next unchecked requirements and help me choose the agreed version."
+policy:
+  allow_implicit_invocation: false
