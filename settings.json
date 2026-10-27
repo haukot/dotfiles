@@ -1,0 +1,16 @@
+{
+  "model": "opus",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send \"Claude waits in $(basename $PWD)\""
+          }
+        ]
+      }
+    ]
+  }
+}
