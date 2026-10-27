@@ -75,7 +75,7 @@ eval my_gray='$FG[237]'
 eval my_orange='$FG[214]'
 
 # right prompt
-RPROMPT='$(git_prompt_status)%{$reset_color%}%'
+RPROMPT=''
 
 # Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]("
