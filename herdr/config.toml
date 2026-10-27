@@ -1,0 +1,14 @@
+onboarding = false
+
+[terminal]
+default_shell = "/usr/bin/zsh"
+
+[ui.toast]
+delivery = "system"
+
+[ui.sound]
+enabled = false
+
+[theme]
+name = "gruvbox"
+auto_switch = false
