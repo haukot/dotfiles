@@ -3,6 +3,9 @@ onboarding = false
 [terminal]
 default_shell = "/usr/bin/zsh"
 
+[ui]
+prompt_new_tab_name = false
+
 [ui.toast]
 delivery = "off"
 
@@ -15,6 +18,8 @@ auto_switch = false
 
 [keys]
 prefix = "ctrl+x"
+rename_tab = "prefix+r"
+resize_mode = ""
 new_workspace = "ctrl+shift+n"
 close_workspace = "ctrl+shift+q"
 previous_workspace = "ctrl+up"
@@ -22,13 +27,13 @@ next_workspace = "ctrl+down"
 switch_workspace = "ctrl+1..9"
 next_tab = "ctrl+tab"
 previous_tab = "ctrl+shift+tab"
-new_tab = "ctrl+shift+t"
+new_tab = ""
 close_tab = "ctrl+shift+w"
 split_horizontal = "prefix+2"
 split_vertical = "prefix+3"
 close_pane = "prefix+0"
-focus_pane_right = "shift+right"
-focus_pane_left = "shift+left"
+focus_pane_right = ["shift+right", "ctrl+h"]
+focus_pane_left = ["shift+left", "ctrl+a"]
 focus_pane_up = "shift+up"
 focus_pane_down = "shift+down"
 zoom = "prefix+f"
@@ -42,3 +47,9 @@ key = "prefix+1"
 type = "shell"
 description = "close other panes in current tab"
 command = "python3 ~/.config/herdr/close-other-panes.py"
+
+[[keys.command]]
+key = "ctrl+shift+t"
+type = "shell"
+description = "new tab with first unused alphabetic name"
+command = "python3 ~/.config/herdr/new-alphabetic-tab.py"
