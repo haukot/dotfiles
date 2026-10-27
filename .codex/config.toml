@@ -1,0 +1,13 @@
+# Keybindings only; merge into ~/.codex/config.toml.
+[tui.keymap.list]
+move_up = "up"
+move_down = "down"
+move_left = "left"
+move_right = "right"
+
+[tui.keymap.chat]
+decrease_reasoning_effort = "alt-,"
+increase_reasoning_effort = "alt-."
+prompt_stack_back = "alt-p"
+edit_queued_message = "ctrl-n"
+

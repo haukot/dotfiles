@@ -4,7 +4,7 @@ onboarding = false
 default_shell = "/usr/bin/zsh"
 
 [ui.toast]
-delivery = "system"
+delivery = "off"
 
 [ui.sound]
 enabled = false
@@ -12,3 +12,32 @@ enabled = false
 [theme]
 name = "gruvbox"
 auto_switch = false
+
+[keys]
+prefix = "ctrl+x"
+new_workspace = "ctrl+shift+n"
+close_workspace = "ctrl+shift+q"
+previous_workspace = "ctrl+up"
+next_workspace = "ctrl+down"
+next_tab = "ctrl+tab"
+previous_tab = "ctrl+shift+tab"
+new_tab = "ctrl+shift+t"
+close_tab = "ctrl+shift+w"
+split_horizontal = "prefix+2"
+split_vertical = "prefix+3"
+close_pane = "prefix+0"
+focus_pane_right = "shift+right"
+focus_pane_left = "shift+left"
+focus_pane_up = "shift+up"
+focus_pane_down = "shift+down"
+zoom = "prefix+f"
+next_agent = "ctrl+shift+down"
+previous_agent = "ctrl+shift+up"
+# Reserve prefix+1, 2, and 3 for pane commands.
+switch_tab = ""
+
+[[keys.command]]
+key = "prefix+1"
+type = "shell"
+description = "close other panes in current tab"
+command = "python3 ~/.config/herdr/close-other-panes.py"
