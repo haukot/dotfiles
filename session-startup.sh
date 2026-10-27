@@ -135,14 +135,14 @@ launch_chrome() {
         --restore-last-session
 }
 
-launch_on_workspace 3 "StartupSlurm" kitty --class=StartupSlurm --working-directory=/home/haukot/programming/projects/slurm/slurm tmux || exit 1
+launch_on_workspace 3 "StartupSlurm" "$HOME/.local/kitty.app/bin/kitty" --class=StartupSlurm --working-directory=/home/haukot/programming/projects/slurm/slurm "$HOME/.local/bin/herdr" || exit 1
 launch_on_workspace 3 "emacs\\.Emacs" ~/dotfiles/ec /home/haukot/programming/projects/slurm/slurm/Gemfile || exit 1
 sleep 1
 launch_on_workspace 4 "TelegramDesktop" telegram-desktop || exit 1
 launch_on_workspace 5 "Vivaldi-stable" vivaldi-stable || exit 1
 
 for ws in 6 7 8; do
-    launch_on_workspace "$ws" "StartupTerminal$ws" kitty --class="StartupTerminal$ws" || exit 1
+    launch_on_workspace "$ws" "StartupTerminal$ws" "$HOME/.local/kitty.app/bin/kitty" --class="StartupTerminal$ws" --start-as=normal --override remember_window_size=no || exit 1
 done
 
 launch_on_workspace 1 "google-chrome" launch_chrome || exit 1
