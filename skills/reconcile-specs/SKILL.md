@@ -56,7 +56,8 @@ After the user explicitly selects a version or agrees on combined wording:
    - For an ordered task, preserve its number and change only `[ ]` to `[x]`.
 4. Briefly state what was recorded.
 5. Write selected version or consessually combined wording to spec_final.md
-6. Immediately select and present the next unresolved pair using the same workflow.
+6. Show user what you wrote. If you changed wordings - say so explicitly.
+7. Immediately select and present the next unresolved pair using the same workflow.
 
 If one specification has no corresponding task, resolve that structural difference with the user before checking anything. When `spec1.md` has no unchecked tasks left, report completion and separately list any unchecked tasks remaining only in `spec2.md`.
 DO NOT write to `spec1.md` and `spec2.md` anything besides checking or unchecking todos, even if one of files doesn't have correspoding line.
